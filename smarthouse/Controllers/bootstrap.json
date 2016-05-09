@@ -1,0 +1,32 @@
+{
+    "action_subjects": [
+        {
+            "name": "Light in Bathroom",
+            "image_name": "light_subject",
+            "configuration": {
+                    "pin": 11
+             }
+        },
+        {
+            "name": "Light in Bedroom",
+            "image_name": "light_subject",
+            "configuration": {
+                    "pin": 12
+            }
+        },
+        {
+            "name": "Light in Living Room",
+            "image_name": "light_subject",
+            "configuration": {
+                    "pin": 13
+            }
+        },
+        {
+            "name": "Light in Kitchen",
+            "image_name": "light_subject",
+            "configuration": {
+                    "pin": 15
+            }
+        }
+    ]
+}

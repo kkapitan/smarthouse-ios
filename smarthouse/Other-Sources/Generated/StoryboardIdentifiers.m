@@ -3,3 +3,11 @@
 
 #import "StoryboardIdentifiers.h"
 
+#pragma mark Main
+
+const struct CSMainStoryboardIDs CSMainStoryboardIDs = {
+    .segues = {
+        .pickSubject = @"CSPickSubjectSegue",
+    },
+
+};
