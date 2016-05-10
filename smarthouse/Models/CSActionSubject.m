@@ -19,7 +19,7 @@
 }
 
 + (NSValueTransformer *)configurationJSONTransformer {
-    return [MTLJSONAdapter transformerForModelPropertiesOfClass:[CSActionSubjectConfiguration class]];
+    return [MTLJSONAdapter dictionaryTransformerWithModelClass:[CSActionSubjectConfiguration class]];
 }
 
 + (NSValueTransformer *)imageJSONTransformer {

@@ -6,7 +6,7 @@ platform :ios, '8.0'
 
 
 # Networking
-pod 'AFNetworking'
+pod 'AFNetworking', '~> 2.5'
 pod 'FormatterKit'    # For all your string formatting needs
 pod 'Mantle'          # Github's model framework
 

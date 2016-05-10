@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		02014D491CE0EBBA00E2A1DF /* UIAlertController+Error.m in Sources */ = {isa = PBXBuildFile; fileRef = 02014D481CE0EBBA00E2A1DF /* UIAlertController+Error.m */; };
+		02014D501CE10B9100E2A1DF /* CSApiClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 02014D4B1CE10B9100E2A1DF /* CSApiClient.m */; };
+		02014D511CE10B9100E2A1DF /* CSJSONResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 02014D4D1CE10B9100E2A1DF /* CSJSONResponseSerializer.m */; };
+		02014D521CE10B9100E2A1DF /* CSRequests.m in Sources */ = {isa = PBXBuildFile; fileRef = 02014D4F1CE10B9100E2A1DF /* CSRequests.m */; };
+		02014D551CE10C3F00E2A1DF /* Configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 02014D541CE10C3F00E2A1DF /* Configuration.plist */; };
+		02014D581CE10C4900E2A1DF /* CSEnvironment.m in Sources */ = {isa = PBXBuildFile; fileRef = 02014D571CE10C4900E2A1DF /* CSEnvironment.m */; };
+		02014D5D1CE10D4E00E2A1DF /* CSTurnApplianceRequestParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 02014D5C1CE10D4E00E2A1DF /* CSTurnApplianceRequestParams.m */; };
+		02014D641CE1272A00E2A1DF /* CSAppliancesOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 02014D631CE1272A00E2A1DF /* CSAppliancesOperationManager.m */; };
 		021918031CDF49E500288736 /* CSTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 021918021CDF49E500288736 /* CSTableViewCell.m */; };
 		021918061CDF5D2B00288736 /* CSSwitchActionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 021918051CDF5D2B00288736 /* CSSwitchActionCell.m */; };
 		021918091CDF62AE00288736 /* CSTimerActionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 021918081CDF62AE00288736 /* CSTimerActionCell.m */; };
@@ -39,7 +46,6 @@
 		074C8AD7A4D403DECEE7F926 /* libPods-Specs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 46A5F5E57179B0D085AF4FF2 /* libPods-Specs.a */; };
 		BD304C8118E672EA0034105E /* CSDummySpec.m in Sources */ = {isa = PBXBuildFile; fileRef = BD304C8018E672EA0034105E /* CSDummySpec.m */; };
 		BD304C8318E77F7E0034105E /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BD304C8218E77F7E0034105E /* Settings.bundle */; };
-		BD35136619BE274A00A19841 /* CSConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = BD35136519BE274A00A19841 /* CSConstants.m */; };
 		BD6951CF18EA4B0800F2F410 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BD6951CE18EA4B0800F2F410 /* main.m */; };
 		BD934CD419C211F600B48551 /* AssetCatalogIdentifiers.m in Sources */ = {isa = PBXBuildFile; fileRef = BD934CD119C211F600B48551 /* AssetCatalogIdentifiers.m */; };
 		BD934CD519C211F600B48551 /* StoryboardIdentifiers.m in Sources */ = {isa = PBXBuildFile; fileRef = BD934CD319C211F600B48551 /* StoryboardIdentifiers.m */; };
@@ -62,6 +68,20 @@
 /* Begin PBXFileReference section */
 		02014D471CE0EBBA00E2A1DF /* UIAlertController+Error.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertController+Error.h"; sourceTree = "<group>"; };
 		02014D481CE0EBBA00E2A1DF /* UIAlertController+Error.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertController+Error.m"; sourceTree = "<group>"; };
+		02014D4A1CE10B9100E2A1DF /* CSApiClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSApiClient.h; path = API/CSApiClient.h; sourceTree = "<group>"; };
+		02014D4B1CE10B9100E2A1DF /* CSApiClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSApiClient.m; path = API/CSApiClient.m; sourceTree = "<group>"; };
+		02014D4C1CE10B9100E2A1DF /* CSJSONResponseSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSJSONResponseSerializer.h; path = API/CSJSONResponseSerializer.h; sourceTree = "<group>"; };
+		02014D4D1CE10B9100E2A1DF /* CSJSONResponseSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSJSONResponseSerializer.m; path = API/CSJSONResponseSerializer.m; sourceTree = "<group>"; };
+		02014D4E1CE10B9100E2A1DF /* CSRequests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSRequests.h; path = API/CSRequests.h; sourceTree = "<group>"; };
+		02014D4F1CE10B9100E2A1DF /* CSRequests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSRequests.m; path = API/CSRequests.m; sourceTree = "<group>"; };
+		02014D541CE10C3F00E2A1DF /* Configuration.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Configuration.plist; sourceTree = "<group>"; };
+		02014D561CE10C4900E2A1DF /* CSEnvironment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSEnvironment.h; sourceTree = "<group>"; };
+		02014D571CE10C4900E2A1DF /* CSEnvironment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSEnvironment.m; sourceTree = "<group>"; };
+		02014D5B1CE10D4E00E2A1DF /* CSTurnApplianceRequestParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTurnApplianceRequestParams.h; sourceTree = "<group>"; };
+		02014D5C1CE10D4E00E2A1DF /* CSTurnApplianceRequestParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTurnApplianceRequestParams.m; sourceTree = "<group>"; };
+		02014D5E1CE10D6300E2A1DF /* CSRequestParamsProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSRequestParamsProtocol.h; sourceTree = "<group>"; };
+		02014D621CE1272A00E2A1DF /* CSAppliancesOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSAppliancesOperationManager.h; sourceTree = "<group>"; };
+		02014D631CE1272A00E2A1DF /* CSAppliancesOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSAppliancesOperationManager.m; sourceTree = "<group>"; };
 		021918011CDF49E500288736 /* CSTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTableViewCell.h; sourceTree = "<group>"; };
 		021918021CDF49E500288736 /* CSTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTableViewCell.m; sourceTree = "<group>"; };
 		021918041CDF5D2B00288736 /* CSSwitchActionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSSwitchActionCell.h; sourceTree = "<group>"; };
@@ -131,7 +151,6 @@
 		BD304C8018E672EA0034105E /* CSDummySpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSDummySpec.m; sourceTree = "<group>"; };
 		BD304C8218E77F7E0034105E /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		BD35136419BE274A00A19841 /* CSConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSConstants.h; sourceTree = "<group>"; };
-		BD35136519BE274A00A19841 /* CSConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSConstants.m; sourceTree = "<group>"; };
 		BD49EA2C18EC842B00F73350 /* smarthouse-Environment.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "smarthouse-Environment.h"; sourceTree = "<group>"; };
 		BD4E49501B8AC7BE004C140F /* smarthouse-Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "smarthouse-Debug.xcconfig"; sourceTree = "<group>"; };
 		BD4E49511B8AC7BE004C140F /* smarthouse-Profile.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "smarthouse-Profile.xcconfig"; sourceTree = "<group>"; };
@@ -183,10 +202,57 @@
 		02014D461CE0EB9100E2A1DF /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				02014D5F1CE10F3B00E2A1DF /* Categories */,
+			);
+			name = Helpers;
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		02014D531CE10C2A00E2A1DF /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				02014D561CE10C4900E2A1DF /* CSEnvironment.h */,
+				02014D571CE10C4900E2A1DF /* CSEnvironment.m */,
+				02014D541CE10C3F00E2A1DF /* Configuration.plist */,
+			);
+			name = Environment;
+			sourceTree = "<group>";
+		};
+		02014D591CE10CEE00E2A1DF /* Serializers */ = {
+			isa = PBXGroup;
+			children = (
+				02014D4C1CE10B9100E2A1DF /* CSJSONResponseSerializer.h */,
+				02014D4D1CE10B9100E2A1DF /* CSJSONResponseSerializer.m */,
+			);
+			name = Serializers;
+			sourceTree = "<group>";
+		};
+		02014D5A1CE10CF400E2A1DF /* Params */ = {
+			isa = PBXGroup;
+			children = (
+				02014D5B1CE10D4E00E2A1DF /* CSTurnApplianceRequestParams.h */,
+				02014D5C1CE10D4E00E2A1DF /* CSTurnApplianceRequestParams.m */,
+				02014D5E1CE10D6300E2A1DF /* CSRequestParamsProtocol.h */,
+			);
+			name = Params;
+			sourceTree = "<group>";
+		};
+		02014D5F1CE10F3B00E2A1DF /* Categories */ = {
+			isa = PBXGroup;
+			children = (
 				02014D471CE0EBBA00E2A1DF /* UIAlertController+Error.h */,
 				02014D481CE0EBBA00E2A1DF /* UIAlertController+Error.m */,
 			);
-			name = Helpers;
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		02014D601CE10F4600E2A1DF /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				02014D621CE1272A00E2A1DF /* CSAppliancesOperationManager.h */,
+				02014D631CE1272A00E2A1DF /* CSAppliancesOperationManager.m */,
+			);
+			name = Operations;
 			path = Resources;
 			sourceTree = "<group>";
 		};
@@ -253,6 +319,13 @@
 		02DDA24F1CDF87200096E3DF /* API */ = {
 			isa = PBXGroup;
 			children = (
+				02014D601CE10F4600E2A1DF /* Operations */,
+				02014D5A1CE10CF400E2A1DF /* Params */,
+				02014D591CE10CEE00E2A1DF /* Serializers */,
+				02014D4A1CE10B9100E2A1DF /* CSApiClient.h */,
+				02014D4B1CE10B9100E2A1DF /* CSApiClient.m */,
+				02014D4E1CE10B9100E2A1DF /* CSRequests.h */,
+				02014D4F1CE10B9100E2A1DF /* CSRequests.m */,
 			);
 			name = API;
 			sourceTree = "<group>";
@@ -389,7 +462,6 @@
 				BD4E494F1B8AC7BE004C140F /* Configuration */,
 				BD934CCF19C211F600B48551 /* Generated */,
 				BD35136419BE274A00A19841 /* CSConstants.h */,
-				BD35136519BE274A00A19841 /* CSConstants.m */,
 				BD6951EA18EA54A800F2F410 /* smarthouse-Info.plist */,
 				BD49EA2C18EC842B00F73350 /* smarthouse-Environment.h */,
 			);
@@ -420,6 +492,7 @@
 		BDB71B2518EA46ED00579B97 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				02014D531CE10C2A00E2A1DF /* Environment */,
 				BD574AFE18EA481500EDD66F /* smarthouse-Prefix.pch */,
 				BD6951CE18EA4B0800F2F410 /* main.m */,
 				BDDB996118C3943B003EBC42 /* CSAppDelegate.h */,
@@ -594,6 +667,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDF68AF31B713C6200153C8D /* LaunchScreen.xib in Resources */,
+				02014D551CE10C3F00E2A1DF /* Configuration.plist in Resources */,
 				021918121CDF698F00288736 /* CSBeaconActionCell.xib in Resources */,
 				021918101CDF695000288736 /* CSTimerActionCell.xib in Resources */,
 				BDDB996E18C3943B003EBC42 /* Images.xcassets in Resources */,
@@ -793,8 +867,9 @@
 				02DDA26E1CDFA72E0096E3DF /* CSAddActionViewModel.m in Sources */,
 				021918061CDF5D2B00288736 /* CSSwitchActionCell.m in Sources */,
 				0219181B1CDF6C7300288736 /* CSBeaconActionCellViewModel.m in Sources */,
-				BD35136619BE274A00A19841 /* CSConstants.m in Sources */,
+				02014D521CE10B9100E2A1DF /* CSRequests.m in Sources */,
 				02DDA23C1CDF6D370096E3DF /* CSAction.m in Sources */,
+				02014D501CE10B9100E2A1DF /* CSApiClient.m in Sources */,
 				02255EC11CDFD2EE002AED8C /* CSActionTriggerTypeModel.m in Sources */,
 				021918151CDF6C5200288736 /* CSSwitchActionCellViewModel.m in Sources */,
 				BDDB996318C3943B003EBC42 /* CSAppDelegate.m in Sources */,
@@ -804,13 +879,17 @@
 				021918031CDF49E500288736 /* CSTableViewCell.m in Sources */,
 				02DDA24B1CDF86E00096E3DF /* CSBootstrap.m in Sources */,
 				BD934CD419C211F600B48551 /* AssetCatalogIdentifiers.m in Sources */,
+				02014D5D1CE10D4E00E2A1DF /* CSTurnApplianceRequestParams.m in Sources */,
 				0219180C1CDF639A00288736 /* CSBeaconActionCell.m in Sources */,
 				02DDA25D1CDF91C10096E3DF /* CSPickSubjectViewController.m in Sources */,
+				02014D581CE10C4900E2A1DF /* CSEnvironment.m in Sources */,
+				02014D511CE10B9100E2A1DF /* CSJSONResponseSerializer.m in Sources */,
 				02014D491CE0EBBA00E2A1DF /* UIAlertController+Error.m in Sources */,
 				02DDA26A1CDF981E0096E3DF /* CSPickSubjectCellViewModel.m in Sources */,
 				02DDA2651CDF94120096E3DF /* CSPickSubjectCell.m in Sources */,
 				BD934CD519C211F600B48551 /* StoryboardIdentifiers.m in Sources */,
 				BD6951CF18EA4B0800F2F410 /* main.m in Sources */,
+				02014D641CE1272A00E2A1DF /* CSAppliancesOperationManager.m in Sources */,
 				02DDA2611CDF92EB0096E3DF /* CSPickSubjectViewModel.m in Sources */,
 				02DDA23F1CDF6DA70096E3DF /* CSActionTrigger.m in Sources */,
 				02DDA2591CDF915A0096E3DF /* CSAddActionViewController.m in Sources */,

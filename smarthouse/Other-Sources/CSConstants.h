@@ -8,9 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-// Use this file to declare constants, especially those that change
-// between staging and production.
+static NSString *const kCSEnvironmentApiBaseURLKey = @"CSApiBaseURL";
 
-// For example:
-//extern NSString * const CSAPIKey;
-//extern NSURL * const CSAPIRoot;
+static NSString *const kCSErrorDomain = @"com.cappsoft.gamestore.error-domain";

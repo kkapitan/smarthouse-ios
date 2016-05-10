@@ -10,18 +10,22 @@
 
 @implementation CSAction
 
-- (instancetype)initWithSubject:(CSActionSubject *)subject trigger:(CSActionTrigger *)trigger actionType:(CSActionType)actionType {
+- (instancetype)initWithSubject:(CSActionSubject *)subject trigger:(CSActionTrigger *)trigger actionState:(CSActionState)state {
     self = [super init];
     if (self) {
         _subject = subject;
         _trigger = trigger;
-        _actionType = actionType;
+        _actionState = state;
     }
     return self;
 }
 
 - (instancetype)initWithSubject:(CSActionSubject *)subject trigger:(CSActionTrigger *)trigger {
-    return [self initWithSubject:subject trigger:trigger actionType:CSActionTypeUserDriven];
+    return [self initWithSubject:subject trigger:trigger actionState:CSActionStateOff];
+}
+
+- (void)changeActionState:(CSActionState)state {
+    _actionState = state;
 }
 
 @end

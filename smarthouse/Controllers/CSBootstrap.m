@@ -31,8 +31,8 @@
     self = [super init];
     if (self) {
         _actions = @[];
-        
-        _subjects = [MTLJSONAdapter modelsOfClass:CSActionSubject.class fromJSONArray:json[@"action_subjects"] error:nil];
+        NSError *error = [NSError new];
+        _subjects = [MTLJSONAdapter modelsOfClass:CSActionSubject.class fromJSONArray:json[@"action_subjects"] error:&error];
         
         [self initTriggerTypes];
     }
