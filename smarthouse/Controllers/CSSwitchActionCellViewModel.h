@@ -16,8 +16,8 @@
 @property (nonatomic, strong, readonly) NSString *subjectName;
 @property (nonatomic, strong, readonly) UIImage *subjectImage;
 
-- (instancetype)initWithAction:(CSAction *)action;
+@property (nonatomic, assign, readonly) BOOL isSwitched;
 
-- (void)switchAction:(BOOL)switchedOn;
+- (instancetype)initWithAction:(CSAction *)action;
 
 @end

@@ -26,6 +26,7 @@
 		021918181CDF6C6400288736 /* CSTimerActionCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 021918171CDF6C6400288736 /* CSTimerActionCellViewModel.m */; };
 		0219181B1CDF6C7300288736 /* CSBeaconActionCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0219181A1CDF6C7300288736 /* CSBeaconActionCellViewModel.m */; };
 		02255EC11CDFD2EE002AED8C /* CSActionTriggerTypeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 02255EC01CDFD2EE002AED8C /* CSActionTriggerTypeModel.m */; };
+		024430961CE2563A00CB48AA /* UITableViewController+IndexPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 024430951CE2563A00CB48AA /* UITableViewController+IndexPath.m */; };
 		02DDA23C1CDF6D370096E3DF /* CSAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DDA23B1CDF6D370096E3DF /* CSAction.m */; };
 		02DDA23F1CDF6DA70096E3DF /* CSActionTrigger.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DDA23E1CDF6DA70096E3DF /* CSActionTrigger.m */; };
 		02DDA2421CDF6DB20096E3DF /* CSActionSubject.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DDA2411CDF6DB20096E3DF /* CSActionSubject.m */; };
@@ -101,6 +102,8 @@
 		0219181A1CDF6C7300288736 /* CSBeaconActionCellViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSBeaconActionCellViewModel.m; sourceTree = "<group>"; };
 		02255EBF1CDFD2EE002AED8C /* CSActionTriggerTypeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSActionTriggerTypeModel.h; sourceTree = "<group>"; };
 		02255EC01CDFD2EE002AED8C /* CSActionTriggerTypeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSActionTriggerTypeModel.m; sourceTree = "<group>"; };
+		024430941CE2563A00CB48AA /* UITableViewController+IndexPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewController+IndexPath.h"; sourceTree = "<group>"; };
+		024430951CE2563A00CB48AA /* UITableViewController+IndexPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewController+IndexPath.m"; sourceTree = "<group>"; };
 		02DDA23A1CDF6D370096E3DF /* CSAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSAction.h; sourceTree = "<group>"; };
 		02DDA23B1CDF6D370096E3DF /* CSAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSAction.m; sourceTree = "<group>"; };
 		02DDA23D1CDF6DA70096E3DF /* CSActionTrigger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSActionTrigger.h; sourceTree = "<group>"; };
@@ -242,6 +245,8 @@
 			children = (
 				02014D471CE0EBBA00E2A1DF /* UIAlertController+Error.h */,
 				02014D481CE0EBBA00E2A1DF /* UIAlertController+Error.m */,
+				024430941CE2563A00CB48AA /* UITableViewController+IndexPath.h */,
+				024430951CE2563A00CB48AA /* UITableViewController+IndexPath.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -866,6 +871,7 @@
 				02DDA2421CDF6DB20096E3DF /* CSActionSubject.m in Sources */,
 				02DDA26E1CDFA72E0096E3DF /* CSAddActionViewModel.m in Sources */,
 				021918061CDF5D2B00288736 /* CSSwitchActionCell.m in Sources */,
+				024430961CE2563A00CB48AA /* UITableViewController+IndexPath.m in Sources */,
 				0219181B1CDF6C7300288736 /* CSBeaconActionCellViewModel.m in Sources */,
 				02014D521CE10B9100E2A1DF /* CSRequests.m in Sources */,
 				02DDA23C1CDF6D370096E3DF /* CSAction.m in Sources */,

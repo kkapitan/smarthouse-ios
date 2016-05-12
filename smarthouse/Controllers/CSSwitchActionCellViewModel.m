@@ -8,16 +8,6 @@
 
 #import "CSSwitchActionCellViewModel.h"
 
-//Operations
-#import "CSAppliancesOperationManager.h"
-
-@interface CSSwitchActionCellViewModel ()
-
-@property (nonatomic, strong) CSAction *action;
-@property (nonatomic, strong) CSAppliancesOperationManager *manager;
-
-@end
-
 @implementation CSSwitchActionCellViewModel
 
 - (instancetype)initWithAction:(CSAction *)action {
@@ -26,19 +16,9 @@
         _subjectName = action.subject.name;
         _subjectImage = action.subject.image;
         
-        _action = action;
-        _manager = [CSAppliancesOperationManager new];
+        _isSwitched = action.actionState == CSActionStateOn;
     }
     return self;
-}
-
-- (void)switchAction:(BOOL)switchedOn {
-    [_action changeActionState:switchedOn ? CSActionStateOn : CSActionStateOff];
-    
-    CSTurnApplianceRequestParams *params = [[CSTurnApplianceRequestParams alloc] initWithAction:_action];
-    [_manager turnApplianceWithParams:params completion:^(BOOL success, NSError *error) {
-        NSLog(@"%@",error);
-    }];
 }
 
 @end

@@ -12,6 +12,8 @@
 
 @interface CSSwitchActionCell : CSTableViewCell
 
+@property (weak, nonatomic) IBOutlet UISwitch *actionSwitch;
+
 - (void)populateWithViewModel:(CSSwitchActionCellViewModel *)viewModel;
 
 @end

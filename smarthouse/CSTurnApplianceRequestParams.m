@@ -13,7 +13,6 @@
 - (instancetype)initWithAction:(CSAction *)action {
     self = [super init];
     if (self) {
-        
         _pin = action.subject.configuration.pin;
         _state = action.actionState;
     }

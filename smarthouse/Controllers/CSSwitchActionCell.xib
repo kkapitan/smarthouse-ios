@@ -11,14 +11,11 @@
             <rect key="frame" x="0.0" y="0.0" width="351" height="76"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="rAs-zc-pxK" id="Ixo-O0-tP1">
-                <rect key="frame" x="0.0" y="0.0" width="351" height="76"/>
+                <rect key="frame" x="0.0" y="0.0" width="351" height="75"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="uFy-Me-zLF">
                         <rect key="frame" x="290" y="22" width="51" height="31"/>
-                        <connections>
-                            <action selector="switchValueChanged:" destination="rAs-zc-pxK" eventType="valueChanged" id="fVX-He-Tx5"/>
-                        </connections>
                     </switch>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XH8-Nf-Yg2">
                         <rect key="frame" x="92" y="27" width="170" height="21"/>
