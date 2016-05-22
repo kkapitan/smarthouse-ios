@@ -14,7 +14,7 @@
 @interface CSTimerActionCellViewModel : NSObject
 
 @property (nonatomic, strong, readonly) NSString *subjectName;
-@property (nonatomic, strong, readonly) UIImage *subjectImage;
+@property (nonatomic, strong, readonly) NSURL *subjectImageURL;
 
 @property (nonatomic, strong, readonly) NSString *timeRemainingString;
 

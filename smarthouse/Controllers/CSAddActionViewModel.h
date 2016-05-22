@@ -21,7 +21,7 @@ typedef void(^CSAddActionSaveCompletionBlock)(BOOL success, CSAction *action, UI
 @property (nonatomic, strong) CSActionSubject *subject;
 
 - (NSString *)subjectName;
-- (UIImage *)subjectImage;
+- (NSURL *)subjectImageURL;
 
 - (void)saveActionWithCompletion:(CSAddActionSaveCompletionBlock)block;
 

@@ -26,13 +26,26 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    NSArray *subjects = [[CSBootstrap sharedInstance] subjects];
-    _viewModel = [[CSPickSubjectViewModel alloc] initWithActionSubjects:subjects];
-    
     [self.tableView registerNib:[CSPickSubjectCell nib]
          forCellReuseIdentifier:[CSPickSubjectCell reuseIdentifier]];
     
     self.tableView.rowHeight = [CSPickSubjectCell height];
+    
+    [self setupViewModel];
+}
+
+- (void)setupViewModel {
+    _viewModel = [CSPickSubjectViewModel new];
+    
+    __weak typeof (self) wSelf = self;
+    [_viewModel fetchActionSubjectsWithCompletion:^(NSArray<CSActionSubject *> *subjects, UIAlertController *alert) {
+        if (alert) {
+            [wSelf presentViewController:alert animated:YES completion:nil];
+            return ;
+        }
+        
+        [wSelf.tableView reloadData];
+    }];
 }
 
 #pragma mark - 

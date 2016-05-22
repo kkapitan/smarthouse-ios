@@ -8,7 +8,11 @@
 
 #import "CSTimerActionCell.h"
 
+//Category
+#import "UIImageView+AFNetworking.h"
+
 @interface CSTimerActionCell ()
+
 @property (weak, nonatomic) IBOutlet UIImageView *subjectImageView;
 @property (weak, nonatomic) IBOutlet UILabel *subjectNameLabel;
 
@@ -19,9 +23,9 @@
 @implementation CSTimerActionCell
 
 - (void)populateWithViewModel:(CSTimerActionCellViewModel *)viewModel {
-    _subjectImageView.image = viewModel.subjectImage;
-    _subjectNameLabel.text = viewModel.subjectName;
+    [_subjectImageView setImageWithURL:viewModel.subjectImageURL placeholderImage:nil];
     
+    _subjectNameLabel.text = viewModel.subjectName;
     _nextTimeLabel.text = viewModel.timeRemainingString;
 }
 

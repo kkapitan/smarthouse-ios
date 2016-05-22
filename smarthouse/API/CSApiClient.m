@@ -47,7 +47,7 @@
     // update `X-AUTH-TOKEN` block
     void (^authTokenBlock)(void) = ^{
         // get auth token
-        NSString *token = [[CSAccount account] authenticationToken:nil];
+        NSString *token = @"Skx1Z31rvWQaDuHBkBMG";//[[CSAccount account] authenticationToken:nil];
         
         // add HTTP header
         [jsonSerializer setValue:token forHTTPHeaderField:@"Authorization"];

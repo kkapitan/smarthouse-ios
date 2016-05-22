@@ -8,6 +8,9 @@
 
 #import "CSSwitchActionCell.h"
 
+//Category
+#import "UIImageView+AFNetworking.h"
+
 @interface CSSwitchActionCell ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *subjectImageView;
@@ -18,9 +21,9 @@
 @implementation CSSwitchActionCell
 
 - (void)populateWithViewModel:(CSSwitchActionCellViewModel *)viewModel {
-    _subjectImageView.image = viewModel.subjectImage;
-    _subjectNameLabel.text = viewModel.subjectName;
+    [_subjectImageView setImageWithURL:viewModel.subjectImageURL placeholderImage:nil];
     
+    _subjectNameLabel.text = viewModel.subjectName;
     _actionSwitch.on = viewModel.isSwitched;
 }
 

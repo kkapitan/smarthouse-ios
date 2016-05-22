@@ -14,7 +14,7 @@
     self = [super init];
     if (self) {
         _subjectName = action.subject.name;
-        _subjectImage = action.subject.image;
+        _subjectImageURL = action.subject.imageURL;
         
         _beaconInfoString = @"Not yet available";
     }

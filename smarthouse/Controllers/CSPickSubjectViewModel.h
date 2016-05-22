@@ -14,6 +14,14 @@
 //View Model
 #import "CSPickSubjectCellViewModel.h"
 
+//Service
+#import "CSActionSubjectsService.h"
+
+//Category
+#import "UIAlertController+Error.h"
+
+typedef void(^CSPickSubjectViewModelFetchSubjectsCompletion)(NSArray <CSActionSubject *> *subjects, UIAlertController *alert);
+
 @interface CSPickSubjectViewModel : NSObject
 
 - (NSInteger)numberOfSubjects;
@@ -21,6 +29,6 @@
 - (CSActionSubject *)actionSubjectForIndexPath:(NSIndexPath *)indexPath;
 - (CSPickSubjectCellViewModel *)cellViewModelForIndexPath:(NSIndexPath *)indexPath;
 
-- (instancetype)initWithActionSubjects:(NSArray <CSActionSubject *> *)subjects;
+- (void)fetchActionSubjectsWithCompletion:(CSPickSubjectViewModelFetchSubjectsCompletion)block;
 
 @end

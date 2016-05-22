@@ -12,20 +12,14 @@
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
     return @{
+             @"uid" : @"id",
              @"name" : @"name",
-             @"image" : @"image_name",
-             @"configuration" : @"configuration"
+             @"imageURL" : @"image_url"
             };
 }
 
-+ (NSValueTransformer *)configurationJSONTransformer {
-    return [MTLJSONAdapter dictionaryTransformerWithModelClass:[CSActionSubjectConfiguration class]];
-}
-
-+ (NSValueTransformer *)imageJSONTransformer {
-    return [MTLValueTransformer transformerUsingForwardBlock:^UIImage*(NSString *imageName, BOOL *success, NSError *__autoreleasing *error) {
-        return [UIImage imageNamed:imageName];
-    }];
++ (NSValueTransformer *)imageURLJSONTransformer {
+    return [MTLValueTransformer valueTransformerForName:MTLURLValueTransformerName];
 }
 
 

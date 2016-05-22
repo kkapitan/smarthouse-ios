@@ -8,6 +8,9 @@
 
 #import "CSPickSubjectCell.h"
 
+//Category
+#import "UIImageView+AFNetworking.h"
+
 @interface CSPickSubjectCell ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *subjectImageView;
@@ -22,7 +25,8 @@
 }
 
 - (void)populateWithViewModel:(CSPickSubjectCellViewModel *)viewModel {
-    self.subjectImageView.image = viewModel.subjectImage;
+    [_subjectImageView setImageWithURL:viewModel.subjectImageURL placeholderImage:nil];
+    
     self.subjectNameLabel.text = viewModel.subjectName;
 }
 

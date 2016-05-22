@@ -20,6 +20,9 @@
 //Bootstrap
 #import "CSBootstrap.h"
 
+//Category
+#import "UIImageView+AFNetworking.h"
+
 @interface CSAddActionViewController () <CSPickSubjectDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *subjectNameLabel;
@@ -72,10 +75,9 @@
 #pragma mark - Private
 
 - (void)reloadData {
+    [_subjectImageView setImageWithURL:self.viewModel.subjectImageURL placeholderImage:nil];
     
     _subjectNameLabel.text = [self.viewModel subjectName];
-    _subjectImageView.image = [self.viewModel subjectImage];
-    
     _triggerTypeTextField.text = [self.viewModel.triggerTypeModel itemTitle];
 }
 

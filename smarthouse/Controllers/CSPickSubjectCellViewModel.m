@@ -14,7 +14,7 @@
     self = [super init];
     if (self) {
         _subjectName = subject.name;
-        _subjectImage = subject.image;
+        _subjectImageURL = subject.imageURL;
     }
     return self;
 };

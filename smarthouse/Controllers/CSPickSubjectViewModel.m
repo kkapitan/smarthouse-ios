@@ -14,14 +14,6 @@
 
 @implementation CSPickSubjectViewModel
 
-- (instancetype)initWithActionSubjects:(NSArray<CSActionSubject *> *)subjects {
-    self = [super init];
-    if (self) {
-        _subjects = subjects;
-    }
-    return self;
-}
-
 - (NSInteger)numberOfSubjects {
     return (NSInteger)_subjects.count;
 }
@@ -34,6 +26,23 @@
 
 - (CSActionSubject *)actionSubjectForIndexPath:(NSIndexPath *)indexPath {
     return _subjects[(NSUInteger)indexPath.row];
+}
+
+- (void)fetchActionSubjectsWithCompletion:(CSPickSubjectViewModelFetchSubjectsCompletion)block {
+    
+    __weak typeof (self) wSelf = self;
+    [[CSActionSubjectsService new] fetchActionSubjectsWithCompletion:^(BOOL success, NSArray<CSActionSubject *> *subjects, NSError *error) {
+        if (!success && error && block) {
+            block(nil, [UIAlertController alertWithErrorMessage:@"Something went wrong. Please try again."]);
+            
+            return;
+        }
+        
+        wSelf.subjects = subjects;
+        if (block) {
+            block([wSelf.subjects copy], nil);
+        }
+    }];
 }
 
 @end

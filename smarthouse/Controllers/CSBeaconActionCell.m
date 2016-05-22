@@ -8,6 +8,9 @@
 
 #import "CSBeaconActionCell.h"
 
+//Category
+#import "UIImageView+AFNetworking.h"
+
 @interface CSBeaconActionCell ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *subjectImageView;
@@ -20,9 +23,9 @@
 @implementation CSBeaconActionCell
 
 - (void)populateWithViewModel:(CSBeaconActionCellViewModel *)viewModel {
-    _subjectImageView.image = viewModel.subjectImage;
-    _subjectNameLabel.text = viewModel.subjectName;
+    [_subjectImageView setImageWithURL:viewModel.subjectImageURL placeholderImage:nil];
     
+    _subjectNameLabel.text = viewModel.subjectName;
     _beaconInfoLabel.text = viewModel.beaconInfoString;
 }
 

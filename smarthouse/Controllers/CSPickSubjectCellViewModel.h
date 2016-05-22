@@ -14,7 +14,7 @@
 @interface CSPickSubjectCellViewModel : NSObject
 
 @property (nonatomic, strong, readonly) NSString *subjectName;
-@property (nonatomic, strong, readonly) UIImage *subjectImage;
+@property (nonatomic, strong, readonly) NSURL *subjectImageURL;
 
 - (instancetype)initWitActionSubject:(CSActionSubject *)subject;
 

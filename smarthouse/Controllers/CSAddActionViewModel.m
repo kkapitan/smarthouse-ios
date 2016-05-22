@@ -17,8 +17,8 @@
     return _subject ? _subject.name : @"Tap to choose subject";
 }
 
-- (UIImage *)subjectImage {
-    return _subject.image;
+- (NSURL *)subjectImageURL {
+    return _subject.imageURL;
 }
 
 - (void)saveActionWithCompletion:(CSAddActionSaveCompletionBlock)block {

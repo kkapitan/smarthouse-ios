@@ -41,7 +41,6 @@
 		02DDA23C1CDF6D370096E3DF /* CSAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DDA23B1CDF6D370096E3DF /* CSAction.m */; };
 		02DDA23F1CDF6DA70096E3DF /* CSActionTrigger.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DDA23E1CDF6DA70096E3DF /* CSActionTrigger.m */; };
 		02DDA2421CDF6DB20096E3DF /* CSActionSubject.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DDA2411CDF6DB20096E3DF /* CSActionSubject.m */; };
-		02DDA2451CDF6DC00096E3DF /* CSActionSubjectConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DDA2441CDF6DC00096E3DF /* CSActionSubjectConfiguration.m */; };
 		02DDA24B1CDF86E00096E3DF /* CSBootstrap.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DDA24A1CDF86E00096E3DF /* CSBootstrap.m */; };
 		02DDA24E1CDF87050096E3DF /* bootstrap.json in Resources */ = {isa = PBXBuildFile; fileRef = 02DDA24D1CDF87050096E3DF /* bootstrap.json */; };
 		02DDA2531CDF90D60096E3DF /* CSSmartHouseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DDA2521CDF90D60096E3DF /* CSSmartHouseTableViewController.m */; };
@@ -142,8 +141,6 @@
 		02DDA23E1CDF6DA70096E3DF /* CSActionTrigger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSActionTrigger.m; sourceTree = "<group>"; };
 		02DDA2401CDF6DB20096E3DF /* CSActionSubject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSActionSubject.h; sourceTree = "<group>"; };
 		02DDA2411CDF6DB20096E3DF /* CSActionSubject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSActionSubject.m; sourceTree = "<group>"; };
-		02DDA2431CDF6DC00096E3DF /* CSActionSubjectConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSActionSubjectConfiguration.h; sourceTree = "<group>"; };
-		02DDA2441CDF6DC00096E3DF /* CSActionSubjectConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSActionSubjectConfiguration.m; sourceTree = "<group>"; };
 		02DDA2491CDF86E00096E3DF /* CSBootstrap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSBootstrap.h; sourceTree = "<group>"; };
 		02DDA24A1CDF86E00096E3DF /* CSBootstrap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSBootstrap.m; sourceTree = "<group>"; };
 		02DDA24D1CDF87050096E3DF /* bootstrap.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bootstrap.json; sourceTree = "<group>"; };
@@ -493,8 +490,6 @@
 				02DDA23E1CDF6DA70096E3DF /* CSActionTrigger.m */,
 				02DDA2401CDF6DB20096E3DF /* CSActionSubject.h */,
 				02DDA2411CDF6DB20096E3DF /* CSActionSubject.m */,
-				02DDA2431CDF6DC00096E3DF /* CSActionSubjectConfiguration.h */,
-				02DDA2441CDF6DC00096E3DF /* CSActionSubjectConfiguration.m */,
 				02B881A91CF1C9860072D3A4 /* CSUploadAction.h */,
 				02B881AA1CF1C9860072D3A4 /* CSUploadAction.m */,
 				02B881AC1CF1D2AA0072D3A4 /* CSUser.h */,
@@ -852,7 +847,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				02DDA2531CDF90D60096E3DF /* CSSmartHouseTableViewController.m in Sources */,
-				02DDA2451CDF6DC00096E3DF /* CSActionSubjectConfiguration.m in Sources */,
 				02B8819C1CF1C5CA0072D3A4 /* CSActionSubjectsService.m in Sources */,
 				02DDA2421CDF6DB20096E3DF /* CSActionSubject.m in Sources */,
 				02DDA26E1CDFA72E0096E3DF /* CSAddActionViewModel.m in Sources */,
