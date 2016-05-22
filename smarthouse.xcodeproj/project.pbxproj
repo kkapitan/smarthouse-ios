@@ -37,6 +37,7 @@
 		02B881B41CF1D43D0072D3A4 /* CSActionSubjectsResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 02B881B31CF1D43D0072D3A4 /* CSActionSubjectsResponseSerializer.m */; };
 		02B881B71CF1D4550072D3A4 /* CSActionResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 02B881B61CF1D4550072D3A4 /* CSActionResponseSerializer.m */; };
 		02B881BA1CF1D4600072D3A4 /* CSActionsResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 02B881B91CF1D4600072D3A4 /* CSActionsResponseSerializer.m */; };
+		02B881BD1CF1F7170072D3A4 /* CSAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 02B881BC1CF1F7170072D3A4 /* CSAccount.m */; };
 		02DDA23C1CDF6D370096E3DF /* CSAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DDA23B1CDF6D370096E3DF /* CSAction.m */; };
 		02DDA23F1CDF6DA70096E3DF /* CSActionTrigger.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DDA23E1CDF6DA70096E3DF /* CSActionTrigger.m */; };
 		02DDA2421CDF6DB20096E3DF /* CSActionSubject.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DDA2411CDF6DB20096E3DF /* CSActionSubject.m */; };
@@ -53,8 +54,7 @@
 		02DDA26A1CDF981E0096E3DF /* CSPickSubjectCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DDA2691CDF981E0096E3DF /* CSPickSubjectCellViewModel.m */; };
 		02DDA26E1CDFA72E0096E3DF /* CSAddActionViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DDA26D1CDFA72E0096E3DF /* CSAddActionViewModel.m */; };
 		02DDA2751CDFA7AA0096E3DF /* CSPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DDA2741CDFA7AA0096E3DF /* CSPickerView.m */; };
-		036A61EAF6146EA59BD29634 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A06B515E067379B8477A8245 /* libPods.a */; };
-		074C8AD7A4D403DECEE7F926 /* libPods-Specs.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 46A5F5E57179B0D085AF4FF2 /* libPods-Specs.a */; };
+		B797686FE309D9D4DBC57095 /* libPods-smarthouse.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B1E15C8B28FBA5DA39332054 /* libPods-smarthouse.a */; };
 		BD304C8118E672EA0034105E /* CSDummySpec.m in Sources */ = {isa = PBXBuildFile; fileRef = BD304C8018E672EA0034105E /* CSDummySpec.m */; };
 		BD304C8318E77F7E0034105E /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BD304C8218E77F7E0034105E /* Settings.bundle */; };
 		BD6951CF18EA4B0800F2F410 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BD6951CE18EA4B0800F2F410 /* main.m */; };
@@ -134,6 +134,8 @@
 		02B881B61CF1D4550072D3A4 /* CSActionResponseSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSActionResponseSerializer.m; sourceTree = "<group>"; };
 		02B881B81CF1D4600072D3A4 /* CSActionsResponseSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSActionsResponseSerializer.h; sourceTree = "<group>"; };
 		02B881B91CF1D4600072D3A4 /* CSActionsResponseSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSActionsResponseSerializer.m; sourceTree = "<group>"; };
+		02B881BB1CF1F7170072D3A4 /* CSAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSAccount.h; sourceTree = "<group>"; };
+		02B881BC1CF1F7170072D3A4 /* CSAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSAccount.m; sourceTree = "<group>"; };
 		02DDA23A1CDF6D370096E3DF /* CSAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSAction.h; sourceTree = "<group>"; };
 		02DDA23B1CDF6D370096E3DF /* CSAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSAction.m; sourceTree = "<group>"; };
 		02DDA23D1CDF6DA70096E3DF /* CSActionTrigger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSActionTrigger.h; sourceTree = "<group>"; };
@@ -164,23 +166,12 @@
 		02DDA26D1CDFA72E0096E3DF /* CSAddActionViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSAddActionViewModel.m; sourceTree = "<group>"; };
 		02DDA2731CDFA7AA0096E3DF /* CSPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSPickerView.h; sourceTree = "<group>"; };
 		02DDA2741CDFA7AA0096E3DF /* CSPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSPickerView.m; sourceTree = "<group>"; };
-		12CC9EC171F3BB2114E66841 /* Pods-Specs.test_staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs.test_staging.xcconfig"; path = "Pods/Target Support Files/Pods-Specs/Pods-Specs.test_staging.xcconfig"; sourceTree = "<group>"; };
-		2CB569C4CA54BBB2A8A3438F /* Pods.adhoc_production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.adhoc_production.xcconfig; path = "Pods/Target Support Files/Pods/Pods.adhoc_production.xcconfig"; sourceTree = "<group>"; };
-		326C1F0145B5BE66CBCC67F1 /* Pods-Specs.test_production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs.test_production.xcconfig"; path = "Pods/Target Support Files/Pods-Specs/Pods-Specs.test_production.xcconfig"; sourceTree = "<group>"; };
-		3EA32E3BEF65BE84130D7190 /* Pods.profile_production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.profile_production.xcconfig; path = "Pods/Target Support Files/Pods/Pods.profile_production.xcconfig"; sourceTree = "<group>"; };
-		40BA951C2C05A8E480C4A89C /* Pods-Specs.distribution.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs.distribution.xcconfig"; path = "Pods/Target Support Files/Pods-Specs/Pods-Specs.distribution.xcconfig"; sourceTree = "<group>"; };
-		46A5F5E57179B0D085AF4FF2 /* libPods-Specs.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Specs.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4D26DC1D97A4FF5AB8CC483F /* Pods-Specs.profile_production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs.profile_production.xcconfig"; path = "Pods/Target Support Files/Pods-Specs/Pods-Specs.profile_production.xcconfig"; sourceTree = "<group>"; };
-		570039B4FD45DBAF5A8E969C /* Pods.test_production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.test_production.xcconfig; path = "Pods/Target Support Files/Pods/Pods.test_production.xcconfig"; sourceTree = "<group>"; };
-		5AF873AF0F585B45C1E0F5B4 /* Pods.adhoc_staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.adhoc_staging.xcconfig; path = "Pods/Target Support Files/Pods/Pods.adhoc_staging.xcconfig"; sourceTree = "<group>"; };
-		62820E5E5DCE1B7643DDFCAC /* Pods.debug_production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug_production.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug_production.xcconfig"; sourceTree = "<group>"; };
-		6770FFEDF6A5EE7451E4DEDF /* Pods-Specs.adhoc_staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs.adhoc_staging.xcconfig"; path = "Pods/Target Support Files/Pods-Specs/Pods-Specs.adhoc_staging.xcconfig"; sourceTree = "<group>"; };
-		6AE8431A4C79A1C8F2737EEB /* Pods.profile_staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.profile_staging.xcconfig; path = "Pods/Target Support Files/Pods/Pods.profile_staging.xcconfig"; sourceTree = "<group>"; };
-		8B825A2DB6F2180BF8C6BAE6 /* Pods.distribution.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.distribution.xcconfig; path = "Pods/Target Support Files/Pods/Pods.distribution.xcconfig"; sourceTree = "<group>"; };
-		973497EBFED9FC87626B9E25 /* Pods.debug_staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug_staging.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug_staging.xcconfig"; sourceTree = "<group>"; };
-		A06B515E067379B8477A8245 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		B9A22FEAECDB5B172A6420E4 /* Pods.test_staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.test_staging.xcconfig; path = "Pods/Target Support Files/Pods/Pods.test_staging.xcconfig"; sourceTree = "<group>"; };
-		B9B99CA30A14373A9E910099 /* Pods-Specs.debug_staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs.debug_staging.xcconfig"; path = "Pods/Target Support Files/Pods-Specs/Pods-Specs.debug_staging.xcconfig"; sourceTree = "<group>"; };
+		5BA9BAD11DA1A0F41FC29EA9 /* Pods-smarthouse.distribution.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-smarthouse.distribution.xcconfig"; path = "Pods/Target Support Files/Pods-smarthouse/Pods-smarthouse.distribution.xcconfig"; sourceTree = "<group>"; };
+		97AB0E77884008C5BC108E15 /* Pods-smarthouse.debug_staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-smarthouse.debug_staging.xcconfig"; path = "Pods/Target Support Files/Pods-smarthouse/Pods-smarthouse.debug_staging.xcconfig"; sourceTree = "<group>"; };
+		A1F1D738F1A9B22BEC5A00E8 /* Pods-smarthouse.debug_production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-smarthouse.debug_production.xcconfig"; path = "Pods/Target Support Files/Pods-smarthouse/Pods-smarthouse.debug_production.xcconfig"; sourceTree = "<group>"; };
+		ACCEA3EC7B1F6CDF5518D995 /* Pods-smarthouse.test_staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-smarthouse.test_staging.xcconfig"; path = "Pods/Target Support Files/Pods-smarthouse/Pods-smarthouse.test_staging.xcconfig"; sourceTree = "<group>"; };
+		B1E15C8B28FBA5DA39332054 /* libPods-smarthouse.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-smarthouse.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B71B0541CCD8C25ACBC13BE1 /* Pods-smarthouse.test_production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-smarthouse.test_production.xcconfig"; path = "Pods/Target Support Files/Pods-smarthouse/Pods-smarthouse.test_production.xcconfig"; sourceTree = "<group>"; };
 		BD304C8018E672EA0034105E /* CSDummySpec.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSDummySpec.m; sourceTree = "<group>"; };
 		BD304C8218E77F7E0034105E /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		BD35136419BE274A00A19841 /* CSConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSConstants.h; sourceTree = "<group>"; };
@@ -207,9 +198,10 @@
 		BDDB997C18C3943B003EBC42 /* Specs-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Specs-Info.plist"; sourceTree = "<group>"; };
 		BDF68AF01B713C3400153C8D /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = Controllers/Main.storyboard; sourceTree = "<group>"; };
 		BDF68AF21B713C6200153C8D /* LaunchScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LaunchScreen.xib; sourceTree = "<group>"; };
-		D5905E5F82BFFA7584BAD4C5 /* Pods-Specs.debug_production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs.debug_production.xcconfig"; path = "Pods/Target Support Files/Pods-Specs/Pods-Specs.debug_production.xcconfig"; sourceTree = "<group>"; };
-		D803149862748E9E696037FB /* Pods-Specs.adhoc_production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs.adhoc_production.xcconfig"; path = "Pods/Target Support Files/Pods-Specs/Pods-Specs.adhoc_production.xcconfig"; sourceTree = "<group>"; };
-		D854A3C5B42BB78F9F14DC65 /* Pods-Specs.profile_staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Specs.profile_staging.xcconfig"; path = "Pods/Target Support Files/Pods-Specs/Pods-Specs.profile_staging.xcconfig"; sourceTree = "<group>"; };
+		C4154917AF1F76C8E6B044CC /* Pods-smarthouse.adhoc_production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-smarthouse.adhoc_production.xcconfig"; path = "Pods/Target Support Files/Pods-smarthouse/Pods-smarthouse.adhoc_production.xcconfig"; sourceTree = "<group>"; };
+		D03EB3C12D30F0605AA4A9A9 /* Pods-smarthouse.adhoc_staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-smarthouse.adhoc_staging.xcconfig"; path = "Pods/Target Support Files/Pods-smarthouse/Pods-smarthouse.adhoc_staging.xcconfig"; sourceTree = "<group>"; };
+		DE2C00015F1F8DAB64DC463E /* Pods-smarthouse.profile_production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-smarthouse.profile_production.xcconfig"; path = "Pods/Target Support Files/Pods-smarthouse/Pods-smarthouse.profile_production.xcconfig"; sourceTree = "<group>"; };
+		FFEBC06F98242B5A87FDC4D9 /* Pods-smarthouse.profile_staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-smarthouse.profile_staging.xcconfig"; path = "Pods/Target Support Files/Pods-smarthouse/Pods-smarthouse.profile_staging.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -217,7 +209,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				036A61EAF6146EA59BD29634 /* libPods.a in Frameworks */,
+				B797686FE309D9D4DBC57095 /* libPods-smarthouse.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,7 +217,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				074C8AD7A4D403DECEE7F926 /* libPods-Specs.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -236,6 +227,8 @@
 			isa = PBXGroup;
 			children = (
 				02014D5F1CE10F3B00E2A1DF /* Categories */,
+				02B881BB1CF1F7170072D3A4 /* CSAccount.h */,
+				02B881BC1CF1F7170072D3A4 /* CSAccount.m */,
 			);
 			name = Helpers;
 			path = Resources;
@@ -444,27 +437,26 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
-		55C5AA14CC157D6E10D487F9 /* Pods */ = {
+		16AEB207F83CBD024A9A3B54 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				973497EBFED9FC87626B9E25 /* Pods.debug_staging.xcconfig */,
-				62820E5E5DCE1B7643DDFCAC /* Pods.debug_production.xcconfig */,
-				B9A22FEAECDB5B172A6420E4 /* Pods.test_staging.xcconfig */,
-				570039B4FD45DBAF5A8E969C /* Pods.test_production.xcconfig */,
-				8B825A2DB6F2180BF8C6BAE6 /* Pods.distribution.xcconfig */,
-				5AF873AF0F585B45C1E0F5B4 /* Pods.adhoc_staging.xcconfig */,
-				2CB569C4CA54BBB2A8A3438F /* Pods.adhoc_production.xcconfig */,
-				6AE8431A4C79A1C8F2737EEB /* Pods.profile_staging.xcconfig */,
-				3EA32E3BEF65BE84130D7190 /* Pods.profile_production.xcconfig */,
-				B9B99CA30A14373A9E910099 /* Pods-Specs.debug_staging.xcconfig */,
-				D5905E5F82BFFA7584BAD4C5 /* Pods-Specs.debug_production.xcconfig */,
-				12CC9EC171F3BB2114E66841 /* Pods-Specs.test_staging.xcconfig */,
-				326C1F0145B5BE66CBCC67F1 /* Pods-Specs.test_production.xcconfig */,
-				40BA951C2C05A8E480C4A89C /* Pods-Specs.distribution.xcconfig */,
-				6770FFEDF6A5EE7451E4DEDF /* Pods-Specs.adhoc_staging.xcconfig */,
-				D803149862748E9E696037FB /* Pods-Specs.adhoc_production.xcconfig */,
-				D854A3C5B42BB78F9F14DC65 /* Pods-Specs.profile_staging.xcconfig */,
-				4D26DC1D97A4FF5AB8CC483F /* Pods-Specs.profile_production.xcconfig */,
+				B1E15C8B28FBA5DA39332054 /* libPods-smarthouse.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		64B3B7DF23FE3D4EAE9F4B61 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				97AB0E77884008C5BC108E15 /* Pods-smarthouse.debug_staging.xcconfig */,
+				A1F1D738F1A9B22BEC5A00E8 /* Pods-smarthouse.debug_production.xcconfig */,
+				ACCEA3EC7B1F6CDF5518D995 /* Pods-smarthouse.test_staging.xcconfig */,
+				B71B0541CCD8C25ACBC13BE1 /* Pods-smarthouse.test_production.xcconfig */,
+				5BA9BAD11DA1A0F41FC29EA9 /* Pods-smarthouse.distribution.xcconfig */,
+				D03EB3C12D30F0605AA4A9A9 /* Pods-smarthouse.adhoc_staging.xcconfig */,
+				C4154917AF1F76C8E6B044CC /* Pods-smarthouse.adhoc_production.xcconfig */,
+				FFEBC06F98242B5A87FDC4D9 /* Pods-smarthouse.profile_staging.xcconfig */,
+				DE2C00015F1F8DAB64DC463E /* Pods-smarthouse.profile_production.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -572,9 +564,9 @@
 			children = (
 				BDDB995818C3943B003EBC42 /* smarthouse */,
 				BDDB997A18C3943B003EBC42 /* Specs */,
-				D36FABF09F1A984E257F1EAF /* Frameworks */,
-				55C5AA14CC157D6E10D487F9 /* Pods */,
 				BDDB995018C3943B003EBC42 /* Products */,
+				64B3B7DF23FE3D4EAE9F4B61 /* Pods */,
+				16AEB207F83CBD024A9A3B54 /* Frameworks */,
 			);
 			indentWidth = 4;
 			sourceTree = "<group>";
@@ -624,15 +616,6 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		D36FABF09F1A984E257F1EAF /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				A06B515E067379B8477A8245 /* libPods.a */,
-				46A5F5E57179B0D085AF4FF2 /* libPods-Specs.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -640,17 +623,17 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BDDB998418C3943B003EBC42 /* Build configuration list for PBXNativeTarget "smarthouse" */;
 			buildPhases = (
-				CE78B447D2424EDEAEAB74EB /* Check Pods Manifest.lock */,
+				459BB6998B374B52F63F4A50 /* 📦 Check Pods Manifest.lock */,
 				BDF4202019B8F31200FE6C13 /* Generate Storyboard Identifier File */,
 				BD79800C19C0CF3E0087DCCA /* Generate Asset Catalog Identifier File */,
 				BDDB994B18C3943B003EBC42 /* Sources */,
 				BDDB994C18C3943B003EBC42 /* Frameworks */,
 				BD36522718CE89C6009107A7 /* Increment Build Number */,
 				BDDB994D18C3943B003EBC42 /* Resources */,
-				5934C2BEC75D4C51B3689E07 /* Copy Pods Resources */,
 				BDC7F36218EBA5EE0045D4BD /* Remove Unused Localizations */,
 				BD35136319BE21BD00A19841 /* Badge App Icons */,
-				39C981DC16D867281773C28F /* Embed Pods Frameworks */,
+				6326DEAC577ED641AECAADFF /* 📦 Embed Pods Frameworks */,
+				10C4C8A37A90886DA650CAD4 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -665,12 +648,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BDDB998718C3943B003EBC42 /* Build configuration list for PBXNativeTarget "Specs" */;
 			buildPhases = (
-				295A078AF08D45C99B314B81 /* Check Pods Manifest.lock */,
 				BDDB996F18C3943B003EBC42 /* Sources */,
 				BDDB997018C3943B003EBC42 /* Frameworks */,
 				BDDB997118C3943B003EBC42 /* Resources */,
-				A20A1E42928D4423912BE388 /* Copy Pods Resources */,
-				24CF772DB41806DAC2DF5758 /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -744,29 +724,29 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		24CF772DB41806DAC2DF5758 /* Embed Pods Frameworks */ = {
+		10C4C8A37A90886DA650CAD4 /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "📦 Copy Pods Resources";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Specs/Pods-Specs-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-smarthouse/Pods-smarthouse-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		295A078AF08D45C99B314B81 /* Check Pods Manifest.lock */ = {
+		459BB6998B374B52F63F4A50 /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Check Pods Manifest.lock";
+			name = "📦 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -774,49 +754,19 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-		39C981DC16D867281773C28F /* Embed Pods Frameworks */ = {
+		6326DEAC577ED641AECAADFF /* 📦 Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
+			name = "📦 Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		5934C2BEC75D4C51B3689E07 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		A20A1E42928D4423912BE388 /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Specs/Pods-Specs-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-smarthouse/Pods-smarthouse-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BD35136319BE21BD00A19841 /* Badge App Icons */ = {
@@ -894,21 +844,6 @@
 			shellScript = "# This script walks the storyboards in your project and creates\n# StoryboardIdentifiers.{h,m} with constants for all the segue,\n# reuse, restoration, and storyboard identifiers.\n# The generated files live in the Other Sources group.\n\n# If this is not desired behavior for you, or you don't use\n# storyboards, feel free to remove this build phase and the\n# generated files in Other Sources.\n\n# If you would like constants generated for restoration IDs,\n# uncomment this line:\n#export NEED_RESTORATION_IDS=1\n\n\"${SRCROOT}/Scripts/GenerateStoryboardIDs.py\"";
 			showEnvVarsInLog = 0;
 		};
-		CE78B447D2424EDEAEAB74EB /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -953,6 +888,7 @@
 				02DDA2651CDF94120096E3DF /* CSPickSubjectCell.m in Sources */,
 				BD934CD519C211F600B48551 /* StoryboardIdentifiers.m in Sources */,
 				BD6951CF18EA4B0800F2F410 /* main.m in Sources */,
+				02B881BD1CF1F7170072D3A4 /* CSAccount.m in Sources */,
 				02DDA2611CDF92EB0096E3DF /* CSPickSubjectViewModel.m in Sources */,
 				02DDA23F1CDF6DA70096E3DF /* CSActionTrigger.m in Sources */,
 				02B881991CF1C5B90072D3A4 /* CSSessionsService.m in Sources */,
@@ -995,7 +931,7 @@
 		};
 		BD49EA2118EC611D00F73350 /* Debug_Production */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 62820E5E5DCE1B7643DDFCAC /* Pods.debug_production.xcconfig */;
+			baseConfigurationReference = A1F1D738F1A9B22BEC5A00E8 /* Pods-smarthouse.debug_production.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				BUNDLE_ID_SUFFIX = .prod;
@@ -1011,7 +947,6 @@
 		};
 		BD49EA2218EC611D00F73350 /* Debug_Production */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D5905E5F82BFFA7584BAD4C5 /* Pods-Specs.debug_production.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/smarthouse.app/smarthouse";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1041,7 +976,7 @@
 		};
 		BD49EA2418EC612E00F73350 /* Test_Production */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 570039B4FD45DBAF5A8E969C /* Pods.test_production.xcconfig */;
+			baseConfigurationReference = B71B0541CCD8C25ACBC13BE1 /* Pods-smarthouse.test_production.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				BUNDLE_ID_SUFFIX = .prod;
@@ -1057,7 +992,6 @@
 		};
 		BD49EA2518EC612E00F73350 /* Test_Production */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 326C1F0145B5BE66CBCC67F1 /* Pods-Specs.test_production.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/smarthouse.app/smarthouse";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1087,7 +1021,7 @@
 		};
 		BD49EA2718EC614F00F73350 /* AdHoc_Production */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2CB569C4CA54BBB2A8A3438F /* Pods.adhoc_production.xcconfig */;
+			baseConfigurationReference = C4154917AF1F76C8E6B044CC /* Pods-smarthouse.adhoc_production.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				BUNDLE_ID_SUFFIX = .prod;
@@ -1103,7 +1037,6 @@
 		};
 		BD49EA2818EC614F00F73350 /* AdHoc_Production */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D803149862748E9E696037FB /* Pods-Specs.adhoc_production.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/smarthouse.app/smarthouse";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1133,7 +1066,7 @@
 		};
 		BD49EA2A18EC62DD00F73350 /* Profile_Production */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3EA32E3BEF65BE84130D7190 /* Pods.profile_production.xcconfig */;
+			baseConfigurationReference = DE2C00015F1F8DAB64DC463E /* Pods-smarthouse.profile_production.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				BUNDLE_ID_SUFFIX = .prod;
@@ -1149,7 +1082,6 @@
 		};
 		BD49EA2B18EC62DD00F73350 /* Profile_Production */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4D26DC1D97A4FF5AB8CC483F /* Pods-Specs.profile_production.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/smarthouse.app/smarthouse";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1179,7 +1111,7 @@
 		};
 		BDD67CDC18DFAB85008ECBBD /* AdHoc_Staging */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5AF873AF0F585B45C1E0F5B4 /* Pods.adhoc_staging.xcconfig */;
+			baseConfigurationReference = D03EB3C12D30F0605AA4A9A9 /* Pods-smarthouse.adhoc_staging.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				BUNDLE_ID_SUFFIX = .staging;
@@ -1195,7 +1127,6 @@
 		};
 		BDD67CDD18DFAB85008ECBBD /* AdHoc_Staging */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6770FFEDF6A5EE7451E4DEDF /* Pods-Specs.adhoc_staging.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/smarthouse.app/smarthouse";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1236,7 +1167,7 @@
 		};
 		BDDB998518C3943B003EBC42 /* Debug_Staging */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 973497EBFED9FC87626B9E25 /* Pods.debug_staging.xcconfig */;
+			baseConfigurationReference = 97AB0E77884008C5BC108E15 /* Pods-smarthouse.debug_staging.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				BUNDLE_ID_SUFFIX = .staging;
@@ -1252,7 +1183,7 @@
 		};
 		BDDB998618C3943B003EBC42 /* Distribution */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8B825A2DB6F2180BF8C6BAE6 /* Pods.distribution.xcconfig */;
+			baseConfigurationReference = 5BA9BAD11DA1A0F41FC29EA9 /* Pods-smarthouse.distribution.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				BUNDLE_ID_SUFFIX = "";
@@ -1268,7 +1199,6 @@
 		};
 		BDDB998818C3943B003EBC42 /* Debug_Staging */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B9B99CA30A14373A9E910099 /* Pods-Specs.debug_staging.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/smarthouse.app/smarthouse";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1288,7 +1218,6 @@
 		};
 		BDDB998918C3943B003EBC42 /* Distribution */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 40BA951C2C05A8E480C4A89C /* Pods-Specs.distribution.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/smarthouse.app/smarthouse";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1318,7 +1247,7 @@
 		};
 		BDF1757B18C3986D008BD9C6 /* Profile_Staging */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6AE8431A4C79A1C8F2737EEB /* Pods.profile_staging.xcconfig */;
+			baseConfigurationReference = FFEBC06F98242B5A87FDC4D9 /* Pods-smarthouse.profile_staging.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				BUNDLE_ID_SUFFIX = .staging;
@@ -1334,7 +1263,6 @@
 		};
 		BDF1757C18C3986D008BD9C6 /* Profile_Staging */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D854A3C5B42BB78F9F14DC65 /* Pods-Specs.profile_staging.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/smarthouse.app/smarthouse";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -1364,7 +1292,7 @@
 		};
 		BDF1757E18C39BD3008BD9C6 /* Test_Staging */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B9A22FEAECDB5B172A6420E4 /* Pods.test_staging.xcconfig */;
+			baseConfigurationReference = ACCEA3EC7B1F6CDF5518D995 /* Pods-smarthouse.test_staging.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				BUNDLE_ID_SUFFIX = .staging;
@@ -1380,7 +1308,6 @@
 		};
 		BDF1757F18C39BD3008BD9C6 /* Test_Staging */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 12CC9EC171F3BB2114E66841 /* Pods-Specs.test_staging.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/smarthouse.app/smarthouse";
 				FRAMEWORK_SEARCH_PATHS = (

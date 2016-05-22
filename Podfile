@@ -4,15 +4,19 @@ platform :ios, '8.0'
 # Uncomment this line if you need Swift support:
 # use_frameworks!
 
+target 'smarthouse' do
 
-# Networking
-pod 'AFNetworking', '~> 2.5'
-pod 'FormatterKit'    # For all your string formatting needs
-pod 'Mantle'          # Github's model framework
+    # Networking
+    pod 'AFNetworking', '~> 2.5'
+    pod 'FormatterKit'    # For all your string formatting needs
+    pod 'Mantle'          # Github's model framework
 
-# Views
-pod 'MBProgressHUD'
+    # Views
+    pod 'MBProgressHUD'
 
+    # Account
+    pod 'AUAccount', git: 'https://github.com/appunite/AUAccount.git', tag: '0.2.8'
+end
 
 # Inform CocoaPods that we use some custom build configurations
 # Leave this in place unless you've tweaked the project's targets and configurations.

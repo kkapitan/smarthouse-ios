@@ -44,6 +44,27 @@
     
     [httpManager setRequestSerializer:jsonSerializer];
     
+    // update `X-AUTH-TOKEN` block
+    void (^authTokenBlock)(void) = ^{
+        // get auth token
+        NSString *token = [[CSAccount account] authenticationToken:nil];
+        
+        // add HTTP header
+        [jsonSerializer setValue:token forHTTPHeaderField:@"Authorization"];
+    };
+    
+    if ([[CSAccount account] isLoggedIn]) {
+        // update `X-AUTH-TOKEN`
+        authTokenBlock();
+    }
+    
+    // we should invalidate that value on every login
+    [[NSNotificationCenter defaultCenter] addObserverForName:AUAccountDidLoginUserNotification object:nil queue:nil usingBlock:^(NSNotification *note) {
+        // update `X-AUTH-TOKEN`
+        authTokenBlock();
+    }];
+
+    
     // handle error globally
     [[NSNotificationCenter defaultCenter] addObserverForName:AFNetworkingOperationDidFinishNotification object:nil queue:nil usingBlock:^(NSNotification *note) {
         AFHTTPRequestOperation *operation = (AFHTTPRequestOperation *)[note object];

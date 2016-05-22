@@ -11,6 +11,9 @@
 //Formater
 #import "TTTURLRequestFormatter.h"
 
+//Account
+#import "CSAccount.h"
+
 @interface CSApiClient : AFHTTPSessionManager
 
 + (instancetype)sharedManager;
