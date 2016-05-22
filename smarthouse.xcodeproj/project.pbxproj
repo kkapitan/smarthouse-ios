@@ -32,6 +32,11 @@
 		02B881A51CF1C7350072D3A4 /* CSDeleteActionParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 02B881A41CF1C7350072D3A4 /* CSDeleteActionParams.m */; };
 		02B881A81CF1C7550072D3A4 /* CSLoginUserParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 02B881A71CF1C7550072D3A4 /* CSLoginUserParams.m */; };
 		02B881AB1CF1C9860072D3A4 /* CSUploadAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 02B881AA1CF1C9860072D3A4 /* CSUploadAction.m */; };
+		02B881AE1CF1D2AA0072D3A4 /* CSUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 02B881AD1CF1D2AA0072D3A4 /* CSUser.m */; };
+		02B881B11CF1D4230072D3A4 /* CSUserResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 02B881B01CF1D4230072D3A4 /* CSUserResponseSerializer.m */; };
+		02B881B41CF1D43D0072D3A4 /* CSActionSubjectsResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 02B881B31CF1D43D0072D3A4 /* CSActionSubjectsResponseSerializer.m */; };
+		02B881B71CF1D4550072D3A4 /* CSActionResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 02B881B61CF1D4550072D3A4 /* CSActionResponseSerializer.m */; };
+		02B881BA1CF1D4600072D3A4 /* CSActionsResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 02B881B91CF1D4600072D3A4 /* CSActionsResponseSerializer.m */; };
 		02DDA23C1CDF6D370096E3DF /* CSAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DDA23B1CDF6D370096E3DF /* CSAction.m */; };
 		02DDA23F1CDF6DA70096E3DF /* CSActionTrigger.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DDA23E1CDF6DA70096E3DF /* CSActionTrigger.m */; };
 		02DDA2421CDF6DB20096E3DF /* CSActionSubject.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DDA2411CDF6DB20096E3DF /* CSActionSubject.m */; };
@@ -119,6 +124,16 @@
 		02B881A71CF1C7550072D3A4 /* CSLoginUserParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSLoginUserParams.m; sourceTree = "<group>"; };
 		02B881A91CF1C9860072D3A4 /* CSUploadAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSUploadAction.h; sourceTree = "<group>"; };
 		02B881AA1CF1C9860072D3A4 /* CSUploadAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSUploadAction.m; sourceTree = "<group>"; };
+		02B881AC1CF1D2AA0072D3A4 /* CSUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSUser.h; sourceTree = "<group>"; };
+		02B881AD1CF1D2AA0072D3A4 /* CSUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSUser.m; sourceTree = "<group>"; };
+		02B881AF1CF1D4230072D3A4 /* CSUserResponseSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSUserResponseSerializer.h; sourceTree = "<group>"; };
+		02B881B01CF1D4230072D3A4 /* CSUserResponseSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSUserResponseSerializer.m; sourceTree = "<group>"; };
+		02B881B21CF1D43D0072D3A4 /* CSActionSubjectsResponseSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSActionSubjectsResponseSerializer.h; sourceTree = "<group>"; };
+		02B881B31CF1D43D0072D3A4 /* CSActionSubjectsResponseSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSActionSubjectsResponseSerializer.m; sourceTree = "<group>"; };
+		02B881B51CF1D4550072D3A4 /* CSActionResponseSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSActionResponseSerializer.h; sourceTree = "<group>"; };
+		02B881B61CF1D4550072D3A4 /* CSActionResponseSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSActionResponseSerializer.m; sourceTree = "<group>"; };
+		02B881B81CF1D4600072D3A4 /* CSActionsResponseSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSActionsResponseSerializer.h; sourceTree = "<group>"; };
+		02B881B91CF1D4600072D3A4 /* CSActionsResponseSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSActionsResponseSerializer.m; sourceTree = "<group>"; };
 		02DDA23A1CDF6D370096E3DF /* CSAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSAction.h; sourceTree = "<group>"; };
 		02DDA23B1CDF6D370096E3DF /* CSAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSAction.m; sourceTree = "<group>"; };
 		02DDA23D1CDF6DA70096E3DF /* CSActionTrigger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSActionTrigger.h; sourceTree = "<group>"; };
@@ -241,6 +256,14 @@
 			children = (
 				02014D4C1CE10B9100E2A1DF /* CSJSONResponseSerializer.h */,
 				02014D4D1CE10B9100E2A1DF /* CSJSONResponseSerializer.m */,
+				02B881AF1CF1D4230072D3A4 /* CSUserResponseSerializer.h */,
+				02B881B01CF1D4230072D3A4 /* CSUserResponseSerializer.m */,
+				02B881B21CF1D43D0072D3A4 /* CSActionSubjectsResponseSerializer.h */,
+				02B881B31CF1D43D0072D3A4 /* CSActionSubjectsResponseSerializer.m */,
+				02B881B51CF1D4550072D3A4 /* CSActionResponseSerializer.h */,
+				02B881B61CF1D4550072D3A4 /* CSActionResponseSerializer.m */,
+				02B881B81CF1D4600072D3A4 /* CSActionsResponseSerializer.h */,
+				02B881B91CF1D4600072D3A4 /* CSActionsResponseSerializer.m */,
 			);
 			name = Serializers;
 			sourceTree = "<group>";
@@ -482,6 +505,8 @@
 				02DDA2441CDF6DC00096E3DF /* CSActionSubjectConfiguration.m */,
 				02B881A91CF1C9860072D3A4 /* CSUploadAction.h */,
 				02B881AA1CF1C9860072D3A4 /* CSUploadAction.m */,
+				02B881AC1CF1D2AA0072D3A4 /* CSUser.h */,
+				02B881AD1CF1D2AA0072D3A4 /* CSUser.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -900,9 +925,11 @@
 				024430961CE2563A00CB48AA /* UITableViewController+IndexPath.m in Sources */,
 				0219181B1CDF6C7300288736 /* CSBeaconActionCellViewModel.m in Sources */,
 				02014D521CE10B9100E2A1DF /* CSRequests.m in Sources */,
+				02B881B71CF1D4550072D3A4 /* CSActionResponseSerializer.m in Sources */,
 				02B881A21CF1C70F0072D3A4 /* CSCreateActionParams.m in Sources */,
 				02DDA23C1CDF6D370096E3DF /* CSAction.m in Sources */,
 				02014D501CE10B9100E2A1DF /* CSApiClient.m in Sources */,
+				02B881B11CF1D4230072D3A4 /* CSUserResponseSerializer.m in Sources */,
 				02255EC11CDFD2EE002AED8C /* CSActionTriggerTypeModel.m in Sources */,
 				021918151CDF6C5200288736 /* CSSwitchActionCellViewModel.m in Sources */,
 				BDDB996318C3943B003EBC42 /* CSAppDelegate.m in Sources */,
@@ -913,8 +940,10 @@
 				02DDA24B1CDF86E00096E3DF /* CSBootstrap.m in Sources */,
 				02B881AB1CF1C9860072D3A4 /* CSUploadAction.m in Sources */,
 				BD934CD419C211F600B48551 /* AssetCatalogIdentifiers.m in Sources */,
+				02B881B41CF1D43D0072D3A4 /* CSActionSubjectsResponseSerializer.m in Sources */,
 				0219180C1CDF639A00288736 /* CSBeaconActionCell.m in Sources */,
 				02DDA25D1CDF91C10096E3DF /* CSPickSubjectViewController.m in Sources */,
+				02B881AE1CF1D2AA0072D3A4 /* CSUser.m in Sources */,
 				02014D581CE10C4900E2A1DF /* CSEnvironment.m in Sources */,
 				02014D511CE10B9100E2A1DF /* CSJSONResponseSerializer.m in Sources */,
 				02014D491CE0EBBA00E2A1DF /* UIAlertController+Error.m in Sources */,
@@ -927,6 +956,7 @@
 				02DDA2611CDF92EB0096E3DF /* CSPickSubjectViewModel.m in Sources */,
 				02DDA23F1CDF6DA70096E3DF /* CSActionTrigger.m in Sources */,
 				02B881991CF1C5B90072D3A4 /* CSSessionsService.m in Sources */,
+				02B881BA1CF1D4600072D3A4 /* CSActionsResponseSerializer.m in Sources */,
 				02DDA2591CDF915A0096E3DF /* CSAddActionViewController.m in Sources */,
 				02B881A51CF1C7350072D3A4 /* CSDeleteActionParams.m in Sources */,
 				021918091CDF62AE00288736 /* CSTimerActionCell.m in Sources */,
