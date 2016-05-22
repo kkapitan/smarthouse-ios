@@ -20,9 +20,6 @@
 //Categories
 #import "UITableViewController+IndexPath.h"
 
-//Operations
-#import "CSAppliancesOperationManager.h"
-
 //Bootstrap
 #import "CSBootstrap.h"
 
@@ -79,7 +76,9 @@
         CSSwitchActionCellViewModel *cellViewModel = [self.viewModel switchActionCellViewModelForIndexPath:indexPath];
         
         [cell populateWithViewModel:cellViewModel];
-        [cell.actionSwitch addTarget:self action:@selector(switchValueChangedAction:forEvent:) forControlEvents:UIControlEventValueChanged];
+        
+        cell.actionSwitch.tag = indexPath.row;
+        [cell.actionSwitch addTarget:self action:@selector(switchValueChangedAction:) forControlEvents:UIControlEventValueChanged];
         
         return cell;
     } else if (indexPath.section == CSSmartHouseSectionTypeTimerActions) {
@@ -105,8 +104,8 @@
 #pragma mark -
 #pragma mark - Actions
 
-- (void)switchValueChangedAction:(UISwitch *)actionSwitch forEvent:(UIEvent *)event {
-    NSIndexPath *indexPath = [self indexPathForEvent:event];
+- (void)switchValueChangedAction:(UISwitch *)actionSwitch {
+    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:actionSwitch.tag inSection:CSSmartHouseSectionTypeSwitchActions];
     
     CSAction *action = [self.viewModel actionForIndexPath:indexPath];
     CSActionState newState = actionSwitch.on ? CSActionStateOn : CSActionStateOff;
@@ -114,12 +113,6 @@
     [action changeActionState:newState];
     
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    
-    __weak typeof(self) wSelf = self;
-    CSTurnApplianceRequestParams *params = [[CSTurnApplianceRequestParams alloc] initWithAction:action];
-    [[CSAppliancesOperationManager new] turnApplianceWithParams:params completion:^(BOOL success, NSError *error) {
-        [MBProgressHUD hideHUDForView:wSelf.view animated:YES];
-    }];
 }
 
 #pragma mark -

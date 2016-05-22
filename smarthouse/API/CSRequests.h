@@ -8,11 +8,26 @@
 
 #import <AFNetworking/AFNetworking.h>
 
-//Params
-#import "CSTurnApplianceRequestParams.h"
+//Parameters
+#import "CSLoginUserParams.h"
+#import "CSCreateActionParams.h"
+#import "CSDeleteActionParams.h"
 
 @interface AFHTTPSessionManager (Requests)
 
-- (NSMutableURLRequest *)requestTurnApplianceWithParams:(CSTurnApplianceRequestParams *)params;
+//Actions
+
+- (NSMutableURLRequest *)requestFetchActions;
+- (NSMutableURLRequest *)requestCreateActionWithParams:(CSCreateActionParams *)params;
+- (NSMutableURLRequest *)requestDeleteActionWithParams:(CSDeleteActionParams *)params;
+
+//Action subjects
+
+- (NSMutableURLRequest *)requestFetchActionSubjects;
+
+//Sessions
+
+- (NSMutableURLRequest *)requestLoginUserWithParams:(CSLoginUserParams *)params;
+- (NSMutableURLRequest *)requestLogoutUser;
 
 @end

@@ -10,11 +10,58 @@
 
 @implementation AFHTTPSessionManager (Requests)
 
-- (NSMutableURLRequest *)requestTurnApplianceWithParams:(CSTurnApplianceRequestParams *)params {
+//Actions
+
+- (NSMutableURLRequest *)requestFetchActions {
     return [self.requestSerializer requestWithMethod:@"GET"
-                                           URLString:[NSString stringWithFormat:@"%@/turn",self.baseURL]
-                                          parameters:params.params
+                                           URLString:[NSString stringWithFormat:@"%@/actions",self.baseURL]
+                                          parameters:nil
                                                error:nil];
 }
+
+- (NSMutableURLRequest *)requestCreateActionWithParams:(CSCreateActionParams *)params {
+    return [self.requestSerializer requestWithMethod:@"POST"
+                                           URLString:[NSString stringWithFormat:@"%@/actions",self.baseURL]
+                                          parameters:nil
+                                               error:nil];
+}
+
+- (NSMutableURLRequest *)requestDeleteActionWithParams:(CSDeleteActionParams *)params {
+    return [self.requestSerializer requestWithMethod:@"DELETE"
+                                           URLString:[NSString stringWithFormat:@"%@/actions",self.baseURL]
+                                          parameters:nil
+                                               error:nil];
+}
+
+//Action subjects
+
+- (NSMutableURLRequest *)requestFetchActionSubjects {
+    return [self.requestSerializer requestWithMethod:@"GET"
+                                           URLString:[NSString stringWithFormat:@"%@/action_subjects",self.baseURL]
+                                          parameters:nil
+                                               error:nil];
+}
+
+//Sessions
+
+- (NSMutableURLRequest *)requestLoginUserWithParams:(CSLoginUserParams *)params {
+    return [self.requestSerializer requestWithMethod:@"POST"
+                                           URLString:[NSString stringWithFormat:@"%@/actions",self.baseURL]
+                                          parameters:nil
+                                               error:nil];
+}
+
+- (NSMutableURLRequest *)requestLogoutUser {
+    return [self.requestSerializer requestWithMethod:@"DELETE"
+                                           URLString:[NSString stringWithFormat:@"%@/actions",self.baseURL]
+                                          parameters:nil
+                                               error:nil];
+}
+
+
+
+
+
+
 
 @end

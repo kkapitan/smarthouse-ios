@@ -13,8 +13,6 @@
 		02014D521CE10B9100E2A1DF /* CSRequests.m in Sources */ = {isa = PBXBuildFile; fileRef = 02014D4F1CE10B9100E2A1DF /* CSRequests.m */; };
 		02014D551CE10C3F00E2A1DF /* Configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 02014D541CE10C3F00E2A1DF /* Configuration.plist */; };
 		02014D581CE10C4900E2A1DF /* CSEnvironment.m in Sources */ = {isa = PBXBuildFile; fileRef = 02014D571CE10C4900E2A1DF /* CSEnvironment.m */; };
-		02014D5D1CE10D4E00E2A1DF /* CSTurnApplianceRequestParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 02014D5C1CE10D4E00E2A1DF /* CSTurnApplianceRequestParams.m */; };
-		02014D641CE1272A00E2A1DF /* CSAppliancesOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 02014D631CE1272A00E2A1DF /* CSAppliancesOperationManager.m */; };
 		021918031CDF49E500288736 /* CSTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 021918021CDF49E500288736 /* CSTableViewCell.m */; };
 		021918061CDF5D2B00288736 /* CSSwitchActionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 021918051CDF5D2B00288736 /* CSSwitchActionCell.m */; };
 		021918091CDF62AE00288736 /* CSTimerActionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 021918081CDF62AE00288736 /* CSTimerActionCell.m */; };
@@ -27,6 +25,13 @@
 		0219181B1CDF6C7300288736 /* CSBeaconActionCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0219181A1CDF6C7300288736 /* CSBeaconActionCellViewModel.m */; };
 		02255EC11CDFD2EE002AED8C /* CSActionTriggerTypeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 02255EC01CDFD2EE002AED8C /* CSActionTriggerTypeModel.m */; };
 		024430961CE2563A00CB48AA /* UITableViewController+IndexPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 024430951CE2563A00CB48AA /* UITableViewController+IndexPath.m */; };
+		02B881991CF1C5B90072D3A4 /* CSSessionsService.m in Sources */ = {isa = PBXBuildFile; fileRef = 02B881981CF1C5B90072D3A4 /* CSSessionsService.m */; };
+		02B8819C1CF1C5CA0072D3A4 /* CSActionSubjectsService.m in Sources */ = {isa = PBXBuildFile; fileRef = 02B8819B1CF1C5CA0072D3A4 /* CSActionSubjectsService.m */; };
+		02B8819F1CF1C5F20072D3A4 /* CSActionsService.m in Sources */ = {isa = PBXBuildFile; fileRef = 02B8819E1CF1C5F20072D3A4 /* CSActionsService.m */; };
+		02B881A21CF1C70F0072D3A4 /* CSCreateActionParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 02B881A11CF1C70F0072D3A4 /* CSCreateActionParams.m */; };
+		02B881A51CF1C7350072D3A4 /* CSDeleteActionParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 02B881A41CF1C7350072D3A4 /* CSDeleteActionParams.m */; };
+		02B881A81CF1C7550072D3A4 /* CSLoginUserParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 02B881A71CF1C7550072D3A4 /* CSLoginUserParams.m */; };
+		02B881AB1CF1C9860072D3A4 /* CSUploadAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 02B881AA1CF1C9860072D3A4 /* CSUploadAction.m */; };
 		02DDA23C1CDF6D370096E3DF /* CSAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DDA23B1CDF6D370096E3DF /* CSAction.m */; };
 		02DDA23F1CDF6DA70096E3DF /* CSActionTrigger.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DDA23E1CDF6DA70096E3DF /* CSActionTrigger.m */; };
 		02DDA2421CDF6DB20096E3DF /* CSActionSubject.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DDA2411CDF6DB20096E3DF /* CSActionSubject.m */; };
@@ -78,11 +83,7 @@
 		02014D541CE10C3F00E2A1DF /* Configuration.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Configuration.plist; sourceTree = "<group>"; };
 		02014D561CE10C4900E2A1DF /* CSEnvironment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSEnvironment.h; sourceTree = "<group>"; };
 		02014D571CE10C4900E2A1DF /* CSEnvironment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSEnvironment.m; sourceTree = "<group>"; };
-		02014D5B1CE10D4E00E2A1DF /* CSTurnApplianceRequestParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTurnApplianceRequestParams.h; sourceTree = "<group>"; };
-		02014D5C1CE10D4E00E2A1DF /* CSTurnApplianceRequestParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTurnApplianceRequestParams.m; sourceTree = "<group>"; };
 		02014D5E1CE10D6300E2A1DF /* CSRequestParamsProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSRequestParamsProtocol.h; sourceTree = "<group>"; };
-		02014D621CE1272A00E2A1DF /* CSAppliancesOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSAppliancesOperationManager.h; sourceTree = "<group>"; };
-		02014D631CE1272A00E2A1DF /* CSAppliancesOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSAppliancesOperationManager.m; sourceTree = "<group>"; };
 		021918011CDF49E500288736 /* CSTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTableViewCell.h; sourceTree = "<group>"; };
 		021918021CDF49E500288736 /* CSTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTableViewCell.m; sourceTree = "<group>"; };
 		021918041CDF5D2B00288736 /* CSSwitchActionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSSwitchActionCell.h; sourceTree = "<group>"; };
@@ -104,6 +105,20 @@
 		02255EC01CDFD2EE002AED8C /* CSActionTriggerTypeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSActionTriggerTypeModel.m; sourceTree = "<group>"; };
 		024430941CE2563A00CB48AA /* UITableViewController+IndexPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewController+IndexPath.h"; sourceTree = "<group>"; };
 		024430951CE2563A00CB48AA /* UITableViewController+IndexPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewController+IndexPath.m"; sourceTree = "<group>"; };
+		02B881971CF1C5B90072D3A4 /* CSSessionsService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSSessionsService.h; sourceTree = "<group>"; };
+		02B881981CF1C5B90072D3A4 /* CSSessionsService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSSessionsService.m; sourceTree = "<group>"; };
+		02B8819A1CF1C5CA0072D3A4 /* CSActionSubjectsService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSActionSubjectsService.h; sourceTree = "<group>"; };
+		02B8819B1CF1C5CA0072D3A4 /* CSActionSubjectsService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSActionSubjectsService.m; sourceTree = "<group>"; };
+		02B8819D1CF1C5F20072D3A4 /* CSActionsService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSActionsService.h; sourceTree = "<group>"; };
+		02B8819E1CF1C5F20072D3A4 /* CSActionsService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSActionsService.m; sourceTree = "<group>"; };
+		02B881A01CF1C70F0072D3A4 /* CSCreateActionParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSCreateActionParams.h; sourceTree = "<group>"; };
+		02B881A11CF1C70F0072D3A4 /* CSCreateActionParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSCreateActionParams.m; sourceTree = "<group>"; };
+		02B881A31CF1C7350072D3A4 /* CSDeleteActionParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSDeleteActionParams.h; sourceTree = "<group>"; };
+		02B881A41CF1C7350072D3A4 /* CSDeleteActionParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSDeleteActionParams.m; sourceTree = "<group>"; };
+		02B881A61CF1C7550072D3A4 /* CSLoginUserParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSLoginUserParams.h; sourceTree = "<group>"; };
+		02B881A71CF1C7550072D3A4 /* CSLoginUserParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSLoginUserParams.m; sourceTree = "<group>"; };
+		02B881A91CF1C9860072D3A4 /* CSUploadAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSUploadAction.h; sourceTree = "<group>"; };
+		02B881AA1CF1C9860072D3A4 /* CSUploadAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSUploadAction.m; sourceTree = "<group>"; };
 		02DDA23A1CDF6D370096E3DF /* CSAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSAction.h; sourceTree = "<group>"; };
 		02DDA23B1CDF6D370096E3DF /* CSAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSAction.m; sourceTree = "<group>"; };
 		02DDA23D1CDF6DA70096E3DF /* CSActionTrigger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSActionTrigger.h; sourceTree = "<group>"; };
@@ -233,9 +248,13 @@
 		02014D5A1CE10CF400E2A1DF /* Params */ = {
 			isa = PBXGroup;
 			children = (
-				02014D5B1CE10D4E00E2A1DF /* CSTurnApplianceRequestParams.h */,
-				02014D5C1CE10D4E00E2A1DF /* CSTurnApplianceRequestParams.m */,
 				02014D5E1CE10D6300E2A1DF /* CSRequestParamsProtocol.h */,
+				02B881A01CF1C70F0072D3A4 /* CSCreateActionParams.h */,
+				02B881A11CF1C70F0072D3A4 /* CSCreateActionParams.m */,
+				02B881A31CF1C7350072D3A4 /* CSDeleteActionParams.h */,
+				02B881A41CF1C7350072D3A4 /* CSDeleteActionParams.m */,
+				02B881A61CF1C7550072D3A4 /* CSLoginUserParams.h */,
+				02B881A71CF1C7550072D3A4 /* CSLoginUserParams.m */,
 			);
 			name = Params;
 			sourceTree = "<group>";
@@ -254,8 +273,12 @@
 		02014D601CE10F4600E2A1DF /* Operations */ = {
 			isa = PBXGroup;
 			children = (
-				02014D621CE1272A00E2A1DF /* CSAppliancesOperationManager.h */,
-				02014D631CE1272A00E2A1DF /* CSAppliancesOperationManager.m */,
+				02B881971CF1C5B90072D3A4 /* CSSessionsService.h */,
+				02B881981CF1C5B90072D3A4 /* CSSessionsService.m */,
+				02B8819A1CF1C5CA0072D3A4 /* CSActionSubjectsService.h */,
+				02B8819B1CF1C5CA0072D3A4 /* CSActionSubjectsService.m */,
+				02B8819D1CF1C5F20072D3A4 /* CSActionsService.h */,
+				02B8819E1CF1C5F20072D3A4 /* CSActionsService.m */,
 			);
 			name = Operations;
 			path = Resources;
@@ -457,6 +480,8 @@
 				02DDA2411CDF6DB20096E3DF /* CSActionSubject.m */,
 				02DDA2431CDF6DC00096E3DF /* CSActionSubjectConfiguration.h */,
 				02DDA2441CDF6DC00096E3DF /* CSActionSubjectConfiguration.m */,
+				02B881A91CF1C9860072D3A4 /* CSUploadAction.h */,
+				02B881AA1CF1C9860072D3A4 /* CSUploadAction.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -868,12 +893,14 @@
 			files = (
 				02DDA2531CDF90D60096E3DF /* CSSmartHouseTableViewController.m in Sources */,
 				02DDA2451CDF6DC00096E3DF /* CSActionSubjectConfiguration.m in Sources */,
+				02B8819C1CF1C5CA0072D3A4 /* CSActionSubjectsService.m in Sources */,
 				02DDA2421CDF6DB20096E3DF /* CSActionSubject.m in Sources */,
 				02DDA26E1CDFA72E0096E3DF /* CSAddActionViewModel.m in Sources */,
 				021918061CDF5D2B00288736 /* CSSwitchActionCell.m in Sources */,
 				024430961CE2563A00CB48AA /* UITableViewController+IndexPath.m in Sources */,
 				0219181B1CDF6C7300288736 /* CSBeaconActionCellViewModel.m in Sources */,
 				02014D521CE10B9100E2A1DF /* CSRequests.m in Sources */,
+				02B881A21CF1C70F0072D3A4 /* CSCreateActionParams.m in Sources */,
 				02DDA23C1CDF6D370096E3DF /* CSAction.m in Sources */,
 				02014D501CE10B9100E2A1DF /* CSApiClient.m in Sources */,
 				02255EC11CDFD2EE002AED8C /* CSActionTriggerTypeModel.m in Sources */,
@@ -884,21 +911,24 @@
 				021918181CDF6C6400288736 /* CSTimerActionCellViewModel.m in Sources */,
 				021918031CDF49E500288736 /* CSTableViewCell.m in Sources */,
 				02DDA24B1CDF86E00096E3DF /* CSBootstrap.m in Sources */,
+				02B881AB1CF1C9860072D3A4 /* CSUploadAction.m in Sources */,
 				BD934CD419C211F600B48551 /* AssetCatalogIdentifiers.m in Sources */,
-				02014D5D1CE10D4E00E2A1DF /* CSTurnApplianceRequestParams.m in Sources */,
 				0219180C1CDF639A00288736 /* CSBeaconActionCell.m in Sources */,
 				02DDA25D1CDF91C10096E3DF /* CSPickSubjectViewController.m in Sources */,
 				02014D581CE10C4900E2A1DF /* CSEnvironment.m in Sources */,
 				02014D511CE10B9100E2A1DF /* CSJSONResponseSerializer.m in Sources */,
 				02014D491CE0EBBA00E2A1DF /* UIAlertController+Error.m in Sources */,
+				02B881A81CF1C7550072D3A4 /* CSLoginUserParams.m in Sources */,
+				02B8819F1CF1C5F20072D3A4 /* CSActionsService.m in Sources */,
 				02DDA26A1CDF981E0096E3DF /* CSPickSubjectCellViewModel.m in Sources */,
 				02DDA2651CDF94120096E3DF /* CSPickSubjectCell.m in Sources */,
 				BD934CD519C211F600B48551 /* StoryboardIdentifiers.m in Sources */,
 				BD6951CF18EA4B0800F2F410 /* main.m in Sources */,
-				02014D641CE1272A00E2A1DF /* CSAppliancesOperationManager.m in Sources */,
 				02DDA2611CDF92EB0096E3DF /* CSPickSubjectViewModel.m in Sources */,
 				02DDA23F1CDF6DA70096E3DF /* CSActionTrigger.m in Sources */,
+				02B881991CF1C5B90072D3A4 /* CSSessionsService.m in Sources */,
 				02DDA2591CDF915A0096E3DF /* CSAddActionViewController.m in Sources */,
+				02B881A51CF1C7350072D3A4 /* CSDeleteActionParams.m in Sources */,
 				021918091CDF62AE00288736 /* CSTimerActionCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
