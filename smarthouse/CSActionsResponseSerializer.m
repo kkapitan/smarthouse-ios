@@ -14,17 +14,32 @@
     NSDictionary *json = [super responseObjectForResponse:response data:data error:error];
     
     NSError *parseError;
-    NSArray <CSAction *> *actions = [MTLJSONAdapter modelsOfClass:CSAction.class fromJSONArray:json[@"actions"] error:&parseError];
     
+    NSMutableArray *actionsByActionType = [NSMutableArray new];
+    NSMutableArray *actionTypes = [NSMutableArray new];
+    
+    for (NSDictionary *sectionJSON in json[@"sections"]) {
+        NSArray <CSAction *> *actions = [MTLJSONAdapter modelsOfClass:CSAction.class fromJSONArray:sectionJSON[@"actions"] error:&parseError];
+        
+        CSActionType *actionType = [MTLJSONAdapter modelOfClass:CSActionType.class fromJSONDictionary:sectionJSON[@"action_type"] error:&parseError];
+        
+        if (actions != nil) {
+            [actionsByActionType addObject:actions];
+        }
+        
+        if (actionTypes != nil) {
+            [actionTypes addObject:actionType];
+        }
+    }
+
     NSMutableDictionary *results = [NSMutableDictionary new];
     
     if (json != nil) {
         [results setObject:json forKey:@"payload"];
     }
     
-    if (actions != nil) {
-        [results setObject:actions forKey:@"actions"];
-    }
+    [results setObject:actionsByActionType forKey:@"actions"];
+    [results setObject:actionTypes forKey:@"action_types"];
     
     return [results copy];
 }

@@ -31,13 +31,6 @@
         
         return;
     }
-    
-    CSActionTrigger *trigger = [self buildTrigger];
-    CSAction *action = [[CSAction alloc] initWithSubject:_subject trigger:trigger];
-    
-    if (block) {
-        block(YES, action, nil);
-    }
 }
 
 #pragma mark - 

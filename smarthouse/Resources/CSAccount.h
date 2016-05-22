@@ -10,6 +10,13 @@
 
 #import "AUAccount.h"
 
+//Model
+#import "CSActionType.h"
+
 @interface CSAccount : AUAccount
+
+@property (nonatomic, strong, readonly) NSArray <CSActionType *> *actionTypes;
+
+- (void)updateActionTypes:(NSArray<CSActionType *> *)actionTypes;
 
 @end

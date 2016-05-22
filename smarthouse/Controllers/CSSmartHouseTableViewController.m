@@ -41,10 +41,21 @@
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:YES];
     
-    NSArray *actions = [CSBootstrap sharedInstance].actions;
-    _viewModel = [[CSSmartHouseViewModel alloc] initWithActions:actions];
+    [self setupViewModel];
+}
 
-    [self.tableView reloadData];
+- (void)setupViewModel {
+    _viewModel = [CSSmartHouseViewModel new];
+    
+    __weak typeof (self) wSelf = self;
+    [_viewModel fetchActionsWithCompletion:^(NSArray<CSAction *> *actions, UIAlertController *alert) {
+        if (alert) {
+            [wSelf presentViewController:alert animated:YES completion:nil];
+            return ;
+        }
+        
+        [wSelf.tableView reloadData];
+    }];
 }
 
 #pragma mark -
@@ -108,11 +119,8 @@
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:actionSwitch.tag inSection:CSSmartHouseSectionTypeSwitchActions];
     
     CSAction *action = [self.viewModel actionForIndexPath:indexPath];
-    CSActionState newState = actionSwitch.on ? CSActionStateOn : CSActionStateOff;
     
-    [action changeActionState:newState];
-    
-    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    //[MBProgressHUD showHUDAddedTo:self.view animated:YES];
 }
 
 #pragma mark -

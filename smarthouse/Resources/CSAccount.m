@@ -10,4 +10,12 @@
 
 @implementation CSAccount
 
+- (BOOL)isLoggedIn {
+    return YES;
+}
+
+- (void)updateActionTypes:(NSArray<CSActionType *> *)actionTypes {
+    _actionTypes = actionTypes;
+}
+
 @end

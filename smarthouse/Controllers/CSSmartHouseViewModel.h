@@ -10,11 +10,23 @@
 
 //Model
 #import "CSAction.h"
+#import "CSActionType.h"
 
 //View Models
 #import "CSBeaconActionCellViewModel.h"
 #import "CSTimerActionCellViewModel.h"
 #import "CSSwitchActionCellViewModel.h"
+
+//Account
+#import "CSAccount.h"
+
+//Service
+#import "CSActionsService.h"
+
+//Category
+#import "UIAlertController+Error.h"
+
+typedef void(^CSSmartHouseViewModelFetchActionsCompletion)(NSArray <CSAction *> *actions, UIAlertController *alert);
 
 typedef NS_ENUM(NSInteger, CSSmartHouseSectionType) {
     CSSmartHouseSectionTypeSwitchActions,
@@ -23,8 +35,6 @@ typedef NS_ENUM(NSInteger, CSSmartHouseSectionType) {
 };
 
 @interface CSSmartHouseViewModel : NSObject
-
-- (instancetype)initWithActions:(NSArray <CSAction *> *)actions;
 
 - (NSInteger)numberOfSections;
 - (NSString *)titleForSection:(NSInteger)section;
@@ -37,5 +47,7 @@ typedef NS_ENUM(NSInteger, CSSmartHouseSectionType) {
 - (CSSwitchActionCellViewModel *)switchActionCellViewModelForIndexPath:(NSIndexPath *)indexPath;
 
 - (CSTimerActionCellViewModel *)timerActionCellViewModelForIndexPath:(NSIndexPath *)indexPath;
+
+- (void)fetchActionsWithCompletion:(CSSmartHouseViewModelFetchActionsCompletion)block;
 
 @end

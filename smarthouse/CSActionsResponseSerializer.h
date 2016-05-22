@@ -8,8 +8,9 @@
 
 #import "CSJSONResponseSerializer.h"
 
-//Model
+//Models
 #import "CSAction.h"
+#import "CSActionType.h"
 
 @interface CSActionsResponseSerializer : CSJSONResponseSerializer
 

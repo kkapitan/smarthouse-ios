@@ -17,16 +17,11 @@ typedef NS_ENUM(NSUInteger, CSActionState) {
     CSActionStateOn
 };
 
-@interface CSAction : MTLModel
+@interface CSAction : MTLModel <MTLJSONSerializing>
 
-@property (nonatomic, strong, readonly) CSActionTrigger *trigger;
+@property (nonatomic, assign, readonly) NSInteger uid;
+
 @property (nonatomic, strong, readonly) CSActionSubject *subject;
-
-@property (nonatomic, assign, readonly) CSActionState actionState;
-
-- (instancetype)initWithSubject:(CSActionSubject *)subject trigger:(CSActionTrigger *)trigger;
-- (instancetype)initWithSubject:(CSActionSubject *)subject trigger:(CSActionTrigger *)trigger actionState:(CSActionState)state;
-
-- (void)changeActionState:(CSActionState)state;
+@property (nonatomic, strong, readonly) CSActionTrigger *trigger;
 
 @end

@@ -10,13 +10,14 @@
 
 //Model
 #import "CSAction.h"
+#import "CSActionType.h"
 #import "CSUploadAction.h"
 
 //Api
 #import "CSApiClient.h"
 #import "CSRequests.h"
 
-typedef void(^CSActionsServiceFetchActionsCompletionBlock)(BOOL success, NSArray <CSAction *> *actions, NSError *error);
+typedef void(^CSActionsServiceFetchActionsCompletionBlock)(BOOL success, NSArray <NSArray <CSAction *> *> *actions, NSArray <CSActionType *> *actionTypes, NSError *error);
 typedef void(^CSActionsServiceCompletionBlock)(BOOL success, CSAction *action, NSError *error);
 
 @interface CSActionsService : NSObject

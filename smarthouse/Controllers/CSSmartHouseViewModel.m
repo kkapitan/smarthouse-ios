@@ -10,46 +10,27 @@
 
 @interface CSSmartHouseViewModel ()
 
-@property (nonatomic, strong) NSArray <NSArray <CSAction *> *> *actionsBySection;
+@property (nonatomic, strong) NSArray <CSActionType *> *actionTypes;
+@property (nonatomic, strong) NSArray <NSArray <CSAction *> *> *actionsByType;
 
 @end
 
 @implementation CSSmartHouseViewModel
 
-- (instancetype)initWithActions:(NSArray<CSAction *> *)actions {
-    self = [super init];
-    if (self) {
-        _actionsBySection = [self groupActions:actions];
-    }
-    return self;
-}
-
 - (NSInteger)numberOfSections {
-    return (NSInteger)_actionsBySection.count;
+    return (NSInteger)_actionsByType.count;
 }
 
 - (NSInteger)numberOfActionsForSection:(NSInteger)section {
-    return (NSInteger)_actionsBySection[(NSUInteger)section].count;
+    return (NSInteger)_actionsByType[(NSUInteger)section].count;
 }
 
 - (NSString *)titleForSection:(NSInteger)section {
-    switch (section) {
-        case CSSmartHouseSectionTypeSwitchActions:
-            return @"Switch Actions";
-            break;
-        case CSSmartHouseSectionTypeTimerActions:
-            return @"Timer Actions";
-            break;
-        case CSSmartHouseSectionTypeBeaconActions:
-            return @"Beacon Actions";
-            break;
-    }
-    
-    return @"Other Actions";
+    return [[_actionTypes[(NSUInteger)section].name uppercaseString] stringByAppendingString:@" Actions"];
 }
 
 - (CSAction *)actionForIndexPath:(NSIndexPath *)indexPath {
-    return _actionsBySection[(NSUInteger)indexPath.section][(NSUInteger)indexPath.row];
+    return _actionsByType[(NSUInteger)indexPath.section][(NSUInteger)indexPath.row];
 }
 
 - (CSBeaconActionCellViewModel *)beaconActionCellViewModelForIndexPath:(NSIndexPath *)indexPath {
@@ -70,22 +51,24 @@
     return [[CSTimerActionCellViewModel alloc] initWithAction:action];
 }
 
-#pragma mark -
-#pragma mark - Private
-
-- (NSArray *)groupActions:(NSArray <CSAction *> *)actions {
-    
-    NSPredicate *switchPredicate = [NSPredicate predicateWithFormat:@"trigger.triggerType = %d", CSActionTriggerTypeSwitch];
-    NSArray *switchActions = [actions filteredArrayUsingPredicate:switchPredicate];
-    
-    NSPredicate *timerPredicate = [NSPredicate predicateWithFormat:@"trigger.triggerType = %d", CSActionTriggerTypeTimer];
-    NSArray *timerActions = [actions filteredArrayUsingPredicate:timerPredicate];
-
-    
-    NSPredicate *beaconPredicate = [NSPredicate predicateWithFormat:@"trigger.triggerType = %d", CSActionTriggerTypeBeacon];
-    NSArray *beaconActions = [actions filteredArrayUsingPredicate:beaconPredicate];
-    
-    return @[switchActions, timerActions, beaconActions];
+- (void)fetchActionsWithCompletion:(CSSmartHouseViewModelFetchActionsCompletion)block {
+    __weak typeof (self) wSelf = self;
+    [[CSActionsService new] fetchActionsWithCompletionBlock:^(BOOL success, NSArray<NSArray <CSAction *> *> *actionsByActionType, NSArray <CSActionType *> *actionTypes,  NSError *error) {
+        
+        if (!success && error && block) {
+            block(nil, [UIAlertController alertWithErrorMessage:@"Something went wrong. Please try again."]);
+            return;
+        }
+        
+        [[CSAccount account] updateActionTypes:actionTypes];
+        
+        wSelf.actionTypes = actionTypes;
+        wSelf.actionsByType = actionsByActionType;
+        
+        if (block) {
+            block(nil, nil);
+        }
+    }];
 }
 
 @end

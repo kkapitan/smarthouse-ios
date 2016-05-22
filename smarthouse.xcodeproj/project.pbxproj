@@ -25,6 +25,7 @@
 		0219181B1CDF6C7300288736 /* CSBeaconActionCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0219181A1CDF6C7300288736 /* CSBeaconActionCellViewModel.m */; };
 		02255EC11CDFD2EE002AED8C /* CSActionTriggerTypeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 02255EC01CDFD2EE002AED8C /* CSActionTriggerTypeModel.m */; };
 		024430961CE2563A00CB48AA /* UITableViewController+IndexPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 024430951CE2563A00CB48AA /* UITableViewController+IndexPath.m */; };
+		029CE0B01CF2411C00F12334 /* CSActionType.m in Sources */ = {isa = PBXBuildFile; fileRef = 029CE0AF1CF2411C00F12334 /* CSActionType.m */; };
 		02B881991CF1C5B90072D3A4 /* CSSessionsService.m in Sources */ = {isa = PBXBuildFile; fileRef = 02B881981CF1C5B90072D3A4 /* CSSessionsService.m */; };
 		02B8819C1CF1C5CA0072D3A4 /* CSActionSubjectsService.m in Sources */ = {isa = PBXBuildFile; fileRef = 02B8819B1CF1C5CA0072D3A4 /* CSActionSubjectsService.m */; };
 		02B8819F1CF1C5F20072D3A4 /* CSActionsService.m in Sources */ = {isa = PBXBuildFile; fileRef = 02B8819E1CF1C5F20072D3A4 /* CSActionsService.m */; };
@@ -109,6 +110,8 @@
 		02255EC01CDFD2EE002AED8C /* CSActionTriggerTypeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSActionTriggerTypeModel.m; sourceTree = "<group>"; };
 		024430941CE2563A00CB48AA /* UITableViewController+IndexPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewController+IndexPath.h"; sourceTree = "<group>"; };
 		024430951CE2563A00CB48AA /* UITableViewController+IndexPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewController+IndexPath.m"; sourceTree = "<group>"; };
+		029CE0AE1CF2411C00F12334 /* CSActionType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSActionType.h; sourceTree = "<group>"; };
+		029CE0AF1CF2411C00F12334 /* CSActionType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSActionType.m; sourceTree = "<group>"; };
 		02B881971CF1C5B90072D3A4 /* CSSessionsService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSSessionsService.h; sourceTree = "<group>"; };
 		02B881981CF1C5B90072D3A4 /* CSSessionsService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSSessionsService.m; sourceTree = "<group>"; };
 		02B8819A1CF1C5CA0072D3A4 /* CSActionSubjectsService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSActionSubjectsService.h; sourceTree = "<group>"; };
@@ -494,6 +497,8 @@
 				02B881AA1CF1C9860072D3A4 /* CSUploadAction.m */,
 				02B881AC1CF1D2AA0072D3A4 /* CSUser.h */,
 				02B881AD1CF1D2AA0072D3A4 /* CSUser.m */,
+				029CE0AE1CF2411C00F12334 /* CSActionType.h */,
+				029CE0AF1CF2411C00F12334 /* CSActionType.m */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -846,6 +851,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				029CE0B01CF2411C00F12334 /* CSActionType.m in Sources */,
 				02DDA2531CDF90D60096E3DF /* CSSmartHouseTableViewController.m in Sources */,
 				02B8819C1CF1C5CA0072D3A4 /* CSActionSubjectsService.m in Sources */,
 				02DDA2421CDF6DB20096E3DF /* CSActionSubject.m in Sources */,

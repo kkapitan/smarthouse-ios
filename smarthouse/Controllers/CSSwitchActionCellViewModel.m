@@ -16,7 +16,7 @@
         _subjectName = action.subject.name;
         _subjectImageURL = action.subject.imageURL;
         
-        _isSwitched = action.actionState == CSActionStateOn;
+        //_isSwitched = action.actionState == CSActionStateOn;
     }
     return self;
 }

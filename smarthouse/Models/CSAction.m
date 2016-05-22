@@ -10,22 +10,16 @@
 
 @implementation CSAction
 
-- (instancetype)initWithSubject:(CSActionSubject *)subject trigger:(CSActionTrigger *)trigger actionState:(CSActionState)state {
-    self = [super init];
-    if (self) {
-        _subject = subject;
-        _trigger = trigger;
-        _actionState = state;
-    }
-    return self;
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+    return @{
+             @"uid":@"id",
+             @"subject":@"action_subject"
+            };
 }
 
-- (instancetype)initWithSubject:(CSActionSubject *)subject trigger:(CSActionTrigger *)trigger {
-    return [self initWithSubject:subject trigger:trigger actionState:CSActionStateOff];
++ (NSValueTransformer *)subjectURLJSONTransformer {
+    return [MTLJSONAdapter dictionaryTransformerWithModelClass:CSActionSubject.class];
 }
 
-- (void)changeActionState:(CSActionState)state {
-    _actionState = state;
-}
 
 @end
