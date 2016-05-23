@@ -9,16 +9,17 @@
 #import <Foundation/Foundation.h>
 
 //Model
-#import "CSAction.h"
-#import "CSActionTriggerTypeModel.h"
+#import "CSUploadAction.h"
+
+//Service
+#import "CSActionsService.h"
+
 
 typedef void(^CSAddActionSaveCompletionBlock)(BOOL success, CSAction *action, UIAlertController *alert);
 
 @interface CSAddActionViewModel : NSObject
 
-@property (nonatomic, assign) CSActionTriggerTypeModel *triggerTypeModel;
-
-@property (nonatomic, strong) CSActionSubject *subject;
+@property (nonatomic, strong) CSUploadAction *uploadAction;
 
 - (NSString *)subjectName;
 - (NSURL *)subjectImageURL;

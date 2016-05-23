@@ -14,11 +14,11 @@
 @implementation CSAddActionViewModel
 
 - (NSString *)subjectName {
-    return _subject ? _subject.name : @"Tap to choose subject";
+    return _uploadAction.subject ? _uploadAction.subject.name : @"Tap to choose subject";
 }
 
 - (NSURL *)subjectImageURL {
-    return _subject.imageURL;
+    return _uploadAction.subject.imageURL;
 }
 
 - (void)saveActionWithCompletion:(CSAddActionSaveCompletionBlock)block {
@@ -31,19 +31,27 @@
         
         return;
     }
+    
+    [[CSActionsService new] createAction:_uploadAction withCompletion:^(BOOL success, CSAction *action, NSError *error) {
+        if (block) {
+            block(success, action, error ? [UIAlertController alertWithErrorMessage:@"Something went wrong. Please try again."] : nil);
+        }
+    }];
 }
 
 #pragma mark - 
 #pragma mark - Private
 
 - (BOOL)validateData {
-    return _triggerTypeModel != nil && _subject != nil;
+    return _uploadAction.subject != nil;
 }
 
-- (CSActionTrigger *)buildTrigger {
-    CSActionTrigger *trigger = [[CSActionTrigger alloc] initWithTriggerType:_triggerTypeModel.triggerType];
-    
-    return trigger;
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        _uploadAction = [CSUploadAction new];
+    }
+    return self;
 }
 
 @end

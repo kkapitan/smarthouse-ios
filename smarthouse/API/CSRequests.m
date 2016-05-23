@@ -22,14 +22,14 @@
 - (NSMutableURLRequest *)requestCreateActionWithParams:(CSCreateActionParams *)params {
     return [self.requestSerializer requestWithMethod:@"POST"
                                            URLString:[NSString stringWithFormat:@"%@/actions",self.baseURL]
-                                          parameters:nil
+                                          parameters:params.params
                                                error:nil];
 }
 
 - (NSMutableURLRequest *)requestDeleteActionWithParams:(CSDeleteActionParams *)params {
     return [self.requestSerializer requestWithMethod:@"DELETE"
-                                           URLString:[NSString stringWithFormat:@"%@/actions",self.baseURL]
-                                          parameters:nil
+                                           URLString:[NSString stringWithFormat:@"%@/actions/%d",self.baseURL, params.action.uid]
+                                          parameters:params.params
                                                error:nil];
 }
 
@@ -47,7 +47,7 @@
 - (NSMutableURLRequest *)requestLoginUserWithParams:(CSLoginUserParams *)params {
     return [self.requestSerializer requestWithMethod:@"POST"
                                            URLString:[NSString stringWithFormat:@"%@/actions",self.baseURL]
-                                          parameters:nil
+                                          parameters:params.params
                                                error:nil];
 }
 

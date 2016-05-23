@@ -23,7 +23,6 @@
 		021918151CDF6C5200288736 /* CSSwitchActionCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 021918141CDF6C5200288736 /* CSSwitchActionCellViewModel.m */; };
 		021918181CDF6C6400288736 /* CSTimerActionCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 021918171CDF6C6400288736 /* CSTimerActionCellViewModel.m */; };
 		0219181B1CDF6C7300288736 /* CSBeaconActionCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0219181A1CDF6C7300288736 /* CSBeaconActionCellViewModel.m */; };
-		02255EC11CDFD2EE002AED8C /* CSActionTriggerTypeModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 02255EC01CDFD2EE002AED8C /* CSActionTriggerTypeModel.m */; };
 		024430961CE2563A00CB48AA /* UITableViewController+IndexPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 024430951CE2563A00CB48AA /* UITableViewController+IndexPath.m */; };
 		029CE0B01CF2411C00F12334 /* CSActionType.m in Sources */ = {isa = PBXBuildFile; fileRef = 029CE0AF1CF2411C00F12334 /* CSActionType.m */; };
 		02B881991CF1C5B90072D3A4 /* CSSessionsService.m in Sources */ = {isa = PBXBuildFile; fileRef = 02B881981CF1C5B90072D3A4 /* CSSessionsService.m */; };
@@ -42,8 +41,6 @@
 		02DDA23C1CDF6D370096E3DF /* CSAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DDA23B1CDF6D370096E3DF /* CSAction.m */; };
 		02DDA23F1CDF6DA70096E3DF /* CSActionTrigger.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DDA23E1CDF6DA70096E3DF /* CSActionTrigger.m */; };
 		02DDA2421CDF6DB20096E3DF /* CSActionSubject.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DDA2411CDF6DB20096E3DF /* CSActionSubject.m */; };
-		02DDA24B1CDF86E00096E3DF /* CSBootstrap.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DDA24A1CDF86E00096E3DF /* CSBootstrap.m */; };
-		02DDA24E1CDF87050096E3DF /* bootstrap.json in Resources */ = {isa = PBXBuildFile; fileRef = 02DDA24D1CDF87050096E3DF /* bootstrap.json */; };
 		02DDA2531CDF90D60096E3DF /* CSSmartHouseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DDA2521CDF90D60096E3DF /* CSSmartHouseTableViewController.m */; };
 		02DDA2561CDF90F30096E3DF /* CSSmartHouseViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DDA2551CDF90F30096E3DF /* CSSmartHouseViewModel.m */; };
 		02DDA2591CDF915A0096E3DF /* CSAddActionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DDA2581CDF915A0096E3DF /* CSAddActionViewController.m */; };
@@ -106,8 +103,6 @@
 		021918171CDF6C6400288736 /* CSTimerActionCellViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTimerActionCellViewModel.m; sourceTree = "<group>"; };
 		021918191CDF6C7300288736 /* CSBeaconActionCellViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSBeaconActionCellViewModel.h; sourceTree = "<group>"; };
 		0219181A1CDF6C7300288736 /* CSBeaconActionCellViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSBeaconActionCellViewModel.m; sourceTree = "<group>"; };
-		02255EBF1CDFD2EE002AED8C /* CSActionTriggerTypeModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSActionTriggerTypeModel.h; sourceTree = "<group>"; };
-		02255EC01CDFD2EE002AED8C /* CSActionTriggerTypeModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSActionTriggerTypeModel.m; sourceTree = "<group>"; };
 		024430941CE2563A00CB48AA /* UITableViewController+IndexPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewController+IndexPath.h"; sourceTree = "<group>"; };
 		024430951CE2563A00CB48AA /* UITableViewController+IndexPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewController+IndexPath.m"; sourceTree = "<group>"; };
 		029CE0AE1CF2411C00F12334 /* CSActionType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSActionType.h; sourceTree = "<group>"; };
@@ -144,9 +139,6 @@
 		02DDA23E1CDF6DA70096E3DF /* CSActionTrigger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSActionTrigger.m; sourceTree = "<group>"; };
 		02DDA2401CDF6DB20096E3DF /* CSActionSubject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSActionSubject.h; sourceTree = "<group>"; };
 		02DDA2411CDF6DB20096E3DF /* CSActionSubject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSActionSubject.m; sourceTree = "<group>"; };
-		02DDA2491CDF86E00096E3DF /* CSBootstrap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSBootstrap.h; sourceTree = "<group>"; };
-		02DDA24A1CDF86E00096E3DF /* CSBootstrap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSBootstrap.m; sourceTree = "<group>"; };
-		02DDA24D1CDF87050096E3DF /* bootstrap.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bootstrap.json; sourceTree = "<group>"; };
 		02DDA2511CDF90D60096E3DF /* CSSmartHouseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSSmartHouseTableViewController.h; sourceTree = "<group>"; };
 		02DDA2521CDF90D60096E3DF /* CSSmartHouseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSSmartHouseTableViewController.m; sourceTree = "<group>"; };
 		02DDA2541CDF90F30096E3DF /* CSSmartHouseViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSSmartHouseViewModel.h; sourceTree = "<group>"; };
@@ -350,16 +342,6 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
-		02DDA24C1CDF86ED0096E3DF /* Bootstrap */ = {
-			isa = PBXGroup;
-			children = (
-				02DDA2491CDF86E00096E3DF /* CSBootstrap.h */,
-				02DDA24A1CDF86E00096E3DF /* CSBootstrap.m */,
-				02DDA24D1CDF87050096E3DF /* bootstrap.json */,
-			);
-			name = Bootstrap;
-			sourceTree = "<group>";
-		};
 		02DDA24F1CDF87200096E3DF /* API */ = {
 			isa = PBXGroup;
 			children = (
@@ -422,8 +404,6 @@
 			children = (
 				02DDA26C1CDFA72E0096E3DF /* CSAddActionViewModel.h */,
 				02DDA26D1CDFA72E0096E3DF /* CSAddActionViewModel.m */,
-				02255EBF1CDFD2EE002AED8C /* CSActionTriggerTypeModel.h */,
-				02255EC01CDFD2EE002AED8C /* CSActionTriggerTypeModel.m */,
 			);
 			name = "View Models";
 			sourceTree = "<group>";
@@ -551,7 +531,6 @@
 		BDB71B2618EA471400579B97 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				02DDA24C1CDF86ED0096E3DF /* Bootstrap */,
 				02DDA25A1CDF91680096E3DF /* PickSubjectViewController */,
 				02DDA2501CDF90900096E3DF /* AddActionViewController */,
 				021917FD1CDF493600288736 /* SmartHouseViewController */,
@@ -706,7 +685,6 @@
 				021918121CDF698F00288736 /* CSBeaconActionCell.xib in Resources */,
 				021918101CDF695000288736 /* CSTimerActionCell.xib in Resources */,
 				BDDB996E18C3943B003EBC42 /* Images.xcassets in Resources */,
-				02DDA24E1CDF87050096E3DF /* bootstrap.json in Resources */,
 				0219180E1CDF658700288736 /* CSSwitchActionCell.xib in Resources */,
 				BD304C8318E77F7E0034105E /* Settings.bundle in Resources */,
 				BDF68AF11B713C3400153C8D /* Main.storyboard in Resources */,
@@ -865,14 +843,12 @@
 				02DDA23C1CDF6D370096E3DF /* CSAction.m in Sources */,
 				02014D501CE10B9100E2A1DF /* CSApiClient.m in Sources */,
 				02B881B11CF1D4230072D3A4 /* CSUserResponseSerializer.m in Sources */,
-				02255EC11CDFD2EE002AED8C /* CSActionTriggerTypeModel.m in Sources */,
 				021918151CDF6C5200288736 /* CSSwitchActionCellViewModel.m in Sources */,
 				BDDB996318C3943B003EBC42 /* CSAppDelegate.m in Sources */,
 				02DDA2751CDFA7AA0096E3DF /* CSPickerView.m in Sources */,
 				02DDA2561CDF90F30096E3DF /* CSSmartHouseViewModel.m in Sources */,
 				021918181CDF6C6400288736 /* CSTimerActionCellViewModel.m in Sources */,
 				021918031CDF49E500288736 /* CSTableViewCell.m in Sources */,
-				02DDA24B1CDF86E00096E3DF /* CSBootstrap.m in Sources */,
 				02B881AB1CF1C9860072D3A4 /* CSUploadAction.m in Sources */,
 				BD934CD419C211F600B48551 /* AssetCatalogIdentifiers.m in Sources */,
 				02B881B41CF1D43D0072D3A4 /* CSActionSubjectsResponseSerializer.m in Sources */,

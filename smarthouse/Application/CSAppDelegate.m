@@ -8,9 +8,6 @@
 
 #import "CSAppDelegate.h"
 
-//Bootstrap
-#import "CSBootstrap.h"
-
 @implementation CSAppDelegate
 
 -(BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions

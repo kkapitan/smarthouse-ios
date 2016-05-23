@@ -17,9 +17,6 @@
 //Controllers
 #import "CSPickSubjectViewController.h"
 
-//Bootstrap
-#import "CSBootstrap.h"
-
 //Category
 #import "UIImageView+AFNetworking.h"
 
@@ -39,7 +36,6 @@
     [super viewDidLoad];
     
     _viewModel = [CSAddActionViewModel new];
-    _viewModel.triggerTypeModel = [[CSBootstrap sharedInstance] triggerTypes][0];
     
     [self setupTextFields];
     [self reloadData];
@@ -49,10 +45,11 @@
 #pragma mark - CSPickSubjectDelegate
 
 - (void)subjectPicker:(CSPickSubjectViewController *)picker didPickActionSubject:(CSActionSubject *)subject {
-    self.viewModel.subject = subject;
+    self.viewModel.uploadAction.subject = subject;
     
     [self reloadData];
 }
+
 - (IBAction)saveButtonAction:(id)sender {
     
     __weak typeof(self) wSelf = self;
@@ -62,7 +59,6 @@
             return ;
         }
         
-        [[CSBootstrap sharedInstance] addAction:action];
         [wSelf.navigationController popViewControllerAnimated:YES];
     }];
 }
@@ -78,17 +74,16 @@
     [_subjectImageView setImageWithURL:self.viewModel.subjectImageURL placeholderImage:nil];
     
     _subjectNameLabel.text = [self.viewModel subjectName];
-    _triggerTypeTextField.text = [self.viewModel.triggerTypeModel itemTitle];
 }
 
 - (void)setupTextFields {
-    NSArray *triggerTypeItems = [[CSBootstrap sharedInstance] triggerTypes];
+    NSArray *triggerTypeItems = [[CSAccount account] actionTypes];
     
     CSPickerView *pickerView = [[CSPickerView alloc] initWithItems:triggerTypeItems];
     __weak typeof(self) wSelf = self;
     
-    pickerView.pickItemBlock = ^(CSActionTriggerTypeModel *triggerTypeModel) {
-        wSelf.viewModel.triggerTypeModel = triggerTypeModel;
+    pickerView.pickItemBlock = ^(CSActionType *actionType) {
+        wSelf.triggerTypeTextField.text = actionType.name;
         
         [wSelf reloadData];
     };

@@ -33,7 +33,7 @@
     [[CSApiClient sharedManager] enqueueOperation:operation];
 }
 
-- (void)createAction:(CSUploadAction *)action withCompletion:(CSActionsServiceCompletionBlock)block {
+- (void)createAction:(CSUploadAction *)action withCompletion:(CSActionsServiceCreateActionCompletionBlock)block {
     CSCreateActionParams *params = [[CSCreateActionParams alloc] initWithAction:action];
     NSURLRequest *request = [[CSApiClient sharedManager] requestCreateActionWithParams:params];
     
@@ -53,7 +53,7 @@
     [[CSApiClient sharedManager] enqueueOperation:operation];
 }
 
-- (void)deleteAction:(CSAction *)action withCompletion:(CSActionsServiceCompletionBlock)block {
+- (void)deleteAction:(CSAction *)action withCompletion:(CSActionsServiceDeleteActionCompletionBlock)block {
     CSDeleteActionParams *params = [[CSDeleteActionParams alloc] initWithAction:action];
     NSURLRequest *request = [[CSApiClient sharedManager] requestDeleteActionWithParams:params];
     
@@ -61,11 +61,11 @@
     
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *innerOperation, NSDictionary *responseObject) {
         if (block) {
-            block(YES, nil, nil);
+            block(YES, nil);
         }
     } failure:^(AFHTTPRequestOperation *innerOperation, NSError *error) {
         if (block) {
-            block(NO, nil, error);
+            block(NO, error);
         }
     }];
     

@@ -17,4 +17,11 @@
             };
 }
 
+#pragma mark -
+#pragma mark - CSPickerItemProtocol
+
+- (NSString *)itemTitle {
+    return self.name;
+}
+
 @end

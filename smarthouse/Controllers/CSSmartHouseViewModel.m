@@ -11,7 +11,7 @@
 @interface CSSmartHouseViewModel ()
 
 @property (nonatomic, strong) NSArray <CSActionType *> *actionTypes;
-@property (nonatomic, strong) NSArray <NSArray <CSAction *> *> *actionsByType;
+@property (nonatomic, strong) NSMutableArray <NSArray <CSAction *> *> *actionsByType;
 
 @end
 
@@ -55,18 +55,26 @@
     __weak typeof (self) wSelf = self;
     [[CSActionsService new] fetchActionsWithCompletionBlock:^(BOOL success, NSArray<NSArray <CSAction *> *> *actionsByActionType, NSArray <CSActionType *> *actionTypes,  NSError *error) {
         
-        if (!success && error && block) {
-            block(nil, [UIAlertController alertWithErrorMessage:@"Something went wrong. Please try again."]);
-            return;
+        if (success) {
+            [[CSAccount account] updateActionTypes:actionTypes];
+            
+            wSelf.actionTypes = actionTypes;
+            wSelf.actionsByType = [actionsByActionType mutableCopy];
         }
         
-        [[CSAccount account] updateActionTypes:actionTypes];
-        
-        wSelf.actionTypes = actionTypes;
-        wSelf.actionsByType = actionsByActionType;
-        
         if (block) {
-            block(nil, nil);
+            block(success, error ? [UIAlertController alertWithErrorMessage:@"Something went wrong. Please try again."] : nil);
+        }
+    }];
+}
+
+- (void)deleteActionAtIndexPath:(NSIndexPath *)indexPath completion:(CSSmartHouseViewModelDeleteActionCompletion)block {
+    CSAction *action = [self actionForIndexPath:indexPath];
+    _actionsByType[(NSUInteger)indexPath.section] = [_actionsByType[(NSUInteger)indexPath.section] mtl_arrayByRemovingObject:action];
+    
+    [[CSActionsService new] deleteAction:action withCompletion:^(BOOL success, NSError *error) {
+        if (block) {
+            block(success, error ? [UIAlertController alertWithErrorMessage:@"Something went wrong. Please try again."] : nil);
         }
     }];
 }

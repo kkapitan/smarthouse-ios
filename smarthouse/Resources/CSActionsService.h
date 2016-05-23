@@ -18,7 +18,8 @@
 #import "CSRequests.h"
 
 typedef void(^CSActionsServiceFetchActionsCompletionBlock)(BOOL success, NSArray <NSArray <CSAction *> *> *actions, NSArray <CSActionType *> *actionTypes, NSError *error);
-typedef void(^CSActionsServiceCompletionBlock)(BOOL success, CSAction *action, NSError *error);
+typedef void(^CSActionsServiceCreateActionCompletionBlock)(BOOL success, CSAction *action, NSError *error);
+typedef void(^CSActionsServiceDeleteActionCompletionBlock)(BOOL success, NSError *error);
 
 @interface CSActionsService : NSObject
 
@@ -26,9 +27,9 @@ typedef void(^CSActionsServiceCompletionBlock)(BOOL success, CSAction *action, N
 - (void)fetchActionsWithCompletionBlock:(CSActionsServiceFetchActionsCompletionBlock)block;
 
 //
-- (void)createAction:(CSUploadAction *)action withCompletion:(CSActionsServiceCompletionBlock)block;
+- (void)createAction:(CSUploadAction *)action withCompletion:(CSActionsServiceCreateActionCompletionBlock)block;
 
 //
-- (void)deleteAction:(CSAction *)action withCompletion:(CSActionsServiceCompletionBlock)block;
+- (void)deleteAction:(CSAction *)action withCompletion:(CSActionsServiceDeleteActionCompletionBlock)block;
 
 @end

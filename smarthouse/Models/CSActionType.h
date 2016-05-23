@@ -8,7 +8,9 @@
 
 #import <Mantle/Mantle.h>
 
-@interface CSActionType : MTLModel <MTLJSONSerializing>
+#import "CSPickerView.h"
+
+@interface CSActionType : MTLModel <MTLJSONSerializing, CSPickerItemProtocol>
 
 @property (nonatomic, assign, readonly) NSInteger uid;
 @property (nonatomic, strong, readonly) NSString *name;

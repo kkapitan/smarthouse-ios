@@ -14,9 +14,6 @@
 //View
 #import "CSPickSubjectCell.h"
 
-//Bootstrap
-#import "CSBootstrap.h"
-
 @interface CSPickSubjectViewController ()
 @property (nonatomic, strong) CSPickSubjectViewModel *viewModel;
 @end

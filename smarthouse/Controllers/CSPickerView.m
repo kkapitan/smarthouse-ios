@@ -9,12 +9,12 @@
 #import "CSPickerView.h"
 
 @interface CSPickerView ()
-@property (nonatomic, strong) NSArray <id<CSPickerItem>> *items;
+@property (nonatomic, strong) NSArray <id<CSPickerItemProtocol>> *items;
 @end
 
 @implementation CSPickerView
 
-- (instancetype)initWithItems:(NSArray<id<CSPickerItem>> *)items {
+- (instancetype)initWithItems:(NSArray<id<CSPickerItemProtocol>> *)items {
     self = [super init];
     if (self) {
         _items = items;

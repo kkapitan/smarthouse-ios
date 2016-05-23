@@ -8,19 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
-@protocol CSPickerItem <NSObject>
+@protocol CSPickerItemProtocol <NSObject>
 
 - (NSString *)itemTitle;
 
 @end
 
-typedef void(^CSPickerViewPickingCompletion)(id<CSPickerItem> item);
+typedef void(^CSPickerViewPickingCompletion)(id<CSPickerItemProtocol> item);
 
 @interface CSPickerView : UIPickerView <UIPickerViewDelegate, UIPickerViewDataSource>
 
 @property (nonatomic, copy) CSPickerViewPickingCompletion pickItemBlock;
 
-- (instancetype)initWithItems:(NSArray <id<CSPickerItem>> *)items;
+- (instancetype)initWithItems:(NSArray <id<CSPickerItemProtocol>> *)items;
 
 
 @end

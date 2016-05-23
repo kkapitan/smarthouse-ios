@@ -19,7 +19,9 @@
 }
 
 - (NSDictionary *)params {
-    return [MTLJSONAdapter JSONDictionaryFromModel:_action error:nil];
+    return @{
+             @"action_subject_id" : @(_action.subject.uid)
+             };
 }
 
 @end

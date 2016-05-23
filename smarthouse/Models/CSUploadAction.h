@@ -11,7 +11,8 @@
 //Action
 #import "CSAction.h"
 
-@interface CSUploadAction : MTLModel <MTLJSONSerializing>
+@interface CSUploadAction : MTLModel
 
+@property (nonatomic, strong) CSActionSubject *subject;
 
 @end

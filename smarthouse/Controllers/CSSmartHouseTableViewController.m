@@ -20,9 +20,6 @@
 //Categories
 #import "UITableViewController+IndexPath.h"
 
-//Bootstrap
-#import "CSBootstrap.h"
-
 @interface CSSmartHouseTableViewController ()
 
 @property (nonatomic, strong) CSSmartHouseViewModel *viewModel;
@@ -48,7 +45,7 @@
     _viewModel = [CSSmartHouseViewModel new];
     
     __weak typeof (self) wSelf = self;
-    [_viewModel fetchActionsWithCompletion:^(NSArray<CSAction *> *actions, UIAlertController *alert) {
+    [_viewModel fetchActionsWithCompletion:^(BOOL success, UIAlertController *alert) {
         if (alert) {
             [wSelf presentViewController:alert animated:YES completion:nil];
             return ;
@@ -109,6 +106,24 @@
         [cell populateWithViewModel:cellViewModel];
         
         return cell;
+    }
+}
+
+#pragma mark -
+#pragma mark - UITableViewDelegate 
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        
+        __weak typeof (self) wSelf = self;
+        [self.viewModel deleteActionAtIndexPath:indexPath completion:^(BOOL success, UIAlertController *alert) {
+            if (!success && alert) {
+                [wSelf presentViewController:alert animated:YES completion:nil];
+                return ;
+            }
+            
+            [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
+        }];
     }
 }
 

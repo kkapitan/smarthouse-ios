@@ -26,7 +26,8 @@
 //Category
 #import "UIAlertController+Error.h"
 
-typedef void(^CSSmartHouseViewModelFetchActionsCompletion)(NSArray <CSAction *> *actions, UIAlertController *alert);
+typedef void(^CSSmartHouseViewModelFetchActionsCompletion)(BOOL success, UIAlertController *alert);
+typedef void(^CSSmartHouseViewModelDeleteActionCompletion)(BOOL success, UIAlertController *alert);
 
 typedef NS_ENUM(NSInteger, CSSmartHouseSectionType) {
     CSSmartHouseSectionTypeSwitchActions,
@@ -49,5 +50,6 @@ typedef NS_ENUM(NSInteger, CSSmartHouseSectionType) {
 - (CSTimerActionCellViewModel *)timerActionCellViewModelForIndexPath:(NSIndexPath *)indexPath;
 
 - (void)fetchActionsWithCompletion:(CSSmartHouseViewModelFetchActionsCompletion)block;
+- (void)deleteActionAtIndexPath:(NSIndexPath *)indexPath completion:(CSSmartHouseViewModelDeleteActionCompletion)block;
 
 @end
