@@ -10,4 +10,9 @@ extern const struct CSMainStoryboardIDs {
         __unsafe_unretained NSString *pickSubject;
     } segues;
 
+    struct {
+        __unsafe_unretained NSString *login;
+        __unsafe_unretained NSString *smartHouseTable;
+    } viewControllers;
+
 } CSMainStoryboardIDs;

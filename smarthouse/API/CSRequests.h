@@ -12,6 +12,7 @@
 #import "CSLoginUserParams.h"
 #import "CSCreateActionParams.h"
 #import "CSDeleteActionParams.h"
+#import "CSSwitchActionSubjectParams.h"
 
 @interface AFHTTPSessionManager (Requests)
 
@@ -24,6 +25,7 @@
 //Action subjects
 
 - (NSMutableURLRequest *)requestFetchActionSubjects;
+- (NSMutableURLRequest *)requestSwitchActionSubjectWithParams:(CSSwitchActionSubjectParams *)params;
 
 //Sessions
 

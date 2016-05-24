@@ -19,6 +19,7 @@
         
         // set acceptable content code returned by API
         NSMutableIndexSet *statusCodesSet = [self.acceptableStatusCodes mutableCopy];
+        [statusCodesSet addIndex:500];
         [self setAcceptableStatusCodes:[statusCodesSet copy]];
     }
     

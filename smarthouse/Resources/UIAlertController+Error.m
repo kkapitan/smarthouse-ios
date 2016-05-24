@@ -10,6 +10,12 @@
 
 @implementation UIAlertController (Error)
 
++ (UIAlertController *)alertWithError:(NSError *)error {
+    NSString *message = error.userInfo[@"message"] ?: @"Something went wrong. Please try again later.";
+    
+    return [self alertWithErrorMessage:message];
+}
+
 + (UIAlertController *)alertWithErrorMessage:(NSString *)message {
     UIAlertController *alert = [UIAlertController alertControllerWithTitle:@"Error!" message:message preferredStyle:UIAlertControllerStyleAlert];
     

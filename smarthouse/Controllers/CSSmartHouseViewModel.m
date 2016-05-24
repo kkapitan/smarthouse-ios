@@ -63,7 +63,7 @@
         }
         
         if (block) {
-            block(success, error ? [UIAlertController alertWithErrorMessage:@"Something went wrong. Please try again."] : nil);
+            block(success, error ? [UIAlertController alertWithError:error] : nil);
         }
     }];
 }
@@ -74,7 +74,16 @@
     
     [[CSActionsService new] deleteAction:action withCompletion:^(BOOL success, NSError *error) {
         if (block) {
-            block(success, error ? [UIAlertController alertWithErrorMessage:@"Something went wrong. Please try again."] : nil);
+            block(success, error ? [UIAlertController alertWithError:error] : nil);
+        }
+    }];
+}
+
+- (void)switchActionSubjectAtIndexPath:(NSIndexPath *)indexPath completion:(CSSmartHouseViewModelSwitchActionSubjectCompletion)block {
+    CSAction *action = [self actionForIndexPath:indexPath];
+    [[CSActionSubjectsService new] switchActionSubject:action.subject withCompletion:^(BOOL success, CSActionSubject *subject, NSError *error) {
+        if (block) {
+            block(success, error ? [UIAlertController alertWithError:error] : nil);
         }
     }];
 }

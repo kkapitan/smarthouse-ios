@@ -17,9 +17,6 @@
 //View Model
 #import "CSSmartHouseViewModel.h"
 
-//Categories
-#import "UITableViewController+IndexPath.h"
-
 @interface CSSmartHouseTableViewController ()
 
 @property (nonatomic, strong) CSSmartHouseViewModel *viewModel;
@@ -86,7 +83,7 @@
         [cell populateWithViewModel:cellViewModel];
         
         cell.actionSwitch.tag = indexPath.row;
-        [cell.actionSwitch addTarget:self action:@selector(switchValueChangedAction:) forControlEvents:UIControlEventValueChanged];
+        //[cell.actionSwitch addTarget:self action:@selector(switchValueChangedAction:) forControlEvents:UIControlEventValueChanged];
         
         return cell;
     } else if (indexPath.section == CSSmartHouseSectionTypeTimerActions) {
@@ -131,11 +128,19 @@
 #pragma mark - Actions
 
 - (void)switchValueChangedAction:(UISwitch *)actionSwitch {
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    
+    __weak typeof (self) wSelf = self;
     NSIndexPath *indexPath = [NSIndexPath indexPathForRow:actionSwitch.tag inSection:CSSmartHouseSectionTypeSwitchActions];
     
-    CSAction *action = [self.viewModel actionForIndexPath:indexPath];
-    
-    //[MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    [self.viewModel switchActionSubjectAtIndexPath:indexPath completion:^(BOOL success, UIAlertController *alert) {
+        [MBProgressHUD hideHUDForView:wSelf.view animated:YES];
+        
+        if (!success && alert) {
+            [wSelf presentViewController:alert animated:YES completion:nil];
+            return;
+        }
+    }];
 }
 
 #pragma mark -

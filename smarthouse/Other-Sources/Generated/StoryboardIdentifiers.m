@@ -10,4 +10,9 @@ const struct CSMainStoryboardIDs CSMainStoryboardIDs = {
         .pickSubject = @"CSPickSubjectSegue",
     },
 
+    .viewControllers = {
+        .login = @"CSLoginViewController",
+        .smartHouseTable = @"CSSmartHouseTableViewController",
+    },
+
 };

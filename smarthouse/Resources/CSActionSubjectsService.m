@@ -10,6 +10,7 @@
 
 //Serializers
 #import "CSActionSubjectsResponseSerializer.h"
+#import "CSActionSubjectResponseSerializer.h"
 
 @implementation CSActionSubjectsService
 
@@ -23,6 +24,26 @@
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *innerOperation, NSDictionary *responseObject) {
         if (block) {
             block(YES, responseObject[@"subjects"], nil);
+        }
+    } failure:^(AFHTTPRequestOperation *innerOperation, NSError *error) {
+        if (block) {
+            block(NO, nil, error);
+        }
+    }];
+    
+    [[CSApiClient sharedManager] enqueueOperation:operation];
+}
+
+- (void)switchActionSubject:(CSActionSubject *)subject withCompletion:(CSActionSubjectSwitchSubjectCompletionBlock)block {
+    
+    NSURLRequest *request = [[CSApiClient sharedManager] requestFetchActionSubjects];
+    
+    AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
+    operation.responseSerializer = [CSActionSubjectResponseSerializer serializer];
+    
+    [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *innerOperation, NSDictionary *responseObject) {
+        if (block) {
+            block(YES, responseObject[@"subject"], nil);
         }
     } failure:^(AFHTTPRequestOperation *innerOperation, NSError *error) {
         if (block) {

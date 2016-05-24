@@ -13,6 +13,10 @@
 		02014D521CE10B9100E2A1DF /* CSRequests.m in Sources */ = {isa = PBXBuildFile; fileRef = 02014D4F1CE10B9100E2A1DF /* CSRequests.m */; };
 		02014D551CE10C3F00E2A1DF /* Configuration.plist in Resources */ = {isa = PBXBuildFile; fileRef = 02014D541CE10C3F00E2A1DF /* Configuration.plist */; };
 		02014D581CE10C4900E2A1DF /* CSEnvironment.m in Sources */ = {isa = PBXBuildFile; fileRef = 02014D571CE10C4900E2A1DF /* CSEnvironment.m */; };
+		020FD6271CF4DADE00823E50 /* CSWireFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 020FD6261CF4DADE00823E50 /* CSWireFrame.m */; };
+		020FD62B1CF4F17000823E50 /* CSSplashViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 020FD62A1CF4F17000823E50 /* CSSplashViewController.m */; };
+		020FD62E1CF4F6BD00823E50 /* CSSwitchActionSubjectParams.m in Sources */ = {isa = PBXBuildFile; fileRef = 020FD62D1CF4F6BD00823E50 /* CSSwitchActionSubjectParams.m */; };
+		020FD6311CF4FA4500823E50 /* CSActionSubjectResponseSerializer.m in Sources */ = {isa = PBXBuildFile; fileRef = 020FD6301CF4FA4500823E50 /* CSActionSubjectResponseSerializer.m */; };
 		021918031CDF49E500288736 /* CSTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 021918021CDF49E500288736 /* CSTableViewCell.m */; };
 		021918061CDF5D2B00288736 /* CSSwitchActionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 021918051CDF5D2B00288736 /* CSSwitchActionCell.m */; };
 		021918091CDF62AE00288736 /* CSTimerActionCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 021918081CDF62AE00288736 /* CSTimerActionCell.m */; };
@@ -23,7 +27,9 @@
 		021918151CDF6C5200288736 /* CSSwitchActionCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 021918141CDF6C5200288736 /* CSSwitchActionCellViewModel.m */; };
 		021918181CDF6C6400288736 /* CSTimerActionCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 021918171CDF6C6400288736 /* CSTimerActionCellViewModel.m */; };
 		0219181B1CDF6C7300288736 /* CSBeaconActionCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0219181A1CDF6C7300288736 /* CSBeaconActionCellViewModel.m */; };
-		024430961CE2563A00CB48AA /* UITableViewController+IndexPath.m in Sources */ = {isa = PBXBuildFile; fileRef = 024430951CE2563A00CB48AA /* UITableViewController+IndexPath.m */; };
+		026C803E1CF391E6000C7599 /* CSLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 026C803D1CF391E6000C7599 /* CSLoginViewController.m */; };
+		026C80411CF391FE000C7599 /* CSLoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 026C80401CF391FE000C7599 /* CSLoginViewModel.m */; };
+		026C80451CF39B09000C7599 /* NSString+Validation.m in Sources */ = {isa = PBXBuildFile; fileRef = 026C80441CF39B09000C7599 /* NSString+Validation.m */; };
 		029CE0B01CF2411C00F12334 /* CSActionType.m in Sources */ = {isa = PBXBuildFile; fileRef = 029CE0AF1CF2411C00F12334 /* CSActionType.m */; };
 		02B881991CF1C5B90072D3A4 /* CSSessionsService.m in Sources */ = {isa = PBXBuildFile; fileRef = 02B881981CF1C5B90072D3A4 /* CSSessionsService.m */; };
 		02B8819C1CF1C5CA0072D3A4 /* CSActionSubjectsService.m in Sources */ = {isa = PBXBuildFile; fileRef = 02B8819B1CF1C5CA0072D3A4 /* CSActionSubjectsService.m */; };
@@ -86,6 +92,14 @@
 		02014D561CE10C4900E2A1DF /* CSEnvironment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSEnvironment.h; sourceTree = "<group>"; };
 		02014D571CE10C4900E2A1DF /* CSEnvironment.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSEnvironment.m; sourceTree = "<group>"; };
 		02014D5E1CE10D6300E2A1DF /* CSRequestParamsProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CSRequestParamsProtocol.h; sourceTree = "<group>"; };
+		020FD6251CF4DADE00823E50 /* CSWireFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSWireFrame.h; sourceTree = "<group>"; };
+		020FD6261CF4DADE00823E50 /* CSWireFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSWireFrame.m; sourceTree = "<group>"; };
+		020FD6291CF4F17000823E50 /* CSSplashViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSSplashViewController.h; sourceTree = "<group>"; };
+		020FD62A1CF4F17000823E50 /* CSSplashViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSSplashViewController.m; sourceTree = "<group>"; };
+		020FD62C1CF4F6BD00823E50 /* CSSwitchActionSubjectParams.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSSwitchActionSubjectParams.h; sourceTree = "<group>"; };
+		020FD62D1CF4F6BD00823E50 /* CSSwitchActionSubjectParams.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSSwitchActionSubjectParams.m; sourceTree = "<group>"; };
+		020FD62F1CF4FA4500823E50 /* CSActionSubjectResponseSerializer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSActionSubjectResponseSerializer.h; sourceTree = "<group>"; };
+		020FD6301CF4FA4500823E50 /* CSActionSubjectResponseSerializer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSActionSubjectResponseSerializer.m; sourceTree = "<group>"; };
 		021918011CDF49E500288736 /* CSTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTableViewCell.h; sourceTree = "<group>"; };
 		021918021CDF49E500288736 /* CSTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTableViewCell.m; sourceTree = "<group>"; };
 		021918041CDF5D2B00288736 /* CSSwitchActionCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSSwitchActionCell.h; sourceTree = "<group>"; };
@@ -103,8 +117,12 @@
 		021918171CDF6C6400288736 /* CSTimerActionCellViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTimerActionCellViewModel.m; sourceTree = "<group>"; };
 		021918191CDF6C7300288736 /* CSBeaconActionCellViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSBeaconActionCellViewModel.h; sourceTree = "<group>"; };
 		0219181A1CDF6C7300288736 /* CSBeaconActionCellViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSBeaconActionCellViewModel.m; sourceTree = "<group>"; };
-		024430941CE2563A00CB48AA /* UITableViewController+IndexPath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UITableViewController+IndexPath.h"; sourceTree = "<group>"; };
-		024430951CE2563A00CB48AA /* UITableViewController+IndexPath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UITableViewController+IndexPath.m"; sourceTree = "<group>"; };
+		026C803C1CF391E6000C7599 /* CSLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSLoginViewController.h; sourceTree = "<group>"; };
+		026C803D1CF391E6000C7599 /* CSLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSLoginViewController.m; sourceTree = "<group>"; };
+		026C803F1CF391FE000C7599 /* CSLoginViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSLoginViewModel.h; sourceTree = "<group>"; };
+		026C80401CF391FE000C7599 /* CSLoginViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSLoginViewModel.m; sourceTree = "<group>"; };
+		026C80431CF39B09000C7599 /* NSString+Validation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Validation.h"; sourceTree = "<group>"; };
+		026C80441CF39B09000C7599 /* NSString+Validation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Validation.m"; sourceTree = "<group>"; };
 		029CE0AE1CF2411C00F12334 /* CSActionType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSActionType.h; sourceTree = "<group>"; };
 		029CE0AF1CF2411C00F12334 /* CSActionType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSActionType.m; sourceTree = "<group>"; };
 		02B881971CF1C5B90072D3A4 /* CSSessionsService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSSessionsService.h; sourceTree = "<group>"; };
@@ -221,6 +239,8 @@
 				02014D5F1CE10F3B00E2A1DF /* Categories */,
 				02B881BB1CF1F7170072D3A4 /* CSAccount.h */,
 				02B881BC1CF1F7170072D3A4 /* CSAccount.m */,
+				020FD6251CF4DADE00823E50 /* CSWireFrame.h */,
+				020FD6261CF4DADE00823E50 /* CSWireFrame.m */,
 			);
 			name = Helpers;
 			path = Resources;
@@ -249,6 +269,8 @@
 				02B881B61CF1D4550072D3A4 /* CSActionResponseSerializer.m */,
 				02B881B81CF1D4600072D3A4 /* CSActionsResponseSerializer.h */,
 				02B881B91CF1D4600072D3A4 /* CSActionsResponseSerializer.m */,
+				020FD62F1CF4FA4500823E50 /* CSActionSubjectResponseSerializer.h */,
+				020FD6301CF4FA4500823E50 /* CSActionSubjectResponseSerializer.m */,
 			);
 			name = Serializers;
 			sourceTree = "<group>";
@@ -263,6 +285,8 @@
 				02B881A41CF1C7350072D3A4 /* CSDeleteActionParams.m */,
 				02B881A61CF1C7550072D3A4 /* CSLoginUserParams.h */,
 				02B881A71CF1C7550072D3A4 /* CSLoginUserParams.m */,
+				020FD62C1CF4F6BD00823E50 /* CSSwitchActionSubjectParams.h */,
+				020FD62D1CF4F6BD00823E50 /* CSSwitchActionSubjectParams.m */,
 			);
 			name = Params;
 			sourceTree = "<group>";
@@ -272,8 +296,8 @@
 			children = (
 				02014D471CE0EBBA00E2A1DF /* UIAlertController+Error.h */,
 				02014D481CE0EBBA00E2A1DF /* UIAlertController+Error.m */,
-				024430941CE2563A00CB48AA /* UITableViewController+IndexPath.h */,
-				024430951CE2563A00CB48AA /* UITableViewController+IndexPath.m */,
+				026C80431CF39B09000C7599 /* NSString+Validation.h */,
+				026C80441CF39B09000C7599 /* NSString+Validation.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -290,6 +314,15 @@
 			);
 			name = Operations;
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		020FD6281CF4F15800823E50 /* SplashViewController */ = {
+			isa = PBXGroup;
+			children = (
+				020FD6291CF4F17000823E50 /* CSSplashViewController.h */,
+				020FD62A1CF4F17000823E50 /* CSSplashViewController.m */,
+			);
+			name = SplashViewController;
 			sourceTree = "<group>";
 		};
 		021917FC1CDF3FFB00288736 /* Storyboard */ = {
@@ -340,6 +373,25 @@
 				021918111CDF698F00288736 /* CSBeaconActionCell.xib */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		026C803B1CF38CDD000C7599 /* LoginViewController */ = {
+			isa = PBXGroup;
+			children = (
+				026C80421CF3920E000C7599 /* View Model */,
+				026C803C1CF391E6000C7599 /* CSLoginViewController.h */,
+				026C803D1CF391E6000C7599 /* CSLoginViewController.m */,
+			);
+			name = LoginViewController;
+			sourceTree = "<group>";
+		};
+		026C80421CF3920E000C7599 /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				026C803F1CF391FE000C7599 /* CSLoginViewModel.h */,
+				026C80401CF391FE000C7599 /* CSLoginViewModel.m */,
+			);
+			name = "View Model";
 			sourceTree = "<group>";
 		};
 		02DDA24F1CDF87200096E3DF /* API */ = {
@@ -531,6 +583,8 @@
 		BDB71B2618EA471400579B97 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				020FD6281CF4F15800823E50 /* SplashViewController */,
+				026C803B1CF38CDD000C7599 /* LoginViewController */,
 				02DDA25A1CDF91680096E3DF /* PickSubjectViewController */,
 				02DDA2501CDF90900096E3DF /* AddActionViewController */,
 				021917FD1CDF493600288736 /* SmartHouseViewController */,
@@ -835,7 +889,6 @@
 				02DDA2421CDF6DB20096E3DF /* CSActionSubject.m in Sources */,
 				02DDA26E1CDFA72E0096E3DF /* CSAddActionViewModel.m in Sources */,
 				021918061CDF5D2B00288736 /* CSSwitchActionCell.m in Sources */,
-				024430961CE2563A00CB48AA /* UITableViewController+IndexPath.m in Sources */,
 				0219181B1CDF6C7300288736 /* CSBeaconActionCellViewModel.m in Sources */,
 				02014D521CE10B9100E2A1DF /* CSRequests.m in Sources */,
 				02B881B71CF1D4550072D3A4 /* CSActionResponseSerializer.m in Sources */,
@@ -848,28 +901,35 @@
 				02DDA2751CDFA7AA0096E3DF /* CSPickerView.m in Sources */,
 				02DDA2561CDF90F30096E3DF /* CSSmartHouseViewModel.m in Sources */,
 				021918181CDF6C6400288736 /* CSTimerActionCellViewModel.m in Sources */,
+				020FD62E1CF4F6BD00823E50 /* CSSwitchActionSubjectParams.m in Sources */,
 				021918031CDF49E500288736 /* CSTableViewCell.m in Sources */,
 				02B881AB1CF1C9860072D3A4 /* CSUploadAction.m in Sources */,
+				020FD6271CF4DADE00823E50 /* CSWireFrame.m in Sources */,
 				BD934CD419C211F600B48551 /* AssetCatalogIdentifiers.m in Sources */,
 				02B881B41CF1D43D0072D3A4 /* CSActionSubjectsResponseSerializer.m in Sources */,
 				0219180C1CDF639A00288736 /* CSBeaconActionCell.m in Sources */,
 				02DDA25D1CDF91C10096E3DF /* CSPickSubjectViewController.m in Sources */,
 				02B881AE1CF1D2AA0072D3A4 /* CSUser.m in Sources */,
 				02014D581CE10C4900E2A1DF /* CSEnvironment.m in Sources */,
+				020FD62B1CF4F17000823E50 /* CSSplashViewController.m in Sources */,
 				02014D511CE10B9100E2A1DF /* CSJSONResponseSerializer.m in Sources */,
+				026C803E1CF391E6000C7599 /* CSLoginViewController.m in Sources */,
 				02014D491CE0EBBA00E2A1DF /* UIAlertController+Error.m in Sources */,
 				02B881A81CF1C7550072D3A4 /* CSLoginUserParams.m in Sources */,
+				026C80451CF39B09000C7599 /* NSString+Validation.m in Sources */,
 				02B8819F1CF1C5F20072D3A4 /* CSActionsService.m in Sources */,
 				02DDA26A1CDF981E0096E3DF /* CSPickSubjectCellViewModel.m in Sources */,
 				02DDA2651CDF94120096E3DF /* CSPickSubjectCell.m in Sources */,
 				BD934CD519C211F600B48551 /* StoryboardIdentifiers.m in Sources */,
 				BD6951CF18EA4B0800F2F410 /* main.m in Sources */,
 				02B881BD1CF1F7170072D3A4 /* CSAccount.m in Sources */,
+				026C80411CF391FE000C7599 /* CSLoginViewModel.m in Sources */,
 				02DDA2611CDF92EB0096E3DF /* CSPickSubjectViewModel.m in Sources */,
 				02DDA23F1CDF6DA70096E3DF /* CSActionTrigger.m in Sources */,
 				02B881991CF1C5B90072D3A4 /* CSSessionsService.m in Sources */,
 				02B881BA1CF1D4600072D3A4 /* CSActionsResponseSerializer.m in Sources */,
 				02DDA2591CDF915A0096E3DF /* CSAddActionViewController.m in Sources */,
+				020FD6311CF4FA4500823E50 /* CSActionSubjectResponseSerializer.m in Sources */,
 				02B881A51CF1C7350072D3A4 /* CSDeleteActionParams.m in Sources */,
 				021918091CDF62AE00288736 /* CSTimerActionCell.m in Sources */,
 			);

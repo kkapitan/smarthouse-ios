@@ -10,6 +10,10 @@
 
 @interface UIAlertController (Error)
 
+//
 + (UIAlertController *)alertWithErrorMessage:(NSString *)message;
+
+//
++ (UIAlertController *)alertWithError:(NSError *)error;
 
 @end

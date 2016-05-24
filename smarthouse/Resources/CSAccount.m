@@ -11,7 +11,7 @@
 @implementation CSAccount
 
 - (BOOL)isLoggedIn {
-    return YES;
+    return self.user != nil;
 }
 
 - (void)updateActionTypes:(NSArray<CSActionType *> *)actionTypes {

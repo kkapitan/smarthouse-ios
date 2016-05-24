@@ -42,11 +42,20 @@
                                                error:nil];
 }
 
+- (NSMutableURLRequest *)requestSwitchActionSubjectWithPjarams:(CSSwitchActionSubjectParams *)params {
+    return [self.requestSerializer requestWithMethod:@"GET"
+                                           URLString:[NSString stringWithFormat:@"%@/action_subjects/%d",self.baseURL, params.subject.uid]
+                                          parameters:params.params
+                                               error:nil];
+}
+
+
+
 //Sessions
 
 - (NSMutableURLRequest *)requestLoginUserWithParams:(CSLoginUserParams *)params {
     return [self.requestSerializer requestWithMethod:@"POST"
-                                           URLString:[NSString stringWithFormat:@"%@/actions",self.baseURL]
+                                           URLString:[NSString stringWithFormat:@"%@/sessions",self.baseURL]
                                           parameters:params.params
                                                error:nil];
 }
