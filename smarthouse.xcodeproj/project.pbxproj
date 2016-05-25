@@ -667,6 +667,7 @@
 				BD35136319BE21BD00A19841 /* Badge App Icons */,
 				6326DEAC577ED641AECAADFF /* 📦 Embed Pods Frameworks */,
 				10C4C8A37A90886DA650CAD4 /* 📦 Copy Pods Resources */,
+				024D0AFB1CF6352300109F72 /* Fabric */,
 			);
 			buildRules = (
 			);
@@ -756,6 +757,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		024D0AFB1CF6352300109F72 /* Fabric */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Fabric;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" ac81451481ec78f969ac22a10101581f6fc074e6 321ac502e87c913162df6b0af72dd252adeafe933e5bd40c8066e4e55d311996";
+		};
 		10C4C8A37A90886DA650CAD4 /* 📦 Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

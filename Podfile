@@ -5,7 +5,11 @@ platform :ios, '8.0'
 # use_frameworks!
 
 target 'smarthouse' do
-
+    # Crashlytics
+    pod 'Fabric'
+    pod 'Crashlytics'
+    
+    
     # Networking
     pod 'AFNetworking', '~> 2.5'
     pod 'FormatterKit'    # For all your string formatting needs
