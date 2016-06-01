@@ -60,6 +60,11 @@
 		02DDA26A1CDF981E0096E3DF /* CSPickSubjectCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DDA2691CDF981E0096E3DF /* CSPickSubjectCellViewModel.m */; };
 		02DDA26E1CDFA72E0096E3DF /* CSAddActionViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DDA26D1CDFA72E0096E3DF /* CSAddActionViewModel.m */; };
 		02DDA2751CDFA7AA0096E3DF /* CSPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DDA2741CDFA7AA0096E3DF /* CSPickerView.m */; };
+		02E52D0E1CFEBD910075B4E6 /* CSDailyTimerActionTrigger.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E52D0D1CFEBD910075B4E6 /* CSDailyTimerActionTrigger.m */; };
+		02E52D111CFEBDA30075B4E6 /* CSWeeklyTimerActionTrigger.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E52D101CFEBDA30075B4E6 /* CSWeeklyTimerActionTrigger.m */; };
+		02E52D141CFEBDCB0075B4E6 /* CSBeaconActionTrigger.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E52D131CFEBDCB0075B4E6 /* CSBeaconActionTrigger.m */; };
+		02E52D171CFEBDDF0075B4E6 /* CSSwitchActionTrigger.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E52D161CFEBDDF0075B4E6 /* CSSwitchActionTrigger.m */; };
+		02E52D1A1CFECB530075B4E6 /* CSTimerTriggerConfiguration.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E52D191CFECB530075B4E6 /* CSTimerTriggerConfiguration.m */; };
 		B797686FE309D9D4DBC57095 /* libPods-smarthouse.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B1E15C8B28FBA5DA39332054 /* libPods-smarthouse.a */; };
 		BD304C8118E672EA0034105E /* CSDummySpec.m in Sources */ = {isa = PBXBuildFile; fileRef = BD304C8018E672EA0034105E /* CSDummySpec.m */; };
 		BD304C8318E77F7E0034105E /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = BD304C8218E77F7E0034105E /* Settings.bundle */; };
@@ -185,6 +190,16 @@
 		02DDA26D1CDFA72E0096E3DF /* CSAddActionViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSAddActionViewModel.m; sourceTree = "<group>"; };
 		02DDA2731CDFA7AA0096E3DF /* CSPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSPickerView.h; sourceTree = "<group>"; };
 		02DDA2741CDFA7AA0096E3DF /* CSPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSPickerView.m; sourceTree = "<group>"; };
+		02E52D0C1CFEBD910075B4E6 /* CSDailyTimerActionTrigger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSDailyTimerActionTrigger.h; sourceTree = "<group>"; };
+		02E52D0D1CFEBD910075B4E6 /* CSDailyTimerActionTrigger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSDailyTimerActionTrigger.m; sourceTree = "<group>"; };
+		02E52D0F1CFEBDA30075B4E6 /* CSWeeklyTimerActionTrigger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSWeeklyTimerActionTrigger.h; sourceTree = "<group>"; };
+		02E52D101CFEBDA30075B4E6 /* CSWeeklyTimerActionTrigger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSWeeklyTimerActionTrigger.m; sourceTree = "<group>"; };
+		02E52D121CFEBDCB0075B4E6 /* CSBeaconActionTrigger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSBeaconActionTrigger.h; sourceTree = "<group>"; };
+		02E52D131CFEBDCB0075B4E6 /* CSBeaconActionTrigger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSBeaconActionTrigger.m; sourceTree = "<group>"; };
+		02E52D151CFEBDDF0075B4E6 /* CSSwitchActionTrigger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSSwitchActionTrigger.h; sourceTree = "<group>"; };
+		02E52D161CFEBDDF0075B4E6 /* CSSwitchActionTrigger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSSwitchActionTrigger.m; sourceTree = "<group>"; };
+		02E52D181CFECB530075B4E6 /* CSTimerTriggerConfiguration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTimerTriggerConfiguration.h; sourceTree = "<group>"; };
+		02E52D191CFECB530075B4E6 /* CSTimerTriggerConfiguration.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTimerTriggerConfiguration.m; sourceTree = "<group>"; };
 		5BA9BAD11DA1A0F41FC29EA9 /* Pods-smarthouse.distribution.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-smarthouse.distribution.xcconfig"; path = "Pods/Target Support Files/Pods-smarthouse/Pods-smarthouse.distribution.xcconfig"; sourceTree = "<group>"; };
 		97AB0E77884008C5BC108E15 /* Pods-smarthouse.debug_staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-smarthouse.debug_staging.xcconfig"; path = "Pods/Target Support Files/Pods-smarthouse/Pods-smarthouse.debug_staging.xcconfig"; sourceTree = "<group>"; };
 		A1F1D738F1A9B22BEC5A00E8 /* Pods-smarthouse.debug_production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-smarthouse.debug_production.xcconfig"; path = "Pods/Target Support Files/Pods-smarthouse/Pods-smarthouse.debug_production.xcconfig"; sourceTree = "<group>"; };
@@ -507,6 +522,25 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
+		02E52D0B1CFEBD1E0075B4E6 /* ActionTriggers */ = {
+			isa = PBXGroup;
+			children = (
+				02DDA23D1CDF6DA70096E3DF /* CSActionTrigger.h */,
+				02DDA23E1CDF6DA70096E3DF /* CSActionTrigger.m */,
+				02E52D0C1CFEBD910075B4E6 /* CSDailyTimerActionTrigger.h */,
+				02E52D0D1CFEBD910075B4E6 /* CSDailyTimerActionTrigger.m */,
+				02E52D0F1CFEBDA30075B4E6 /* CSWeeklyTimerActionTrigger.h */,
+				02E52D101CFEBDA30075B4E6 /* CSWeeklyTimerActionTrigger.m */,
+				02E52D121CFEBDCB0075B4E6 /* CSBeaconActionTrigger.h */,
+				02E52D131CFEBDCB0075B4E6 /* CSBeaconActionTrigger.m */,
+				02E52D151CFEBDDF0075B4E6 /* CSSwitchActionTrigger.h */,
+				02E52D161CFEBDDF0075B4E6 /* CSSwitchActionTrigger.m */,
+				02E52D181CFECB530075B4E6 /* CSTimerTriggerConfiguration.h */,
+				02E52D191CFECB530075B4E6 /* CSTimerTriggerConfiguration.m */,
+			);
+			name = ActionTriggers;
+			sourceTree = "<group>";
+		};
 		16AEB207F83CBD024A9A3B54 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -557,10 +591,9 @@
 		BD574AFB18EA47FA00EDD66F /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				02E52D0B1CFEBD1E0075B4E6 /* ActionTriggers */,
 				02DDA23A1CDF6D370096E3DF /* CSAction.h */,
 				02DDA23B1CDF6D370096E3DF /* CSAction.m */,
-				02DDA23D1CDF6DA70096E3DF /* CSActionTrigger.h */,
-				02DDA23E1CDF6DA70096E3DF /* CSActionTrigger.m */,
 				02DDA2401CDF6DB20096E3DF /* CSActionSubject.h */,
 				02DDA2411CDF6DB20096E3DF /* CSActionSubject.m */,
 				02B881A91CF1C9860072D3A4 /* CSUploadAction.h */,
@@ -938,6 +971,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				029CE0B01CF2411C00F12334 /* CSActionType.m in Sources */,
+				02E52D141CFEBDCB0075B4E6 /* CSBeaconActionTrigger.m in Sources */,
 				02DDA2531CDF90D60096E3DF /* CSSmartHouseTableViewController.m in Sources */,
 				02B8819C1CF1C5CA0072D3A4 /* CSActionSubjectsService.m in Sources */,
 				02DDA2421CDF6DB20096E3DF /* CSActionSubject.m in Sources */,
@@ -954,6 +988,7 @@
 				02B881B11CF1D4230072D3A4 /* CSUserResponseSerializer.m in Sources */,
 				021918151CDF6C5200288736 /* CSSwitchActionCellViewModel.m in Sources */,
 				BDDB996318C3943B003EBC42 /* CSAppDelegate.m in Sources */,
+				02E52D111CFEBDA30075B4E6 /* CSWeeklyTimerActionTrigger.m in Sources */,
 				02DDA2751CDFA7AA0096E3DF /* CSPickerView.m in Sources */,
 				02DDA2561CDF90F30096E3DF /* CSSmartHouseViewModel.m in Sources */,
 				021918181CDF6C6400288736 /* CSTimerActionCellViewModel.m in Sources */,
@@ -969,8 +1004,10 @@
 				02B881AE1CF1D2AA0072D3A4 /* CSUser.m in Sources */,
 				02014D581CE10C4900E2A1DF /* CSEnvironment.m in Sources */,
 				020FD62B1CF4F17000823E50 /* CSSplashViewController.m in Sources */,
+				02E52D1A1CFECB530075B4E6 /* CSTimerTriggerConfiguration.m in Sources */,
 				02014D511CE10B9100E2A1DF /* CSJSONResponseSerializer.m in Sources */,
 				026C803E1CF391E6000C7599 /* CSLoginViewController.m in Sources */,
+				02E52D171CFEBDDF0075B4E6 /* CSSwitchActionTrigger.m in Sources */,
 				02014D491CE0EBBA00E2A1DF /* UIAlertController+Error.m in Sources */,
 				02B881A81CF1C7550072D3A4 /* CSLoginUserParams.m in Sources */,
 				026C80451CF39B09000C7599 /* NSString+Validation.m in Sources */,
@@ -986,6 +1023,7 @@
 				02B881991CF1C5B90072D3A4 /* CSSessionsService.m in Sources */,
 				02B881BA1CF1D4600072D3A4 /* CSActionsResponseSerializer.m in Sources */,
 				02DDA2591CDF915A0096E3DF /* CSAddActionViewController.m in Sources */,
+				02E52D0E1CFEBD910075B4E6 /* CSDailyTimerActionTrigger.m in Sources */,
 				020FD6311CF4FA4500823E50 /* CSActionSubjectResponseSerializer.m in Sources */,
 				02B881A51CF1C7350072D3A4 /* CSDeleteActionParams.m in Sources */,
 				021918091CDF62AE00288736 /* CSTimerActionCell.m in Sources */,

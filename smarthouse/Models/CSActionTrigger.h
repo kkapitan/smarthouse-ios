@@ -10,14 +10,14 @@
 
 typedef NS_ENUM(NSUInteger, CSActionTriggerType) {
     CSActionTriggerTypeSwitch,
-    CSActionTriggerTypeTimer,
+    CSActionTriggerTypeDailyTimer,
+    CSActionTriggerTypeWeeklyTimer,
     CSActionTriggerTypeBeacon
 };
 
-@interface CSActionTrigger : MTLModel
+@interface CSActionTrigger : MTLModel <MTLJSONSerializing>
 
+@property (nonatomic, assign, readonly) NSInteger uid;
 @property (nonatomic, assign, readonly) CSActionTriggerType triggerType;
-
-- (instancetype)initWithTriggerType:(CSActionTriggerType)type;
 
 @end
