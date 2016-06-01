@@ -39,6 +39,14 @@
     }];
 }
 
+- (BOOL)shouldShowCellAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section != 1 || indexPath.row == 0) {
+        return YES;
+    }
+    
+    return indexPath.row == _uploadAction.actionType.uid;
+}
+
 #pragma mark - 
 #pragma mark - Private
 

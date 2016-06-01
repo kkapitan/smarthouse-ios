@@ -5,17 +5,17 @@
 	<key>Debug_Production</key>
 	<dict>
 		<key>CSApiBaseURL</key>
-		<string>http://smarthouse.25.111.133.199.xip.io/api</string>
+		<string>http://smarthouse.dev/api</string>
 	</dict>
 	<key>Debug_Staging</key>
 	<dict>
 		<key>CSApiBaseURL</key>
-		<string>http://smarthouse.25.111.133.199.xip.io/api</string>
+		<string>http://smarthouse.dev/api</string>
 	</dict>
 	<key>Default</key>
 	<dict>
 		<key>CSApiBaseURL</key>
-		<string>http://smarthouse.25.111.133.199.xip.io/api</string>
+		<string>http://smarthouse.dev/api</string>
 	</dict>
 </dict>
 </plist>

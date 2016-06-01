@@ -27,6 +27,9 @@
 		021918151CDF6C5200288736 /* CSSwitchActionCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 021918141CDF6C5200288736 /* CSSwitchActionCellViewModel.m */; };
 		021918181CDF6C6400288736 /* CSTimerActionCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 021918171CDF6C6400288736 /* CSTimerActionCellViewModel.m */; };
 		0219181B1CDF6C7300288736 /* CSBeaconActionCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 0219181A1CDF6C7300288736 /* CSBeaconActionCellViewModel.m */; };
+		0263297B1CFDD76300790EEF /* CSTimerTriggerDailyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0263297A1CFDD76300790EEF /* CSTimerTriggerDailyViewController.m */; };
+		0263297F1CFDD7C000790EEF /* CSTimerTriggerWeeklyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0263297E1CFDD7C000790EEF /* CSTimerTriggerWeeklyViewController.m */; };
+		026329831CFDDF7E00790EEF /* CSTimerTriggerPageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 026329821CFDDF7E00790EEF /* CSTimerTriggerPageManager.m */; };
 		026C803E1CF391E6000C7599 /* CSLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 026C803D1CF391E6000C7599 /* CSLoginViewController.m */; };
 		026C80411CF391FE000C7599 /* CSLoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 026C80401CF391FE000C7599 /* CSLoginViewModel.m */; };
 		026C80451CF39B09000C7599 /* NSString+Validation.m in Sources */ = {isa = PBXBuildFile; fileRef = 026C80441CF39B09000C7599 /* NSString+Validation.m */; };
@@ -117,6 +120,12 @@
 		021918171CDF6C6400288736 /* CSTimerActionCellViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTimerActionCellViewModel.m; sourceTree = "<group>"; };
 		021918191CDF6C7300288736 /* CSBeaconActionCellViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSBeaconActionCellViewModel.h; sourceTree = "<group>"; };
 		0219181A1CDF6C7300288736 /* CSBeaconActionCellViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSBeaconActionCellViewModel.m; sourceTree = "<group>"; };
+		026329791CFDD76300790EEF /* CSTimerTriggerDailyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTimerTriggerDailyViewController.h; sourceTree = "<group>"; };
+		0263297A1CFDD76300790EEF /* CSTimerTriggerDailyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTimerTriggerDailyViewController.m; sourceTree = "<group>"; };
+		0263297D1CFDD7C000790EEF /* CSTimerTriggerWeeklyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTimerTriggerWeeklyViewController.h; sourceTree = "<group>"; };
+		0263297E1CFDD7C000790EEF /* CSTimerTriggerWeeklyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTimerTriggerWeeklyViewController.m; sourceTree = "<group>"; };
+		026329811CFDDF7E00790EEF /* CSTimerTriggerPageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTimerTriggerPageManager.h; sourceTree = "<group>"; };
+		026329821CFDDF7E00790EEF /* CSTimerTriggerPageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTimerTriggerPageManager.m; sourceTree = "<group>"; };
 		026C803C1CF391E6000C7599 /* CSLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSLoginViewController.h; sourceTree = "<group>"; };
 		026C803D1CF391E6000C7599 /* CSLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSLoginViewController.m; sourceTree = "<group>"; };
 		026C803F1CF391FE000C7599 /* CSLoginViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSLoginViewModel.h; sourceTree = "<group>"; };
@@ -375,6 +384,35 @@
 			name = Views;
 			sourceTree = "<group>";
 		};
+		026329781CFDD68300790EEF /* TimerTriggerViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				026329801CFDD7C800790EEF /* TimerTriggerWeeklyViewController */,
+				0263297C1CFDD78700790EEF /* TimerTriggerDailyViewController */,
+				026329811CFDDF7E00790EEF /* CSTimerTriggerPageManager.h */,
+				026329821CFDDF7E00790EEF /* CSTimerTriggerPageManager.m */,
+			);
+			name = TimerTriggerViewControllers;
+			sourceTree = "<group>";
+		};
+		0263297C1CFDD78700790EEF /* TimerTriggerDailyViewController */ = {
+			isa = PBXGroup;
+			children = (
+				026329791CFDD76300790EEF /* CSTimerTriggerDailyViewController.h */,
+				0263297A1CFDD76300790EEF /* CSTimerTriggerDailyViewController.m */,
+			);
+			name = TimerTriggerDailyViewController;
+			sourceTree = "<group>";
+		};
+		026329801CFDD7C800790EEF /* TimerTriggerWeeklyViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0263297D1CFDD7C000790EEF /* CSTimerTriggerWeeklyViewController.h */,
+				0263297E1CFDD7C000790EEF /* CSTimerTriggerWeeklyViewController.m */,
+			);
+			name = TimerTriggerWeeklyViewController;
+			sourceTree = "<group>";
+		};
 		026C803B1CF38CDD000C7599 /* LoginViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -583,6 +621,7 @@
 		BDB71B2618EA471400579B97 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				026329781CFDD68300790EEF /* TimerTriggerViewControllers */,
 				020FD6281CF4F15800823E50 /* SplashViewController */,
 				026C803B1CF38CDD000C7599 /* LoginViewController */,
 				02DDA25A1CDF91680096E3DF /* PickSubjectViewController */,
@@ -907,9 +946,11 @@
 				0219181B1CDF6C7300288736 /* CSBeaconActionCellViewModel.m in Sources */,
 				02014D521CE10B9100E2A1DF /* CSRequests.m in Sources */,
 				02B881B71CF1D4550072D3A4 /* CSActionResponseSerializer.m in Sources */,
+				026329831CFDDF7E00790EEF /* CSTimerTriggerPageManager.m in Sources */,
 				02B881A21CF1C70F0072D3A4 /* CSCreateActionParams.m in Sources */,
 				02DDA23C1CDF6D370096E3DF /* CSAction.m in Sources */,
 				02014D501CE10B9100E2A1DF /* CSApiClient.m in Sources */,
+				0263297F1CFDD7C000790EEF /* CSTimerTriggerWeeklyViewController.m in Sources */,
 				02B881B11CF1D4230072D3A4 /* CSUserResponseSerializer.m in Sources */,
 				021918151CDF6C5200288736 /* CSSwitchActionCellViewModel.m in Sources */,
 				BDDB996318C3943B003EBC42 /* CSAppDelegate.m in Sources */,
@@ -923,6 +964,7 @@
 				BD934CD419C211F600B48551 /* AssetCatalogIdentifiers.m in Sources */,
 				02B881B41CF1D43D0072D3A4 /* CSActionSubjectsResponseSerializer.m in Sources */,
 				0219180C1CDF639A00288736 /* CSBeaconActionCell.m in Sources */,
+				0263297B1CFDD76300790EEF /* CSTimerTriggerDailyViewController.m in Sources */,
 				02DDA25D1CDF91C10096E3DF /* CSPickSubjectViewController.m in Sources */,
 				02B881AE1CF1D2AA0072D3A4 /* CSUser.m in Sources */,
 				02014D581CE10C4900E2A1DF /* CSEnvironment.m in Sources */,

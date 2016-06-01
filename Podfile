@@ -14,9 +14,10 @@ target 'smarthouse' do
     pod 'AFNetworking', '~> 2.5'
     pod 'FormatterKit'    # For all your string formatting needs
     pod 'Mantle'          # Github's model framework
-
+    
     # Views
     pod 'MBProgressHUD'
+    pod 'MultiSelectSegmentedControl'
 
     # Account
     pod 'AUAccount', git: 'https://github.com/appunite/AUAccount.git', tag: '0.2.8'

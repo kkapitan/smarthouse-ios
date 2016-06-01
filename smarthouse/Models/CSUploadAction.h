@@ -14,5 +14,6 @@
 @interface CSUploadAction : MTLModel
 
 @property (nonatomic, strong) CSActionSubject *subject;
+@property (nonatomic, strong) CSActionType *actionType;
 
 @end

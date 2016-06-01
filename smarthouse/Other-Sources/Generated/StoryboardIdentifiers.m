@@ -7,12 +7,15 @@
 
 const struct CSMainStoryboardIDs CSMainStoryboardIDs = {
     .segues = {
+        .pageViewController = @"CSPageViewControllerSegue",
         .pickSubject = @"CSPickSubjectSegue",
     },
 
     .viewControllers = {
         .login = @"CSLoginViewController",
+        .timerTriggerWeekly = @"CSTimerTriggerWeeklyViewController",
         .smartHouseTable = @"CSSmartHouseTableViewController",
+        .timerTriggerDaily = @"CSTimerTriggerDailyViewController",
     },
 
 };

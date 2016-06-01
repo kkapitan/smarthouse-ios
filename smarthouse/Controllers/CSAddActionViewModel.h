@@ -25,5 +25,7 @@ typedef void(^CSAddActionSaveCompletionBlock)(BOOL success, CSAction *action, UI
 - (NSURL *)subjectImageURL;
 
 - (void)saveActionWithCompletion:(CSAddActionSaveCompletionBlock)block;
+- (BOOL)shouldShowCellAtIndexPath:(NSIndexPath *)indexPath;
+
 
 @end

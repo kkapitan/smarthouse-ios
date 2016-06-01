@@ -11,6 +11,7 @@
 //Models
 #import "CSActionTrigger.h"
 #import "CSActionSubject.h"
+#import "CSActionType.h"
 
 typedef NS_ENUM(NSUInteger, CSActionState) {
     CSActionStateOff,

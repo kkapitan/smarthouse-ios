@@ -7,12 +7,15 @@
 
 extern const struct CSMainStoryboardIDs {
     struct {
+        __unsafe_unretained NSString *pageViewController;
         __unsafe_unretained NSString *pickSubject;
     } segues;
 
     struct {
         __unsafe_unretained NSString *login;
+        __unsafe_unretained NSString *timerTriggerWeekly;
         __unsafe_unretained NSString *smartHouseTable;
+        __unsafe_unretained NSString *timerTriggerDaily;
     } viewControllers;
 
 } CSMainStoryboardIDs;

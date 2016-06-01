@@ -20,6 +20,9 @@
 //Category
 #import "UIImageView+AFNetworking.h"
 
+//Managers
+#import "CSTimerTriggerPageManager.h"
+
 @interface CSAddActionViewController () <CSPickSubjectDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *subjectNameLabel;
@@ -28,6 +31,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *triggerTypeTextField;
 
 @property (nonatomic, strong) CSAddActionViewModel *viewModel;
+@property (nonatomic, strong) CSTimerTriggerPageManager *pageManager;
+
 @end
 
 @implementation CSAddActionViewController
@@ -36,6 +41,7 @@
     [super viewDidLoad];
     
     _viewModel = [CSAddActionViewModel new];
+    _viewModel.uploadAction.actionType = [[CSAccount account].actionTypes firstObject];
     
     [self setupTextFields];
     [self reloadData];
@@ -48,6 +54,22 @@
     self.viewModel.uploadAction.subject = subject;
     
     [self reloadData];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (![_viewModel shouldShowCellAtIndexPath:indexPath]) {
+        return  0;
+    }
+
+    return [super tableView:tableView heightForRowAtIndexPath:indexPath];
+}
+
+#pragma mark -
+#pragma mark - Actions
+
+- (IBAction)timerSegmentedControlValueChanged:(UISegmentedControl *)sender {
+    NSUInteger index = (NSUInteger)sender.selectedSegmentIndex;
+    [_pageManager setViewControllerWithIndex:index animated:NO];
 }
 
 - (IBAction)saveButtonAction:(id)sender {
@@ -74,6 +96,8 @@
     [_subjectImageView setImageWithURL:self.viewModel.subjectImageURL placeholderImage:nil];
     
     _subjectNameLabel.text = [self.viewModel subjectName];
+    
+    _triggerTypeTextField.text = _viewModel.uploadAction.actionType.name;
 }
 
 - (void)setupTextFields {
@@ -83,9 +107,10 @@
     __weak typeof(self) wSelf = self;
     
     pickerView.pickItemBlock = ^(CSActionType *actionType) {
-        wSelf.triggerTypeTextField.text = actionType.name;
+        wSelf.viewModel.uploadAction.actionType = actionType;
         
         [wSelf reloadData];
+        [wSelf.tableView reloadData];
     };
     
     self.triggerTypeTextField.inputView = pickerView;
@@ -95,11 +120,15 @@
 #pragma mark - Navigation
 
 static NSString *const CSPickSubjectSegueIdentifier = @"CSPickSubjectSegue";
+static NSString *const CSPageViewSegueIdentifier = @"CSPageViewControllerSegue";
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([segue.identifier isEqualToString:CSPickSubjectSegueIdentifier]) {
         CSPickSubjectViewController *pickSubjectViewController = segue.destinationViewController;
         pickSubjectViewController.delegate = self;
+    } else if ([segue.identifier isEqualToString:CSPageViewSegueIdentifier]) {
+        UIPageViewController *pageViewController = segue.destinationViewController;
+        _pageManager = [[CSTimerTriggerPageManager alloc] initWithPageController:pageViewController];
     }
 }
 

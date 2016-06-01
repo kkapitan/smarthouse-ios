@@ -59,6 +59,7 @@ PODS:
     - Mantle/extobjc (= 2.0.7)
   - Mantle/extobjc (2.0.7)
   - MBProgressHUD (0.9.2)
+  - MultiSelectSegmentedControl (1.1.0)
   - SSKeychain (1.4.0)
 
 DEPENDENCIES:
@@ -69,6 +70,7 @@ DEPENDENCIES:
   - FormatterKit
   - Mantle
   - MBProgressHUD
+  - MultiSelectSegmentedControl
 
 EXTERNAL SOURCES:
   AUAccount:
@@ -88,8 +90,9 @@ SPEC CHECKSUMS:
   FormatterKit: 11ad17b983200629246a5a466f6f1bfa2df823cb
   Mantle: bc40bb061d8c2c6fb48d5083e04d928c3b7f73d9
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
+  MultiSelectSegmentedControl: 54fb23c997b971eff621cfcf965ff1613d99c3d2
   SSKeychain: c71293fa57216a40ab06c23f4085387583293de4
 
-PODFILE CHECKSUM: c8f685880c073c53ad028b178191808806de1976
+PODFILE CHECKSUM: f0342b69e5c068cc0365cf19672198437dea3c31
 
-COCOAPODS: 1.0.0.beta.6
+COCOAPODS: 1.0.0

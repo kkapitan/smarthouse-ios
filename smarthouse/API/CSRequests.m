@@ -42,7 +42,7 @@
                                                error:nil];
 }
 
-- (NSMutableURLRequest *)requestSwitchActionSubjectWithPjarams:(CSSwitchActionSubjectParams *)params {
+- (NSMutableURLRequest *)requestSwitchActionSubjectWithParams:(CSSwitchActionSubjectParams *)params {
     return [self.requestSerializer requestWithMethod:@"GET"
                                            URLString:[NSString stringWithFormat:@"%@/action_subjects/%d",self.baseURL, params.subject.uid]
                                           parameters:params.params

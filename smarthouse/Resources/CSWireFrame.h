@@ -10,11 +10,16 @@
 
 #import "CSLoginViewController.h"
 #import "CSSmartHouseTableViewController.h"
+#import "CSTimerTriggerWeeklyViewController.h"
+#import "CSTimerTriggerDailyViewController.h"
 
 @interface CSWireFrame : NSObject
 
 - (CSLoginViewController *)loginViewController;
 
 - (CSSmartHouseTableViewController *)smartHouseViewController;
+
+- (CSTimerTriggerDailyViewController *)timerTriggerDailyViewController;
+- (CSTimerTriggerWeeklyViewController *)timerTriggerWeeklyViewController;
 
 @end
