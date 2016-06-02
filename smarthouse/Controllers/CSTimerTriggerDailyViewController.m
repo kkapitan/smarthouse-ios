@@ -43,6 +43,9 @@
     [self setupTextFields];
 }
 
+//Dirty fix to prevent embed table view from scrolling on keyboard appearance
+- (void)viewWillAppear:(BOOL)animated {}
+
 - (void)reloadData {
     self.hourTextField.text = [NSString stringWithFormat:@"%ld", (unsigned long)_viewModel.configuration.hours];
     

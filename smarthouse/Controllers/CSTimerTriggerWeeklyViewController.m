@@ -39,6 +39,9 @@
     [self setupTextFields];
 }
 
+//Dirty fix to prevent embed table view from scrolling on keyboard appearance
+- (void)viewWillAppear:(BOOL)animated {}
+
 - (void)reloadData {
     self.weeksTextField.text = [NSString stringWithFormat:@"%ld", (unsigned long)_viewModel.configuration.weeks];
     
