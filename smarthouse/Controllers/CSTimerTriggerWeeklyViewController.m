@@ -49,6 +49,13 @@
 }
 
 #pragma mark -
+#pragma mark - CSTimerTriggerBuilderPageProtocol
+
+- (void)buildTriggerWithCompletion:(CSTimerTriggerBuilderCompletion)completion {
+    [self.viewModel buildTimerTriggerWithCompletion:completion];
+}
+
+#pragma mark -
 #pragma mark - Private
 
 - (void)setupTextFields {

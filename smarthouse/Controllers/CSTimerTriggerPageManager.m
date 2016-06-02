@@ -15,7 +15,7 @@
 
 @property (nonatomic, strong) UIPageViewController *pageController;
 
-@property (nonatomic, strong) NSArray <UIViewController *> *controllers;
+@property (nonatomic, strong) NSArray <UIViewController<CSTimerTriggerBuilderPageProtocol> *> *controllers;
 @property (nonatomic, assign) NSUInteger controllerIndex;
 
 @end
@@ -44,13 +44,17 @@
     [self.pageController setViewControllers:@[viewController] direction:direction animated:animated completion:nil];
 }
 
+- (UIViewController<CSTimerTriggerBuilderPageProtocol> *)currentPage {
+    return _controllers[(NSUInteger)_controllerIndex];
+}
+
 #pragma mark -
 #pragma mark - Private
 
 - (void)setupControllers {
-    UIViewController *dailyController = [[CSWireFrame new] timerTriggerDailyViewController];
+    CSTimerTriggerDailyViewController *dailyController = [[CSWireFrame new] timerTriggerDailyViewController];
     
-    UIViewController *weeklyController = [[CSWireFrame new] timerTriggerWeeklyViewController];
+    CSTimerTriggerWeeklyViewController *weeklyController = [[CSWireFrame new] timerTriggerWeeklyViewController];
     
     _controllers = @[dailyController, weeklyController];
     [self setViewControllerWithIndex:0 animated:YES];

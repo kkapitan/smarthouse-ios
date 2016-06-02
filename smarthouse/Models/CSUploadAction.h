@@ -15,5 +15,6 @@
 
 @property (nonatomic, strong) CSActionSubject *subject;
 @property (nonatomic, strong) CSActionType *actionType;
+@property (nonatomic, strong) CSActionTrigger *actionTrigger;
 
 @end

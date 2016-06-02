@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface CSTimerTriggerWeeklyViewController : UITableViewController
+//Protocol
+#import "CSTimerTriggerBuilderPageProtocol.h"
+
+@interface CSTimerTriggerWeeklyViewController : UITableViewController <CSTimerTriggerBuilderPageProtocol>
 
 @end

@@ -8,10 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
+//Protocol
+#import "CSTimerTriggerBuilderPageProtocol.h"
+
 @interface CSTimerTriggerPageManager : NSObject 
 
 - (instancetype)initWithPageController:(UIPageViewController *)controller;
 
 - (void)setViewControllerWithIndex:(NSUInteger)index animated:(BOOL)animated;
+
+- (UIViewController<CSTimerTriggerBuilderPageProtocol> *)currentPage;
 
 @end

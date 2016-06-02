@@ -73,7 +73,33 @@
 }
 
 - (IBAction)saveButtonAction:(id)sender {
+    __weak typeof(self) wSelf = self;
     
+    if (_viewModel.uploadAction.actionType.uid == CSActionTypeKeyTimer) {
+        [[_pageManager currentPage] buildTriggerWithCompletion:^(BOOL success, CSActionTrigger *trigger, UIAlertController *alert) {
+            if (!success) {
+                [wSelf presentViewController:alert animated:YES completion:nil];
+                return ;
+            }
+            
+            wSelf.viewModel.uploadAction.actionTrigger = trigger;
+            [wSelf save];
+            
+            return;
+        }];
+    }
+    
+    [self save];
+}
+
+- (IBAction)tapGestureAction:(id)sender {
+    [self.view endEditing:YES];
+}
+
+#pragma mark -
+#pragma mark - Private
+
+- (void)save {
     __weak typeof(self) wSelf = self;
     [self.viewModel saveActionWithCompletion:^(BOOL success, CSAction *action, UIAlertController *alert) {
         if (!success && alert) {
@@ -84,13 +110,6 @@
         [wSelf.navigationController popViewControllerAnimated:YES];
     }];
 }
-
-- (IBAction)tapGestureAction:(id)sender {
-    [self.view endEditing:YES];
-}
-
-#pragma mark -
-#pragma mark - Private
 
 - (void)reloadData {
     [_subjectImageView setImageWithURL:self.viewModel.subjectImageURL placeholderImage:nil];

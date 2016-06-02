@@ -10,9 +10,15 @@
 
 #import "CSPickerView.h"
 
+typedef NS_ENUM(NSUInteger, CSActionTypeKey) {
+    CSActionTypeKeySwitch,
+    CSActionTypeKeyTimer,
+    CSActionTypeKeyBeacon,
+};
+
 @interface CSActionType : MTLModel <MTLJSONSerializing, CSPickerItemProtocol>
 
-@property (nonatomic, assign, readonly) NSInteger uid;
+@property (nonatomic, assign, readonly) CSActionTypeKey uid;
 @property (nonatomic, strong, readonly) NSString *name;
 
 @end

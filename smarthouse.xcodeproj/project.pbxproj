@@ -176,6 +176,7 @@
 		02BF44B61D00674A00D88822 /* CSNumberPicker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSNumberPicker.m; sourceTree = "<group>"; };
 		02BF44B91D006C5F00D88822 /* CSTimerTriggerDailyViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTimerTriggerDailyViewModel.h; sourceTree = "<group>"; };
 		02BF44BA1D006C5F00D88822 /* CSTimerTriggerDailyViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTimerTriggerDailyViewModel.m; sourceTree = "<group>"; };
+		02BF44BF1D007C2000D88822 /* CSTimerTriggerBuilderPageProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTimerTriggerBuilderPageProtocol.h; sourceTree = "<group>"; };
 		02DDA23A1CDF6D370096E3DF /* CSAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSAction.h; sourceTree = "<group>"; };
 		02DDA23B1CDF6D370096E3DF /* CSAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSAction.m; sourceTree = "<group>"; };
 		02DDA23D1CDF6DA70096E3DF /* CSActionTrigger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSActionTrigger.h; sourceTree = "<group>"; };
@@ -423,6 +424,7 @@
 				0263297C1CFDD78700790EEF /* TimerTriggerDailyViewController */,
 				026329811CFDDF7E00790EEF /* CSTimerTriggerPageManager.h */,
 				026329821CFDDF7E00790EEF /* CSTimerTriggerPageManager.m */,
+				02BF44BF1D007C2000D88822 /* CSTimerTriggerBuilderPageProtocol.h */,
 			);
 			name = TimerTriggerViewControllers;
 			sourceTree = "<group>";
