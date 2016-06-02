@@ -111,15 +111,15 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="500" id="ZOW-uL-E3V">
-                                        <rect key="frame" x="0.0" y="331" width="600" height="500"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="387" id="ZOW-uL-E3V">
+                                        <rect key="frame" x="0.0" y="331" width="600" height="387"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZOW-uL-E3V" id="jpQ-jI-E7G">
-                                            <rect key="frame" x="0.0" y="0.0" width="600" height="499"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="600" height="386"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Qkp-9G-gZc">
-                                                    <rect key="frame" x="0.0" y="44" width="600" height="455"/>
+                                                    <rect key="frame" x="0.0" y="44" width="600" height="342"/>
                                                     <connections>
                                                         <segue destination="6C4-1R-zW7" kind="embed" identifier="CSPageViewControllerSegue" id="vwi-En-UdA"/>
                                                     </connections>
@@ -144,9 +144,10 @@
                                                 <constraint firstItem="ImL-e1-WmP" firstAttribute="centerX" secondItem="jpQ-jI-E7G" secondAttribute="centerX" id="qTe-w9-J5Z"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <inset key="separatorInset" minX="1000" minY="0.0" maxX="0.0" maxY="0.0"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="u37-IU-r2D">
-                                        <rect key="frame" x="0.0" y="831" width="600" height="44"/>
+                                        <rect key="frame" x="0.0" y="718" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="u37-IU-r2D" id="GmD-TK-H42">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
@@ -309,6 +310,9 @@
                                                         <segment title="Sat"/>
                                                         <segment title="Sun"/>
                                                     </segments>
+                                                    <connections>
+                                                        <action selector="weekDaysSegmentedControlValueChanged:" destination="FnH-hN-JAB" eventType="valueChanged" id="IT5-28-UQu"/>
+                                                    </connections>
                                                 </segmentedControl>
                                             </subviews>
                                             <constraints>
@@ -385,6 +389,13 @@
                             <outlet property="delegate" destination="FnH-hN-JAB" id="0rN-Iu-nY8"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="endingWithTextField" destination="oBG-OR-MUy" id="dRn-1r-QKm"/>
+                        <outlet property="hourTextField" destination="ZBd-76-gtb" id="tc5-dx-34e"/>
+                        <outlet property="minuteTextField" destination="zaC-79-jgU" id="qhQ-xH-8Us"/>
+                        <outlet property="startingFromTextField" destination="OyW-gB-peA" id="w04-b3-ZJo"/>
+                        <outlet property="weekDaysSegmentedControl" destination="CzP-Ro-vqd" id="Q3G-cu-87L"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yok-nY-mDq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -417,7 +428,7 @@
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="omE-un-bna">
                                                     <rect key="frame" x="80" y="7" width="439" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="weeks" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oPw-T5-CwC">
                                                     <rect key="frame" x="531" y="11" width="49" height="21"/>
@@ -456,6 +467,9 @@
                                                         <segment title="Sat"/>
                                                         <segment title="Sun"/>
                                                     </segments>
+                                                    <connections>
+                                                        <action selector="weekDaysSegmentedControlValueChanged:" destination="I8c-4Q-nyb" eventType="valueChanged" id="MfB-hz-7KU"/>
+                                                    </connections>
                                                 </segmentedControl>
                                             </subviews>
                                             <constraints>
@@ -503,10 +517,33 @@
                             <outlet property="delegate" destination="I8c-4Q-nyb" id="BKX-ec-y98"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="dayHourTextField" destination="S58-jx-TeV" id="oR6-k0-63L"/>
+                        <outlet property="weekDaysSegmentedControl" destination="tzl-4R-tRG" id="iZ4-ss-WfX"/>
+                        <outlet property="weeksTextField" destination="omE-un-bna" id="OVh-tA-8KK"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Yed-C1-Fj7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2646" y="2282"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="gEe-LN-v4d">
+            <objects>
+                <viewController id="3xp-fW-QWC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jdN-NA-oA4"/>
+                        <viewControllerLayoutGuide type="bottom" id="PRt-po-UBp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xDa-80-ozx">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zyd-hh-bHo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3685" y="2264"/>
         </scene>
         <!--Pick Subject-->
         <scene sceneID="vMa-JQ-caU">

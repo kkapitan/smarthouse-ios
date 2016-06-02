@@ -14,8 +14,10 @@
 @interface CSWeeklyTimerActionTrigger : CSActionTrigger
 
 @property (nonatomic, assign, readonly) NSUInteger weeks;
-@property (nonatomic, strong, readonly) NSArray *weekDays;
+@property (nonatomic, strong, readonly) NSIndexSet *weekDays;
 
 @property (nonatomic, assign, readonly) NSDate *hour;
+
+- (instancetype)initWithConfiguration:(CSTimerTriggerConfiguration *)configuration;
 
 @end

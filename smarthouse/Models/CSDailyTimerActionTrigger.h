@@ -19,6 +19,8 @@
 @property (nonatomic, strong, readonly) NSDate *startHour;
 @property (nonatomic, strong, readonly) NSDate *finishHour;
 
-@property (nonatomic, strong, readonly) NSArray *weekDays;
+@property (nonatomic, strong, readonly) NSIndexSet *weekDays;
+
+- (instancetype)initWithConfiguration:(CSTimerTriggerConfiguration *)configuration;
 
 @end

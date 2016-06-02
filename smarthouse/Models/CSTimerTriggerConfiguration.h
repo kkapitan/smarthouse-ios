@@ -15,7 +15,7 @@
 @property (nonatomic, strong) NSDate *startHour;
 @property (nonatomic, strong) NSDate *finishHour;
 
-@property (nonatomic, strong) NSArray *weekdays;
+@property (nonatomic, strong) NSIndexSet *weekdays;
 
 @property (nonatomic, assign) NSUInteger weeks;
 @property (nonatomic, assign) NSUInteger hours;
