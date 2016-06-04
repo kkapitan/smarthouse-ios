@@ -15,6 +15,12 @@ target 'smarthouse' do
     pod 'FormatterKit'    # For all your string formatting needs
     pod 'Mantle'          # Github's model framework
     
+    # Beacons
+    pod 'KontaktSDK', '~> 1.0'
+    
+    # Archiver
+    pod 'FastCoding'
+    
     # Views
     pod 'MBProgressHUD'
     pod 'MultiSelectSegmentedControl'

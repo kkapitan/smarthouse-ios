@@ -8,6 +8,9 @@
 
 #import "CSSmartHouseViewModel.h"
 
+//Manager
+#import "CSActionManager.h"
+
 @interface CSSmartHouseViewModel ()
 
 @property (nonatomic, strong) NSArray <CSActionType *> *actionTypes;
@@ -60,6 +63,7 @@
             
             wSelf.actionTypes = actionTypes;
             wSelf.actionsByType = [actionsByActionType mutableCopy];
+            
         }
         
         if (block) {

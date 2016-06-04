@@ -25,6 +25,7 @@ PODS:
   - Crashlytics (3.7.0):
     - Fabric (~> 1.6.3)
   - Fabric (1.6.7)
+  - FastCoding (3.2.1)
   - FormatterKit (1.8.1):
     - FormatterKit/AddressFormatter (= 1.8.1)
     - FormatterKit/ArrayFormatter (= 1.8.1)
@@ -55,6 +56,7 @@ PODS:
     - FormatterKit/Resources
   - FormatterKit/URLRequestFormatter (1.8.1):
     - FormatterKit/Resources
+  - KontaktSDK (1.1.3)
   - Mantle (2.0.7):
     - Mantle/extobjc (= 2.0.7)
   - Mantle/extobjc (2.0.7)
@@ -67,7 +69,9 @@ DEPENDENCIES:
   - AUAccount (from `https://github.com/appunite/AUAccount.git`, tag `0.2.8`)
   - Crashlytics
   - Fabric
+  - FastCoding
   - FormatterKit
+  - KontaktSDK (~> 1.0)
   - Mantle
   - MBProgressHUD
   - MultiSelectSegmentedControl
@@ -87,12 +91,14 @@ SPEC CHECKSUMS:
   AUAccount: 5bc4bb04d16195348b1b4fe6de963cfb650a5e50
   Crashlytics: c3a2333dea9e2733d2777f730910321fc9e25c0d
   Fabric: caf7580c725e64db144f610ac65cd60956911dc7
+  FastCoding: ed46c83ba23d048aafa0251972a1e1fc1cfc58ed
   FormatterKit: 11ad17b983200629246a5a466f6f1bfa2df823cb
+  KontaktSDK: 9df6b1c0797b61318352dcc7cd70bc2edf60b921
   Mantle: bc40bb061d8c2c6fb48d5083e04d928c3b7f73d9
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
   MultiSelectSegmentedControl: 54fb23c997b971eff621cfcf965ff1613d99c3d2
   SSKeychain: c71293fa57216a40ab06c23f4085387583293de4
 
-PODFILE CHECKSUM: f0342b69e5c068cc0365cf19672198437dea3c31
+PODFILE CHECKSUM: c63b9a7dba698c7223e6dc713c51569c68684a18
 
 COCOAPODS: 1.0.0

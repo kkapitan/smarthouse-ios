@@ -12,11 +12,18 @@
 #import <Fabric/Fabric.h>
 #import <Crashlytics/Crashlytics.h>
 
+//KontaktIO
+#import <KontaktSDK/KontaktSDK.h>
+
+//Environment
+#import "CSEnvironment.h"
+
 @implementation CSAppDelegate
 
 -(BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [Fabric with:@[[Crashlytics class]]];
+    [Kontakt setAPIKey:[[CSEnvironment sharedConfiguration] variableForKey:kCSEnvironmentKontaktIOApiKey]];
     return YES;
 }
 

@@ -6,16 +6,22 @@
 	<dict>
 		<key>CSApiBaseURL</key>
 		<string>http://smarthouse.dev/api</string>
+		<key>CSKontaktIOApiKey</key>
+		<string>PFgtHpwVRTRuTxBPiTxpqnJEsbRNfPDE</string>
 	</dict>
 	<key>Debug_Staging</key>
 	<dict>
 		<key>CSApiBaseURL</key>
 		<string>http://smarthouse.dev/api</string>
+		<key>CSKontaktIOApiKey</key>
+		<string>PFgtHpwVRTRuTxBPiTxpqnJEsbRNfPDE</string>
 	</dict>
 	<key>Default</key>
 	<dict>
 		<key>CSApiBaseURL</key>
 		<string>http://smarthouse.dev/api</string>
+		<key>CSKontaktIOApiKey</key>
+		<string>PFgtHpwVRTRuTxBPiTxpqnJEsbRNfPDE</string>
 	</dict>
 </dict>
 </plist>

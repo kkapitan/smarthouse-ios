@@ -33,6 +33,8 @@
 		026C803E1CF391E6000C7599 /* CSLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 026C803D1CF391E6000C7599 /* CSLoginViewController.m */; };
 		026C80411CF391FE000C7599 /* CSLoginViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 026C80401CF391FE000C7599 /* CSLoginViewModel.m */; };
 		026C80451CF39B09000C7599 /* NSString+Validation.m in Sources */ = {isa = PBXBuildFile; fileRef = 026C80441CF39B09000C7599 /* NSString+Validation.m */; };
+		02881A841D033989008E4A5A /* CSDocumentsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 02881A831D033989008E4A5A /* CSDocumentsManager.m */; };
+		02979C121D0326130073EC2C /* CSActionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 02979C111D0326130073EC2C /* CSActionManager.m */; };
 		029CE0B01CF2411C00F12334 /* CSActionType.m in Sources */ = {isa = PBXBuildFile; fileRef = 029CE0AF1CF2411C00F12334 /* CSActionType.m */; };
 		02B881991CF1C5B90072D3A4 /* CSSessionsService.m in Sources */ = {isa = PBXBuildFile; fileRef = 02B881981CF1C5B90072D3A4 /* CSSessionsService.m */; };
 		02B8819C1CF1C5CA0072D3A4 /* CSActionSubjectsService.m in Sources */ = {isa = PBXBuildFile; fileRef = 02B8819B1CF1C5CA0072D3A4 /* CSActionSubjectsService.m */; };
@@ -142,6 +144,10 @@
 		026C80401CF391FE000C7599 /* CSLoginViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSLoginViewModel.m; sourceTree = "<group>"; };
 		026C80431CF39B09000C7599 /* NSString+Validation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Validation.h"; sourceTree = "<group>"; };
 		026C80441CF39B09000C7599 /* NSString+Validation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Validation.m"; sourceTree = "<group>"; };
+		02881A821D033989008E4A5A /* CSDocumentsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSDocumentsManager.h; sourceTree = "<group>"; };
+		02881A831D033989008E4A5A /* CSDocumentsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSDocumentsManager.m; sourceTree = "<group>"; };
+		02979C101D0326130073EC2C /* CSActionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSActionManager.h; sourceTree = "<group>"; };
+		02979C111D0326130073EC2C /* CSActionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSActionManager.m; sourceTree = "<group>"; };
 		029CE0AE1CF2411C00F12334 /* CSActionType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSActionType.h; sourceTree = "<group>"; };
 		029CE0AF1CF2411C00F12334 /* CSActionType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSActionType.m; sourceTree = "<group>"; };
 		02B881971CF1C5B90072D3A4 /* CSSessionsService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSSessionsService.h; sourceTree = "<group>"; };
@@ -283,6 +289,10 @@
 				020FD6261CF4DADE00823E50 /* CSWireFrame.m */,
 				02E52D1E1CFEE70D0075B4E6 /* CSDateFormatter.h */,
 				02E52D1F1CFEE70D0075B4E6 /* CSDateFormatter.m */,
+				02979C101D0326130073EC2C /* CSActionManager.h */,
+				02979C111D0326130073EC2C /* CSActionManager.m */,
+				02881A821D033989008E4A5A /* CSDocumentsManager.h */,
+				02881A831D033989008E4A5A /* CSDocumentsManager.m */,
 			);
 			name = Helpers;
 			path = Resources;
@@ -810,7 +820,7 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = CS;
-				LastUpgradeCheck = 0710;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = Cappsoft;
 				TargetAttributes = {
 					BDDB997218C3943B003EBC42 = {
@@ -1055,6 +1065,7 @@
 				02DDA2651CDF94120096E3DF /* CSPickSubjectCell.m in Sources */,
 				BD934CD519C211F600B48551 /* StoryboardIdentifiers.m in Sources */,
 				BD6951CF18EA4B0800F2F410 /* main.m in Sources */,
+				02881A841D033989008E4A5A /* CSDocumentsManager.m in Sources */,
 				02B881BD1CF1F7170072D3A4 /* CSAccount.m in Sources */,
 				026C80411CF391FE000C7599 /* CSLoginViewModel.m in Sources */,
 				02DDA2611CDF92EB0096E3DF /* CSPickSubjectViewModel.m in Sources */,
@@ -1066,6 +1077,7 @@
 				02E52D0E1CFEBD910075B4E6 /* CSDailyTimerActionTrigger.m in Sources */,
 				020FD6311CF4FA4500823E50 /* CSActionSubjectResponseSerializer.m in Sources */,
 				02B881A51CF1C7350072D3A4 /* CSDeleteActionParams.m in Sources */,
+				02979C121D0326130073EC2C /* CSActionManager.m in Sources */,
 				021918091CDF62AE00288736 /* CSTimerActionCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1095,6 +1107,7 @@
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1321,6 +1334,7 @@
 			buildSettings = {
 				ENABLE_TESTABILITY = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

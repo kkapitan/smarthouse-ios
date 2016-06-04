@@ -23,6 +23,7 @@ typedef NS_ENUM(NSUInteger, CSActionState) {
 @property (nonatomic, assign, readonly) NSInteger uid;
 
 @property (nonatomic, strong, readonly) CSActionSubject *subject;
+@property (nonatomic, strong, readonly) CSActionType *actionType;
 @property (nonatomic, strong, readonly) CSActionTrigger *trigger;
 
 @end
