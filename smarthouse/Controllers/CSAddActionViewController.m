@@ -23,6 +23,10 @@
 //Managers
 #import "CSTimerTriggerPageManager.h"
 
+//Triggers
+#import "CSSwitchActionTrigger.h"
+#import "CSBeaconActionTrigger.h"
+
 @interface CSAddActionViewController () <CSPickSubjectDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *subjectNameLabel;
@@ -84,12 +88,14 @@
             
             wSelf.viewModel.uploadAction.actionTrigger = trigger;
             [wSelf save];
-            
-            return;
         }];
+    } else if (_viewModel.uploadAction.actionType.uid == CSActionTypeKeySwitch) {
+        self.viewModel.uploadAction.actionTrigger = [CSSwitchActionTrigger new];
+        [self save];
+    } else if (_viewModel.uploadAction.actionType.uid == CSActionTypeKeyBeacon) {
+        self.viewModel.uploadAction.actionTrigger = [CSBeaconActionTrigger new];
+        [self save];
     }
-    
-    [self save];
 }
 
 - (IBAction)tapGestureAction:(id)sender {

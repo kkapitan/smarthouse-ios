@@ -21,3 +21,35 @@
 - (instancetype)initWithAction:(CSUploadAction *)action;
 
 @end
+
+@interface CSSwitchActionTriggerParams : NSObject <CSRequestParamsProtocol>
+
+@property (nonatomic, strong, readonly) CSActionTrigger *trigger;
+
+- (instancetype)initWithActionTrigger:(CSActionTrigger *)actionTrigger;
+
+@end
+
+@interface CSDailyTimerActionTriggerParams : NSObject <CSRequestParamsProtocol>
+
+@property (nonatomic, strong, readonly) CSActionTrigger *trigger;
+
+- (instancetype)initWithActionTrigger:(CSActionTrigger *)actionTrigger;
+
+@end
+
+@interface CSWeeklyTimerActionTriggerParams : NSObject <CSRequestParamsProtocol>
+
+@property (nonatomic, strong, readonly) CSActionTrigger *trigger;
+
+- (instancetype)initWithActionTrigger:(CSActionTrigger *)actionTrigger;
+
+@end
+
+@interface CSBeaconActionTriggerParams : NSObject <CSRequestParamsProtocol>
+
+@property (nonatomic, strong, readonly) CSActionTrigger *trigger;
+
+- (instancetype)initWithActionTrigger:(CSActionTrigger *)actionTrigger;
+
+@end

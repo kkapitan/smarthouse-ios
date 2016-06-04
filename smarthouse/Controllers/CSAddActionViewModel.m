@@ -51,7 +51,7 @@
 #pragma mark - Private
 
 - (BOOL)validateData {
-    return _uploadAction.subject != nil;
+    return _uploadAction.subject != nil && _uploadAction.actionTrigger != nil;
 }
 
 - (instancetype)init {

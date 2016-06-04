@@ -9,12 +9,21 @@
 #import "CSSwitchActionTrigger.h"
 
 @implementation CSSwitchActionTrigger
+@synthesize triggerType = _triggerType;
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
     return @{
              @"uid" : @"id",
              @"triggerType" : @"type"
              };
+}
+
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        _triggerType = CSActionTriggerTypeSwitch;
+    }
+    return self;
 }
 
 @end

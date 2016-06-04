@@ -9,12 +9,21 @@
 #import "CSBeaconActionTrigger.h"
 
 @implementation CSBeaconActionTrigger
+@synthesize triggerType = _triggerType;
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
     return @{
              @"uid" : @"id",
              @"triggerType" : @"type"
              };
+}
+
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        _triggerType = CSActionTriggerTypeBeacon;
+    }
+    return self;
 }
 
 @end
