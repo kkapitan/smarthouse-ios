@@ -14,14 +14,14 @@
 
 @interface CSActionManager ()
 
-@property (nonatomic, strong) NSMutableArray <NSMutableArray<CSAction *> *> *actionsByType;
+@property (nonatomic, strong) NSMutableArray <NSArray <CSAction *> *> *actionsByType;
 @property (nonatomic, strong) CSDocumentsManager *documentsManager;
 
 @end
 
 @implementation CSActionManager
 
-- (instancetype)initWithActionTypes:(NSArray *)actionTypes {
+- (instancetype)init {
     self = [super init];
     if (self) {
         _documentsManager = [[CSDocumentsManager alloc] initWithStorageName:[self persistentStoreName]];
@@ -29,7 +29,10 @@
         NSData *data = [_documentsManager read];
         NSArray *objects = [FastCoder objectWithData:data];
         
-        _actionsByType = objects ? [NSMutableArray arrayWithArray:objects] : [NSMutableArray arrayWithCapacity:actionTypes.count];
+        if (objects) {
+            _actionsByType = [objects mutableCopy];
+        }
+
     }
     return self;
 }
@@ -38,12 +41,20 @@
     return [_actionsByType copy];
 }
 
+- (void)setActions:(NSArray <NSArray <CSAction *> *> *)actions {
+    @synchronized (self) {
+        _actionsByType = [actions mutableCopy];
+    
+        [self save];
+    }
+}
+
 - (void)updateAction:(CSAction *)action {
     @synchronized (self) {
         CSAction *oldAction = [self findAction:action];
         
-        [_actionsByType[(NSUInteger)oldAction.actionType.uid] removeObject:oldAction];
-        [_actionsByType[(NSUInteger)action.actionType.uid] addObject:action];
+        [self safelyRemoveAction:oldAction];
+        [self safelyAddAction:action];
         
         [self save];
     }
@@ -53,20 +64,20 @@
     @synchronized (self) {
         CSAction *oldAction = [self findAction:action];
         
-        [_actionsByType[(NSUInteger)oldAction.actionType.uid] removeObject:oldAction];
+        [self safelyRemoveAction:oldAction];
         
         [self save];
     }
 }
 
-- (void)addActions:(NSMutableArray<CSAction *> *)actions {
+- (void)addActions:(NSArray<CSAction *> *)actions {
     @synchronized(self) {
-        for (CSAction *action in _actionsByType) {
+        for (CSAction *action in actions) {
             
             CSAction *oldAction = [self findAction:action];
-            [_actionsByType[(NSUInteger)oldAction.actionType.uid] removeObject:oldAction];
+            [self safelyRemoveAction:oldAction];
             
-            [_actionsByType[(NSUInteger)action.actionType.uid] addObject:action];
+            [self safelyAddAction:action];
         }
 
         [self save];
@@ -75,7 +86,15 @@
 
 #pragma mark -
 #pragma mark - Private
-
+         
+- (void)safelyRemoveAction:(CSAction *)action {
+    _actionsByType[(NSUInteger)action.actionType.uid] = [_actionsByType[(NSUInteger)action.actionType.uid] mtl_arrayByRemovingObject:action];
+}
+         
+- (void)safelyAddAction:(CSAction *)action {
+    _actionsByType[(NSUInteger)action.actionType.uid] = [_actionsByType[(NSUInteger)action.actionType.uid] arrayByAddingObject:action];
+}
+         
 - (CSAction *)findAction:(CSAction *)action {
     for (NSArray *actions in _actionsByType) {
         for (CSAction *innerAction in actions) {

@@ -13,19 +13,27 @@
 
 @interface CSSmartHouseViewModel ()
 
+@property (nonatomic, strong) CSActionManager *manager;
 @property (nonatomic, strong) NSArray <CSActionType *> *actionTypes;
-@property (nonatomic, strong) NSMutableArray <NSArray <CSAction *> *> *actionsByType;
 
 @end
 
 @implementation CSSmartHouseViewModel
 
+- (instancetype)init {
+    self = [super init];
+    if (self) {
+        _manager = [CSActionManager new];
+    }
+    return self;
+}
+
 - (NSInteger)numberOfSections {
-    return (NSInteger)_actionsByType.count;
+    return (NSInteger)_actionTypes.count;
 }
 
 - (NSInteger)numberOfActionsForSection:(NSInteger)section {
-    return (NSInteger)_actionsByType[(NSUInteger)section].count;
+    return (NSInteger)_manager.actionsByType[(NSUInteger)section].count;
 }
 
 - (NSString *)titleForSection:(NSInteger)section {
@@ -33,7 +41,7 @@
 }
 
 - (CSAction *)actionForIndexPath:(NSIndexPath *)indexPath {
-    return _actionsByType[(NSUInteger)indexPath.section][(NSUInteger)indexPath.row];
+    return _manager.actionsByType[(NSUInteger)indexPath.section][(NSUInteger)indexPath.row];
 }
 
 - (CSBeaconActionCellViewModel *)beaconActionCellViewModelForIndexPath:(NSIndexPath *)indexPath {
@@ -62,8 +70,8 @@
             [[CSAccount account] updateActionTypes:actionTypes];
             
             wSelf.actionTypes = actionTypes;
-            wSelf.actionsByType = [actionsByActionType mutableCopy];
             
+            [wSelf.manager setActions:actionsByActionType];
         }
         
         if (block) {
@@ -74,9 +82,9 @@
 
 - (void)deleteActionAtIndexPath:(NSIndexPath *)indexPath completion:(CSSmartHouseViewModelDeleteActionCompletion)block {
     CSAction *action = [self actionForIndexPath:indexPath];
-    _actionsByType[(NSUInteger)indexPath.section] = [_actionsByType[(NSUInteger)indexPath.section] mtl_arrayByRemovingObject:action];
+    [_manager removeAction:action];
     
-    [[CSActionsService new] deleteAction:action withCompletion:^(BOOL success, NSError *error) {
+    [[CSActionsService new] deleteAction:action withCompletion:^(BOOL success, NSError *error) {        
         if (block) {
             block(success, error ? [UIAlertController alertWithError:error] : nil);
         }

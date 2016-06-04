@@ -13,11 +13,12 @@
 
 @interface CSActionManager : NSObject
 
-//
-- (instancetype)initWithActionTypes:(NSArray *)actionTypes;
 
 //
 - (NSArray <NSArray<CSAction *> *> *)actionsByType;
+
+//
+- (void)setActions:(NSArray <NSArray <CSAction *> *> *)actions;
 
 //
 - (void)updateAction:(CSAction *)action;
@@ -26,6 +27,6 @@
 - (void)removeAction:(CSAction *)action;
 
 //
-- (void)addActions:(NSMutableArray<CSAction *> *)actions;
+- (void)addActions:(NSArray<CSAction *> *)actions;
 
 @end

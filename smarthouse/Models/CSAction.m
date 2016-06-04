@@ -13,12 +13,17 @@
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
     return @{
              @"uid":@"id",
-             @"subject":@"action_subject"
+             @"subject":@"action_subject",
+             @"actionType":@"type"
             };
 }
 
 + (NSValueTransformer *)subjectURLJSONTransformer {
     return [MTLJSONAdapter dictionaryTransformerWithModelClass:CSActionSubject.class];
+}
+
++ (NSValueTransformer *)actionTypeURLJSONTransformer {
+    return [MTLJSONAdapter dictionaryTransformerWithModelClass:CSActionType.class];
 }
 
 

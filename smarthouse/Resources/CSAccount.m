@@ -25,6 +25,8 @@
         
         NSData *data = [_documentManager read];
         _actionTypes = [FastCoder objectWithData:data];
+        
+        self.accountName = @"cs.account.smarthouse";
     }
     return self;
 }
