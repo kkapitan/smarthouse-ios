@@ -11,6 +11,7 @@
 //Models
 #import "CSAction.h"
 #import "CSActionType.h"
+#import "CSBeacon.h"
 
 @interface CSActionsResponseSerializer : CSJSONResponseSerializer
 

@@ -65,10 +65,11 @@
 
 - (void)fetchActionsWithCompletion:(CSSmartHouseViewModelFetchActionsCompletion)block {
     __weak typeof (self) wSelf = self;
-    [[CSActionsService new] fetchActionsWithCompletionBlock:^(BOOL success, NSArray<NSArray <CSAction *> *> *actionsByActionType, NSArray <CSActionType *> *actionTypes,  NSError *error) {
+    [[CSActionsService new] fetchActionsWithCompletionBlock:^(BOOL success, NSArray<NSArray <CSAction *> *> *actionsByActionType, NSArray <CSActionType *> *actionTypes,  NSArray <CSBeacon *> *beacons,  NSError *error) {
         
         if (success) {
             [[CSAccount account] updateActionTypes:actionTypes];
+            [[CSAccount account] updateBeacons:beacons];
             
             wSelf.actionTypes = actionTypes;
             

@@ -19,6 +19,11 @@
     NSMutableArray *actionsByActionType = [NSMutableArray new];
     NSMutableArray *actionTypes = [NSMutableArray new];
     
+    NSArray *beacons = @[];
+    if (json[@"beacons"] != nil) {
+        beacons = [MTLJSONAdapter modelsOfClass:CSBeacon.class fromJSONArray:json[@"beacons"] error:&parseError];
+    }
+    
     for (NSDictionary *sectionJSON in json[@"sections"]) {
         NSArray <CSAction *> *actions = [MTLJSONAdapter modelsOfClass:CSAction.class fromJSONArray:sectionJSON[@"actions"] error:&parseError];
         
@@ -39,6 +44,7 @@
         [results setObject:json forKey:@"payload"];
     }
     
+    [results setObject:beacons forKey:@"beacons"];
     [results setObject:actionsByActionType forKey:@"actions"];
     [results setObject:actionTypes forKey:@"action_types"];
     

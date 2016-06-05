@@ -22,11 +22,11 @@
     
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *innerOperation, NSDictionary *responseObject) {
         if (block) {
-            block(YES, responseObject[@"actions"], responseObject[@"action_types"], nil);
+            block(YES, responseObject[@"actions"], responseObject[@"action_types"], responseObject[@"beacons"],nil);
         }
     } failure:^(AFHTTPRequestOperation *innerOperation, NSError *error) {
         if (block) {
-            block(NO, nil, nil, error);
+            block(NO, nil, nil, nil, error);
         }
     }];
     

@@ -11,13 +11,14 @@
 //Model
 #import "CSAction.h"
 #import "CSActionType.h"
+#import "CSBeacon.h"
 #import "CSUploadAction.h"
 
 //Api
 #import "CSApiClient.h"
 #import "CSRequests.h"
 
-typedef void(^CSActionsServiceFetchActionsCompletionBlock)(BOOL success, NSArray <NSArray <CSAction *> *> *actions, NSArray <CSActionType *> *actionTypes, NSError *error);
+typedef void(^CSActionsServiceFetchActionsCompletionBlock)(BOOL success, NSArray <NSArray <CSAction *> *> *actions, NSArray <CSActionType *> *actionTypes,  NSArray <CSBeacon *> *beacons, NSError *error);
 typedef void(^CSActionsServiceCreateActionCompletionBlock)(BOOL success, CSAction *action, NSError *error);
 typedef void(^CSActionsServiceDeleteActionCompletionBlock)(BOOL success, NSError *error);
 
