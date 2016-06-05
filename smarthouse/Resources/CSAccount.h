@@ -12,11 +12,14 @@
 
 //Model
 #import "CSActionType.h"
+#import "CSBeacon.h"
 
 @interface CSAccount : AUAccount
 
-@property (nonatomic, strong) NSArray <CSActionType *> *actionTypes;
+@property (nonatomic, strong, readonly) NSArray <CSActionType *> *actionTypes;
+@property (nonatomic, strong, readonly) NSArray <CSBeacon *> *beacons;
 
 - (void)updateActionTypes:(NSArray<CSActionType *> *)actionTypes;
+- (void)updateBeacons:(NSArray<CSBeacon *> *)beacons;
 
 @end

@@ -8,6 +8,13 @@
 
 #import "CSActionTrigger.h"
 
+//Model
+#import "CSBeacon.h"
+
 @interface CSBeaconActionTrigger : CSActionTrigger
+
+@property (nonatomic, strong, readonly) CSBeacon *beacon;
+
+- (instancetype)initWithBeacon:(CSBeacon *)beacon;
 
 @end

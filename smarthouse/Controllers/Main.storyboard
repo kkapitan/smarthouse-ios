@@ -146,20 +146,32 @@
                                         </tableViewCellContentView>
                                         <inset key="separatorInset" minX="1000" minY="0.0" maxX="0.0" maxY="0.0"/>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="u37-IU-r2D">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="Goz-67-3vL">
                                         <rect key="frame" x="0.0" y="718" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="u37-IU-r2D" id="GmD-TK-H42">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Goz-67-3vL" id="y4x-9I-B6a">
                                             <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Beacon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ceq-Ye-edo">
-                                                    <rect key="frame" x="256" y="11" width="58" height="21"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Beacon:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xba-Pz-QfB">
+                                                    <rect key="frame" x="20" y="11" width="63" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="pVh-Zx-RYd">
+                                                    <rect key="frame" x="95" y="7" width="485" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Xba-Pz-QfB" firstAttribute="centerY" secondItem="y4x-9I-B6a" secondAttribute="centerY" id="Dml-Np-RFz"/>
+                                                <constraint firstAttribute="trailing" secondItem="pVh-Zx-RYd" secondAttribute="trailing" constant="20" id="FKz-vU-zQc"/>
+                                                <constraint firstItem="pVh-Zx-RYd" firstAttribute="centerY" secondItem="Xba-Pz-QfB" secondAttribute="centerY" id="X1Z-Yx-taM"/>
+                                                <constraint firstItem="Xba-Pz-QfB" firstAttribute="leading" secondItem="y4x-9I-B6a" secondAttribute="leading" constant="20" id="h7V-vc-CeD"/>
+                                                <constraint firstItem="pVh-Zx-RYd" firstAttribute="leading" secondItem="Xba-Pz-QfB" secondAttribute="trailing" constant="12" id="kTn-ZD-atH"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
@@ -181,6 +193,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="600" height="900"/>
                     <connections>
+                        <outlet property="beaconTextField" destination="pVh-Zx-RYd" id="9Gk-cW-H5M"/>
                         <outlet property="subjectImageView" destination="NWw-Ws-IUB" id="I8v-TD-TSY"/>
                         <outlet property="subjectNameLabel" destination="qcV-7Z-jQu" id="Yx5-pW-9XR"/>
                         <outlet property="triggerTypeTextField" destination="yHe-P3-ZBF" id="f1k-LU-eO5"/>

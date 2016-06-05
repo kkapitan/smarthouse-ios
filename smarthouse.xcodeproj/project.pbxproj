@@ -54,6 +54,7 @@
 		02BF44BB1D006C5F00D88822 /* CSTimerTriggerDailyViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 02BF44BA1D006C5F00D88822 /* CSTimerTriggerDailyViewModel.m */; };
 		02D014F31D04342400523666 /* CSBeaconActionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 02D014F01D04342400523666 /* CSBeaconActionManager.m */; };
 		02D014F41D04342400523666 /* NSUserDefaults+Beacons.m in Sources */ = {isa = PBXBuildFile; fileRef = 02D014F21D04342400523666 /* NSUserDefaults+Beacons.m */; };
+		02D014F71D0467EA00523666 /* CSBeacon.m in Sources */ = {isa = PBXBuildFile; fileRef = 02D014F61D0467EA00523666 /* CSBeacon.m */; };
 		02DDA23C1CDF6D370096E3DF /* CSAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DDA23B1CDF6D370096E3DF /* CSAction.m */; };
 		02DDA23F1CDF6DA70096E3DF /* CSActionTrigger.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DDA23E1CDF6DA70096E3DF /* CSActionTrigger.m */; };
 		02DDA2421CDF6DB20096E3DF /* CSActionSubject.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DDA2411CDF6DB20096E3DF /* CSActionSubject.m */; };
@@ -189,6 +190,8 @@
 		02D014F01D04342400523666 /* CSBeaconActionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSBeaconActionManager.m; sourceTree = "<group>"; };
 		02D014F11D04342400523666 /* NSUserDefaults+Beacons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+Beacons.h"; sourceTree = "<group>"; };
 		02D014F21D04342400523666 /* NSUserDefaults+Beacons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+Beacons.m"; sourceTree = "<group>"; };
+		02D014F51D0467EA00523666 /* CSBeacon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSBeacon.h; sourceTree = "<group>"; };
+		02D014F61D0467EA00523666 /* CSBeacon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSBeacon.m; sourceTree = "<group>"; };
 		02DDA23A1CDF6D370096E3DF /* CSAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSAction.h; sourceTree = "<group>"; };
 		02DDA23B1CDF6D370096E3DF /* CSAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSAction.m; sourceTree = "<group>"; };
 		02DDA23D1CDF6DA70096E3DF /* CSActionTrigger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSActionTrigger.h; sourceTree = "<group>"; };
@@ -641,6 +644,8 @@
 			isa = PBXGroup;
 			children = (
 				02E52D0B1CFEBD1E0075B4E6 /* ActionTriggers */,
+				02D014F51D0467EA00523666 /* CSBeacon.h */,
+				02D014F61D0467EA00523666 /* CSBeacon.m */,
 				02DDA23A1CDF6D370096E3DF /* CSAction.h */,
 				02DDA23B1CDF6D370096E3DF /* CSAction.m */,
 				02DDA2401CDF6DB20096E3DF /* CSActionSubject.h */,
@@ -1049,6 +1054,7 @@
 				02E52D111CFEBDA30075B4E6 /* CSWeeklyTimerActionTrigger.m in Sources */,
 				02DDA2751CDFA7AA0096E3DF /* CSPickerView.m in Sources */,
 				02DDA2561CDF90F30096E3DF /* CSSmartHouseViewModel.m in Sources */,
+				02D014F71D0467EA00523666 /* CSBeacon.m in Sources */,
 				021918181CDF6C6400288736 /* CSTimerActionCellViewModel.m in Sources */,
 				020FD62E1CF4F6BD00823E50 /* CSSwitchActionSubjectParams.m in Sources */,
 				021918031CDF49E500288736 /* CSTableViewCell.m in Sources */,

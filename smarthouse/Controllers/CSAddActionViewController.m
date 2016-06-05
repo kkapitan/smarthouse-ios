@@ -33,6 +33,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *subjectImageView;
 
 @property (weak, nonatomic) IBOutlet UITextField *triggerTypeTextField;
+@property (weak, nonatomic) IBOutlet UITextField *beaconTextField;
 
 @property (nonatomic, strong) CSAddActionViewModel *viewModel;
 @property (nonatomic, strong) CSTimerTriggerPageManager *pageManager;
@@ -93,7 +94,6 @@
         self.viewModel.uploadAction.actionTrigger = [CSSwitchActionTrigger new];
         [self save];
     } else if (_viewModel.uploadAction.actionType.uid == CSActionTypeKeyBeacon) {
-        self.viewModel.uploadAction.actionTrigger = [CSBeaconActionTrigger new];
         [self save];
     }
 }
@@ -139,6 +139,20 @@
     };
     
     self.triggerTypeTextField.inputView = pickerView;
+    
+    NSArray *beaconItems = [[CSAccount account] beacons];
+    
+    CSPickerView *beaconsPicker = [[CSPickerView alloc] initWithItems:beaconItems];
+    
+    beaconsPicker.pickItemBlock = ^(CSBeacon *beacon) {
+        wSelf.viewModel.uploadAction.actionTrigger = [[CSBeaconActionTrigger alloc] initWithBeacon:beacon];
+        
+        wSelf.beaconTextField.text = beacon.name;
+        
+        [wSelf reloadData];
+    };
+    
+    self.beaconTextField.inputView = beaconsPicker;
 }
 
 #pragma mark -

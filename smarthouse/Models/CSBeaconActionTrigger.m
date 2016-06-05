@@ -18,10 +18,11 @@
              };
 }
 
-- (instancetype)init {
+- (instancetype)initWithBeacon:(CSBeacon *)beacon {
     self = [super init];
     if (self) {
         _triggerType = CSActionTriggerTypeBeacon;
+        _beacon = beacon;
     }
     return self;
 }

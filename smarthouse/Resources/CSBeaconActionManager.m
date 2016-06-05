@@ -14,6 +14,9 @@
 //Service
 #import "CSActionSubjectsService.h"
 
+//Trigger
+#import "CSBeaconActionTrigger.h"
+
 @interface CSBeaconActionManager ()
 
 @property (nonatomic, strong) CSActionManager *manager;
@@ -38,8 +41,16 @@
 
 - (NSArray *)actionsForBeacon:(CLBeacon *)beacon {
     NSArray <CSAction *> *actions = [_manager actionsByType][CSActionTypeKeyBeacon];
+    NSMutableArray *beaconActions = [NSMutableArray new];
+    for (CSAction *action in actions) {
+        CSBeacon *triggerBeacon = [(CSBeaconActionTrigger*)action.trigger beacon];
+        
+        if ([triggerBeacon.major integerValue] == [beacon.major integerValue]) {
+            [beaconActions addObject:action];
+        }
+    }
 
-    return actions;
+    return beaconActions;
 }
 
 - (void)handleBeacons:(NSArray <CLBeacon *> *)beacons {
@@ -65,7 +76,7 @@
 }
 
 - (BOOL)shouldLaunchActions:(CLBeacon *)beacon {
-    return YES;
+    //return YES;
     
     CLProximity previous = [[NSUserDefaults standardUserDefaults] previousStateForBeacon:beacon];
     
