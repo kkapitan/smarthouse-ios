@@ -20,6 +20,8 @@ typedef void(^CSActionSubjectSwitchSubjectCompletionBlock)(BOOL success, CSActio
 
 @interface CSActionSubjectsService : NSObject
 
+- (instancetype)initWithQueue:(NSOperationQueue *)queue;
+
 - (void)fetchActionSubjectsWithCompletion:(CSActionSubjectsCompletionBlock)block;
 - (void)switchActionSubject:(CSActionSubject *)subject withCompletion:(CSActionSubjectSwitchSubjectCompletionBlock)block;
 

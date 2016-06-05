@@ -36,6 +36,7 @@
     [super viewWillAppear:YES];
     
     [self setupViewModel];
+    [self.tableView reloadData];
 }
 
 - (void)setupViewModel {

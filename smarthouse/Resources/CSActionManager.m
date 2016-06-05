@@ -26,13 +26,7 @@
     if (self) {
         _documentsManager = [[CSDocumentsManager alloc] initWithStorageName:[self persistentStoreName]];
         
-        NSData *data = [_documentsManager read];
-        NSArray *objects = [FastCoder objectWithData:data];
-        
-        if (objects) {
-            _actionsByType = [objects mutableCopy];
-        }
-
+        [self reload];
     }
     return self;
 }
@@ -81,6 +75,15 @@
         }
 
         [self save];
+    }
+}
+
+- (void)reload {
+    NSData *data = [_documentsManager read];
+    NSArray *objects = [FastCoder objectWithData:data];
+    
+    if (objects) {
+        _actionsByType = [objects mutableCopy];
     }
 }
 

@@ -15,7 +15,7 @@
 
 @interface CSAccount : AUAccount
 
-@property (nonatomic, strong, readonly) NSArray <CSActionType *> *actionTypes;
+@property (nonatomic, strong) NSArray <CSActionType *> *actionTypes;
 
 - (void)updateActionTypes:(NSArray<CSActionType *> *)actionTypes;
 

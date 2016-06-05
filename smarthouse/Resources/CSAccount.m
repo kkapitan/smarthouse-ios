@@ -27,6 +27,7 @@
         _actionTypes = [FastCoder objectWithData:data];
         
         self.accountName = @"cs.account.smarthouse";
+        self.serviceName = @"cs.account.smarthouse";
     }
     return self;
 }

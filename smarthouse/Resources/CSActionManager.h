@@ -29,4 +29,7 @@
 //
 - (void)addActions:(NSArray<CSAction *> *)actions;
 
+//
+- (void)reload;
+
 @end

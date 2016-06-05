@@ -24,6 +24,7 @@
     self = [super init];
     if (self) {
         _manager = [CSActionManager new];
+        _actionTypes = [[CSAccount account] actionTypes];
     }
     return self;
 }

@@ -5,21 +5,21 @@
 	<key>Debug_Production</key>
 	<dict>
 		<key>CSApiBaseURL</key>
-		<string>http://smarthouse.dev/api</string>
+		<string>http://smarthouse.192.168.0.4.xip.io/api</string>
 		<key>CSKontaktIOApiKey</key>
 		<string>PFgtHpwVRTRuTxBPiTxpqnJEsbRNfPDE</string>
 	</dict>
 	<key>Debug_Staging</key>
 	<dict>
 		<key>CSApiBaseURL</key>
-		<string>http://smarthouse.dev/api</string>
+		<string>http://smarthouse.192.168.0.4.xip.io/api</string>
 		<key>CSKontaktIOApiKey</key>
 		<string>PFgtHpwVRTRuTxBPiTxpqnJEsbRNfPDE</string>
 	</dict>
 	<key>Default</key>
 	<dict>
 		<key>CSApiBaseURL</key>
-		<string>http://smarthouse.dev/api</string>
+		<string>http://smarthouse.192.168.0.4.xip.io/api</string>
 		<key>CSKontaktIOApiKey</key>
 		<string>PFgtHpwVRTRuTxBPiTxpqnJEsbRNfPDE</string>
 	</dict>

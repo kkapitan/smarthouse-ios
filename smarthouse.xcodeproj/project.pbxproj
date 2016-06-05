@@ -52,6 +52,8 @@
 		02BF44B31D003E4500D88822 /* CSTimerTriggerWeeklyViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 02BF44B21D003E4500D88822 /* CSTimerTriggerWeeklyViewModel.m */; };
 		02BF44B71D00674A00D88822 /* CSNumberPicker.m in Sources */ = {isa = PBXBuildFile; fileRef = 02BF44B61D00674A00D88822 /* CSNumberPicker.m */; };
 		02BF44BB1D006C5F00D88822 /* CSTimerTriggerDailyViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 02BF44BA1D006C5F00D88822 /* CSTimerTriggerDailyViewModel.m */; };
+		02D014F31D04342400523666 /* CSBeaconActionManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 02D014F01D04342400523666 /* CSBeaconActionManager.m */; };
+		02D014F41D04342400523666 /* NSUserDefaults+Beacons.m in Sources */ = {isa = PBXBuildFile; fileRef = 02D014F21D04342400523666 /* NSUserDefaults+Beacons.m */; };
 		02DDA23C1CDF6D370096E3DF /* CSAction.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DDA23B1CDF6D370096E3DF /* CSAction.m */; };
 		02DDA23F1CDF6DA70096E3DF /* CSActionTrigger.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DDA23E1CDF6DA70096E3DF /* CSActionTrigger.m */; };
 		02DDA2421CDF6DB20096E3DF /* CSActionSubject.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DDA2411CDF6DB20096E3DF /* CSActionSubject.m */; };
@@ -183,6 +185,10 @@
 		02BF44B91D006C5F00D88822 /* CSTimerTriggerDailyViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTimerTriggerDailyViewModel.h; sourceTree = "<group>"; };
 		02BF44BA1D006C5F00D88822 /* CSTimerTriggerDailyViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSTimerTriggerDailyViewModel.m; sourceTree = "<group>"; };
 		02BF44BF1D007C2000D88822 /* CSTimerTriggerBuilderPageProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSTimerTriggerBuilderPageProtocol.h; sourceTree = "<group>"; };
+		02D014EF1D04342400523666 /* CSBeaconActionManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSBeaconActionManager.h; sourceTree = "<group>"; };
+		02D014F01D04342400523666 /* CSBeaconActionManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSBeaconActionManager.m; sourceTree = "<group>"; };
+		02D014F11D04342400523666 /* NSUserDefaults+Beacons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+Beacons.h"; sourceTree = "<group>"; };
+		02D014F21D04342400523666 /* NSUserDefaults+Beacons.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+Beacons.m"; sourceTree = "<group>"; };
 		02DDA23A1CDF6D370096E3DF /* CSAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSAction.h; sourceTree = "<group>"; };
 		02DDA23B1CDF6D370096E3DF /* CSAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSAction.m; sourceTree = "<group>"; };
 		02DDA23D1CDF6DA70096E3DF /* CSActionTrigger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSActionTrigger.h; sourceTree = "<group>"; };
@@ -285,6 +291,8 @@
 				02014D5F1CE10F3B00E2A1DF /* Categories */,
 				02B881BB1CF1F7170072D3A4 /* CSAccount.h */,
 				02B881BC1CF1F7170072D3A4 /* CSAccount.m */,
+				02D014EF1D04342400523666 /* CSBeaconActionManager.h */,
+				02D014F01D04342400523666 /* CSBeaconActionManager.m */,
 				020FD6251CF4DADE00823E50 /* CSWireFrame.h */,
 				020FD6261CF4DADE00823E50 /* CSWireFrame.m */,
 				02E52D1E1CFEE70D0075B4E6 /* CSDateFormatter.h */,
@@ -346,6 +354,8 @@
 		02014D5F1CE10F3B00E2A1DF /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				02D014F11D04342400523666 /* NSUserDefaults+Beacons.h */,
+				02D014F21D04342400523666 /* NSUserDefaults+Beacons.m */,
 				02014D471CE0EBBA00E2A1DF /* UIAlertController+Error.h */,
 				02014D481CE0EBBA00E2A1DF /* UIAlertController+Error.m */,
 				026C80431CF39B09000C7599 /* NSString+Validation.h */,
@@ -1028,6 +1038,7 @@
 				02B881B71CF1D4550072D3A4 /* CSActionResponseSerializer.m in Sources */,
 				026329831CFDDF7E00790EEF /* CSTimerTriggerPageManager.m in Sources */,
 				02B881A21CF1C70F0072D3A4 /* CSCreateActionParams.m in Sources */,
+				02D014F31D04342400523666 /* CSBeaconActionManager.m in Sources */,
 				02DDA23C1CDF6D370096E3DF /* CSAction.m in Sources */,
 				02014D501CE10B9100E2A1DF /* CSApiClient.m in Sources */,
 				0263297F1CFDD7C000790EEF /* CSTimerTriggerWeeklyViewController.m in Sources */,
@@ -1041,6 +1052,7 @@
 				021918181CDF6C6400288736 /* CSTimerActionCellViewModel.m in Sources */,
 				020FD62E1CF4F6BD00823E50 /* CSSwitchActionSubjectParams.m in Sources */,
 				021918031CDF49E500288736 /* CSTableViewCell.m in Sources */,
+				02D014F41D04342400523666 /* NSUserDefaults+Beacons.m in Sources */,
 				02B881AB1CF1C9860072D3A4 /* CSUploadAction.m in Sources */,
 				02BF44B31D003E4500D88822 /* CSTimerTriggerWeeklyViewModel.m in Sources */,
 				020FD6271CF4DADE00823E50 /* CSWireFrame.m in Sources */,

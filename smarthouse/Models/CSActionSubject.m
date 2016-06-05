@@ -8,6 +8,9 @@
 
 #import "CSActionSubject.h"
 
+//Environment
+#import "CSEnvironment.h"
+
 @implementation CSActionSubject
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
@@ -19,7 +22,13 @@
 }
 
 + (NSValueTransformer *)imageURLJSONTransformer {
-    return [MTLValueTransformer valueTransformerForName:MTLURLValueTransformerName];
+    return [MTLValueTransformer transformerUsingForwardBlock:^NSURL*(NSString *value, BOOL *success, NSError *__autoreleasing *error) {
+        NSURL *apiURL = [[CSEnvironment sharedConfiguration] apiBaseURL];
+        apiURL = [apiURL URLByDeletingLastPathComponent];
+        
+        NSURL *imageURL = [NSURL URLWithString:value];
+        return [apiURL URLByAppendingPathComponent:[imageURL relativePath]];
+    }];
 }
 
 

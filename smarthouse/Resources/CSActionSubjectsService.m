@@ -12,7 +12,19 @@
 #import "CSActionSubjectsResponseSerializer.h"
 #import "CSActionSubjectResponseSerializer.h"
 
+@interface CSActionSubjectsService ()
+@property (nonatomic, strong) NSOperationQueue *queue;
+@end
+
 @implementation CSActionSubjectsService
+
+- (instancetype)initWithQueue:(NSOperationQueue *)queue {
+    self = [super init];
+    if (self) {
+        _queue = queue;
+    }
+    return self;
+}
 
 - (void)fetchActionSubjectsWithCompletion:(CSActionSubjectsCompletionBlock)block {
 
@@ -31,7 +43,7 @@
         }
     }];
     
-    [[CSApiClient sharedManager] enqueueOperation:operation];
+    _queue ? [_queue addOperation:operation] : [[CSApiClient sharedManager] enqueueOperation:operation];
 }
 
 - (void)switchActionSubject:(CSActionSubject *)subject withCompletion:(CSActionSubjectSwitchSubjectCompletionBlock)block {
@@ -51,7 +63,7 @@
         }
     }];
     
-    [[CSApiClient sharedManager] enqueueOperation:operation];
+    _queue ? [_queue addOperation:operation] : [[CSApiClient sharedManager] enqueueOperation:operation];
 }
 
 @end
