@@ -14,7 +14,8 @@
     return @{
              @"uid":@"id",
              @"subject":@"action_subject",
-             @"actionType":@"type"
+             @"actionType":@"action_type",
+             @"trigger":@"trigger"
             };
 }
 
@@ -24,6 +25,10 @@
 
 + (NSValueTransformer *)actionTypeURLJSONTransformer {
     return [MTLJSONAdapter dictionaryTransformerWithModelClass:CSActionType.class];
+}
+
++ (NSValueTransformer *)triggerURLJSONTransformer {
+    return [MTLJSONAdapter dictionaryTransformerWithModelClass:CSActionTrigger.class];
 }
 
 

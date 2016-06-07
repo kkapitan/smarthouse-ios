@@ -14,22 +14,20 @@
 #import "CSDailyTimerActionTrigger.h"
 #import "CSWeeklyTimerActionTrigger.h"
 
+
 @interface CSActionTrigger ()
-@property (nonatomic, assign, readwrite) CSActionTriggerType triggerType;
 @end
 
 @implementation CSActionTrigger
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
     return @{
-             @"uid" : @"id",
-             @"triggerType" : @"type"
-             
+             @"uid" : @"id"
             };
 }
 
 + (Class)classForParsingJSONDictionary:(NSDictionary *)JSONDictionary {
-    CSActionTriggerType triggerType = (CSActionTriggerType)JSONDictionary[@"type"];
+    CSActionTriggerType triggerType = (CSActionTriggerType)[JSONDictionary[@"type"]integerValue];
     
     switch (triggerType) {
         case CSActionTriggerTypeSwitch: return [CSSwitchActionTrigger class];

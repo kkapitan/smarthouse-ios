@@ -65,14 +65,14 @@
 - (instancetype)initWithActionTrigger:(CSActionTrigger *)actionTrigger {
     self = [super init];
     if (self) {
-        _trigger = actionTrigger;
+        _trigger = (CSSwitchActionTrigger *)actionTrigger;
     }
     return self;
 }
 
 - (NSDictionary *)params {
     return @{
-      @"type":@(_trigger.triggerType)
+      @"trigger_type":@(_trigger.triggerType)
     };
 }
 
@@ -84,14 +84,19 @@
 - (instancetype)initWithActionTrigger:(CSActionTrigger *)actionTrigger {
     self = [super init];
     if (self) {
-        _trigger = actionTrigger;
+        _trigger =  (CSDailyTimerActionTrigger *)actionTrigger;
     }
     return self;
 }
 
 - (NSDictionary *)params {
     return @{
-        @"type":@(_trigger.triggerType)
+        @"trigger_type":@(_trigger.triggerType),
+        @"hours":@(_trigger.hours),
+        @"minutes":@(_trigger.minutes),
+        @"start_hour":@([_trigger.startHour timeIntervalSince1970]),
+        @"finish_hour":@([_trigger.finishHour timeIntervalSince1970]),
+        @"week_days":_trigger.weekDays
     };
 }
 
@@ -102,14 +107,17 @@
 - (instancetype)initWithActionTrigger:(CSActionTrigger *)actionTrigger {
     self = [super init];
     if (self) {
-        _trigger = actionTrigger;
+        _trigger = (CSWeeklyTimerActionTrigger *)actionTrigger;
     }
     return self;
 }
 
 - (NSDictionary *)params {
     return @{
-        @"type":@(_trigger.triggerType)
+        @"trigger_type":@(_trigger.triggerType),
+        @"weeks":@(_trigger.weeks),
+        @"day_hour":@([_trigger.hour timeIntervalSince1970]),
+        @"week_days":_trigger.weekDays
     };
 }
 
@@ -121,14 +129,15 @@
 - (instancetype)initWithActionTrigger:(CSActionTrigger *)actionTrigger {
     self = [super init];
     if (self) {
-        _trigger = actionTrigger;
+        _trigger = (CSBeaconActionTrigger *)actionTrigger;
     }
     return self;
 }
 
 - (NSDictionary *)params {
     return @{
-        @"type":@(_trigger.triggerType)
+        @"trigger_type":@(_trigger.triggerType),
+        @"beacon_id":@(_trigger.beacon.uid)
     };
 }
 

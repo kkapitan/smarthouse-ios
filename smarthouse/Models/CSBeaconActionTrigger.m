@@ -14,7 +14,8 @@
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
     return @{
              @"uid" : @"id",
-             @"triggerType" : @"type"
+             @"triggerType" : @"type",
+             @"beacon" : @"beacon"
              };
 }
 
@@ -25,6 +26,10 @@
         _beacon = beacon;
     }
     return self;
+}
+
++ (NSValueTransformer *)beaconURLJSONTransformer {
+    return [MTLJSONAdapter dictionaryTransformerWithModelClass:CSBeacon.class];
 }
 
 @end

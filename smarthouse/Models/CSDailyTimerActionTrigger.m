@@ -8,13 +8,21 @@
 
 #import "CSDailyTimerActionTrigger.h"
 
+//Category
+#import "NSIndexSet+Array.h"
+
 @implementation CSDailyTimerActionTrigger
 @synthesize triggerType = _triggerType;
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
     return @{
              @"uid" : @"id",
-             @"triggerType" : @"type"
+             @"triggerType" : @"type",
+             @"startHour" : @"start_hour",
+             @"finishHour" : @"finish_hour",
+             @"hours" : @"hours",
+             @"minutes" : @"minutes",
+             @"weekDays" : @"week_days"
              };
 }
 
@@ -25,13 +33,26 @@
         
         _hours = configuration.hours;
         _minutes = configuration.minutes;
-        _weekDays = configuration.weekdays;
+        _weekDays = [configuration.weekdays arrayFromIndexes];
         
         _startHour = configuration.startHour;
         _finishHour = configuration.finishHour;
     }
     return self;
 }
+
++ (NSValueTransformer *)startHourJSONTransformer {
+    return [MTLValueTransformer transformerUsingForwardBlock:^NSDate*(NSNumber *value, BOOL *success, NSError *__autoreleasing *error) {
+        return [NSDate dateWithTimeIntervalSince1970:[value integerValue]];
+    }];
+}
+
++ (NSValueTransformer *)finishHourJSONTransformer {
+    return [MTLValueTransformer transformerUsingForwardBlock:^NSDate*(NSNumber *value, BOOL *success, NSError *__autoreleasing *error) {
+        return [NSDate dateWithTimeIntervalSince1970:[value integerValue]];
+    }];
+}
+
 
 
 @end

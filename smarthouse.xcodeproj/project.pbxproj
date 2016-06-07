@@ -68,6 +68,7 @@
 		02DDA26A1CDF981E0096E3DF /* CSPickSubjectCellViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DDA2691CDF981E0096E3DF /* CSPickSubjectCellViewModel.m */; };
 		02DDA26E1CDFA72E0096E3DF /* CSAddActionViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DDA26D1CDFA72E0096E3DF /* CSAddActionViewModel.m */; };
 		02DDA2751CDFA7AA0096E3DF /* CSPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DDA2741CDFA7AA0096E3DF /* CSPickerView.m */; };
+		02DEAE2C1D0710D40087E906 /* NSIndexSet+Array.m in Sources */ = {isa = PBXBuildFile; fileRef = 02DEAE2B1D0710D40087E906 /* NSIndexSet+Array.m */; };
 		02E52D0E1CFEBD910075B4E6 /* CSDailyTimerActionTrigger.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E52D0D1CFEBD910075B4E6 /* CSDailyTimerActionTrigger.m */; };
 		02E52D111CFEBDA30075B4E6 /* CSWeeklyTimerActionTrigger.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E52D101CFEBDA30075B4E6 /* CSWeeklyTimerActionTrigger.m */; };
 		02E52D141CFEBDCB0075B4E6 /* CSBeaconActionTrigger.m in Sources */ = {isa = PBXBuildFile; fileRef = 02E52D131CFEBDCB0075B4E6 /* CSBeaconActionTrigger.m */; };
@@ -217,6 +218,8 @@
 		02DDA26D1CDFA72E0096E3DF /* CSAddActionViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSAddActionViewModel.m; sourceTree = "<group>"; };
 		02DDA2731CDFA7AA0096E3DF /* CSPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CSPickerView.h; path = ../Controllers/CSPickerView.h; sourceTree = "<group>"; };
 		02DDA2741CDFA7AA0096E3DF /* CSPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CSPickerView.m; path = ../Controllers/CSPickerView.m; sourceTree = "<group>"; };
+		02DEAE2A1D0710D40087E906 /* NSIndexSet+Array.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSIndexSet+Array.h"; sourceTree = "<group>"; };
+		02DEAE2B1D0710D40087E906 /* NSIndexSet+Array.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSIndexSet+Array.m"; sourceTree = "<group>"; };
 		02E52D0C1CFEBD910075B4E6 /* CSDailyTimerActionTrigger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSDailyTimerActionTrigger.h; sourceTree = "<group>"; };
 		02E52D0D1CFEBD910075B4E6 /* CSDailyTimerActionTrigger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CSDailyTimerActionTrigger.m; sourceTree = "<group>"; };
 		02E52D0F1CFEBDA30075B4E6 /* CSWeeklyTimerActionTrigger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSWeeklyTimerActionTrigger.h; sourceTree = "<group>"; };
@@ -363,6 +366,8 @@
 				02014D481CE0EBBA00E2A1DF /* UIAlertController+Error.m */,
 				026C80431CF39B09000C7599 /* NSString+Validation.h */,
 				026C80441CF39B09000C7599 /* NSString+Validation.m */,
+				02DEAE2A1D0710D40087E906 /* NSIndexSet+Array.h */,
+				02DEAE2B1D0710D40087E906 /* NSIndexSet+Array.m */,
 			);
 			name = Categories;
 			sourceTree = "<group>";
@@ -1062,6 +1067,7 @@
 				02B881AB1CF1C9860072D3A4 /* CSUploadAction.m in Sources */,
 				02BF44B31D003E4500D88822 /* CSTimerTriggerWeeklyViewModel.m in Sources */,
 				020FD6271CF4DADE00823E50 /* CSWireFrame.m in Sources */,
+				02DEAE2C1D0710D40087E906 /* NSIndexSet+Array.m in Sources */,
 				BD934CD419C211F600B48551 /* AssetCatalogIdentifiers.m in Sources */,
 				02B881B41CF1D43D0072D3A4 /* CSActionSubjectsResponseSerializer.m in Sources */,
 				0219180C1CDF639A00288736 /* CSBeaconActionCell.m in Sources */,

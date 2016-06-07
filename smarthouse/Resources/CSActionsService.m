@@ -39,7 +39,7 @@
     
     AFHTTPRequestOperation *operation = [[AFHTTPRequestOperation alloc] initWithRequest:request];
     operation.responseSerializer = [CSActionResponseSerializer serializer];
-    
+    NSLog(@"%@",[TTTURLRequestFormatter cURLCommandFromURLRequest:operation.request]);
     [operation setCompletionBlockWithSuccess:^(AFHTTPRequestOperation *innerOperation, NSDictionary *responseObject) {
         if (block) {
             block(YES, responseObject[@"action"], nil);

@@ -31,7 +31,7 @@
 {
     [Fabric with:@[[Crashlytics class]]];
     [Kontakt setAPIKey:[[CSEnvironment sharedConfiguration] variableForKey:kCSEnvironmentKontaktIOApiKey]];
-    
+
     [self setupBeacons];
     return YES;
 }

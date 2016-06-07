@@ -14,6 +14,13 @@
 //Action
 #import "CSUploadAction.h"
 
+//Triggers
+#import "CSSwitchActionTrigger.h"
+#import "CSBeaconActionTrigger.h"
+#import "CSDailyTimerActionTrigger.h"
+#import "CSWeeklyTimerActionTrigger.h"
+
+
 @interface CSCreateActionParams : NSObject <CSRequestParamsProtocol>
 
 @property (nonatomic, strong, readonly) CSUploadAction *action;
@@ -24,7 +31,7 @@
 
 @interface CSSwitchActionTriggerParams : NSObject <CSRequestParamsProtocol>
 
-@property (nonatomic, strong, readonly) CSActionTrigger *trigger;
+@property (nonatomic, strong, readonly) CSSwitchActionTrigger *trigger;
 
 - (instancetype)initWithActionTrigger:(CSActionTrigger *)actionTrigger;
 
@@ -32,7 +39,7 @@
 
 @interface CSDailyTimerActionTriggerParams : NSObject <CSRequestParamsProtocol>
 
-@property (nonatomic, strong, readonly) CSActionTrigger *trigger;
+@property (nonatomic, strong, readonly) CSDailyTimerActionTrigger *trigger;
 
 - (instancetype)initWithActionTrigger:(CSActionTrigger *)actionTrigger;
 
@@ -40,7 +47,7 @@
 
 @interface CSWeeklyTimerActionTriggerParams : NSObject <CSRequestParamsProtocol>
 
-@property (nonatomic, strong, readonly) CSActionTrigger *trigger;
+@property (nonatomic, strong, readonly) CSWeeklyTimerActionTrigger *trigger;
 
 - (instancetype)initWithActionTrigger:(CSActionTrigger *)actionTrigger;
 
@@ -48,7 +55,7 @@
 
 @interface CSBeaconActionTriggerParams : NSObject <CSRequestParamsProtocol>
 
-@property (nonatomic, strong, readonly) CSActionTrigger *trigger;
+@property (nonatomic, strong, readonly) CSBeaconActionTrigger *trigger;
 
 - (instancetype)initWithActionTrigger:(CSActionTrigger *)actionTrigger;
 

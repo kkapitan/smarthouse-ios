@@ -8,6 +8,9 @@
 
 #import "CSBeaconActionCellViewModel.h"
 
+//Model
+#import "CSBeaconActionTrigger.h"
+
 @implementation CSBeaconActionCellViewModel
 
 - (instancetype)initWithAction:(CSAction *)action {
@@ -16,7 +19,8 @@
         _subjectName = action.subject.name;
         _subjectImageURL = action.subject.imageURL;
         
-        _beaconInfoString = @"Not yet available";
+        CSBeaconActionTrigger *beaconTrigger = (CSBeaconActionTrigger *)action.trigger;
+        _beaconInfoString = [NSString stringWithFormat:@"Triggered by %@", beaconTrigger.beacon.name];
     }
     return self;
 }

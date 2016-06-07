@@ -8,6 +8,9 @@
 
 #import "CSWeeklyTimerActionTrigger.h"
 
+//Category
+#import "NSIndexSet+Array.h"
+
 @implementation CSWeeklyTimerActionTrigger
 @synthesize triggerType = _triggerType;
 
@@ -15,7 +18,10 @@
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
     return @{
              @"uid" : @"id",
-             @"triggerType" : @"type"
+             @"triggerType" : @"type",
+             @"weeks" : @"weeks",
+             @"hour" : @"day_hour",
+             @"weekDays" : @"week_days"
              };
 }
 
@@ -25,10 +31,16 @@
         _triggerType = CSActionTriggerTypeWeeklyTimer;
         
         _weeks = configuration.weeks;
-        _weekDays = configuration.weekdays;
+        _weekDays = [configuration.weekdays arrayFromIndexes];
         _hour = configuration.dayHour;
     }
     return self;
+}
+
++ (NSValueTransformer *)hourJSONTransformer {
+    return [MTLValueTransformer transformerUsingForwardBlock:^NSDate*(NSNumber *value, BOOL *success, NSError *__autoreleasing *error) {
+        return [NSDate dateWithTimeIntervalSince1970:[value integerValue]];
+    }];
 }
 
 @end

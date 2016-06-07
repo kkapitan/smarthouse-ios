@@ -8,6 +8,9 @@
 
 #import "CSSwitchActionTrigger.h"
 
+@interface CSSwitchActionTrigger ()
+@end
+
 @implementation CSSwitchActionTrigger
 @synthesize triggerType = _triggerType;
 
