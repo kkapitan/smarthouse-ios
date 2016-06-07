@@ -19,6 +19,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="SmartHouse" id="aDB-BY-k4u">
+                        <barButtonItem key="backBarButtonItem" title=" " id="plw-3e-9h6"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="Sbd-eg-yaE">
                             <connections>
                                 <segue destination="MRB-7N-ybE" kind="show" id="SGd-Wu-Ict"/>
@@ -184,6 +185,7 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Add Action" id="29L-hb-lC1">
+                        <barButtonItem key="backBarButtonItem" title=" " id="pXz-i3-f6G"/>
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="4VK-q8-vav">
                             <connections>
                                 <action selector="saveButtonAction:" destination="MRB-7N-ybE" id="ren-mh-ndg"/>

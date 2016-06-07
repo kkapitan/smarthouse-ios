@@ -11,7 +11,7 @@
             <rect key="frame" x="0.0" y="0.0" width="351" height="76"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="0el-Ei-7Vx" id="5Gt-le-yAy">
-                <rect key="frame" x="0.0" y="0.0" width="351" height="75.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="351" height="75"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQ0-NJ-baQ">
@@ -27,23 +27,31 @@
                             <constraint firstAttribute="height" constant="60" id="mj9-2b-5p7"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YO6-Ri-H8M">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YO6-Ri-H8M">
                         <rect key="frame" x="90" y="46" width="249" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.50068623310810811" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="YO6-Ri-H8M" secondAttribute="trailing" constant="12" id="0cb-me-Ict"/>
+                    <constraint firstItem="Bg8-rF-DFv" firstAttribute="top" secondItem="5Gt-le-yAy" secondAttribute="top" constant="7" id="4d2-2S-sN4"/>
+                    <constraint firstAttribute="bottom" secondItem="YO6-Ri-H8M" secondAttribute="bottom" constant="8" id="BrV-v7-46G"/>
                     <constraint firstItem="YO6-Ri-H8M" firstAttribute="leading" secondItem="dQ0-NJ-baQ" secondAttribute="leading" id="HFW-2w-L5z"/>
-                    <constraint firstItem="YO6-Ri-H8M" firstAttribute="bottom" secondItem="Bg8-rF-DFv" secondAttribute="bottom" id="R5R-ph-28a"/>
+                    <constraint firstItem="dQ0-NJ-baQ" firstAttribute="top" secondItem="5Gt-le-yAy" secondAttribute="top" constant="7" id="KPe-lz-n4f"/>
                     <constraint firstAttribute="trailing" secondItem="dQ0-NJ-baQ" secondAttribute="trailing" constant="12" id="YNj-mH-0G2"/>
-                    <constraint firstItem="dQ0-NJ-baQ" firstAttribute="top" secondItem="Bg8-rF-DFv" secondAttribute="top" id="aYn-Zi-AA5"/>
                     <constraint firstItem="dQ0-NJ-baQ" firstAttribute="leading" secondItem="Bg8-rF-DFv" secondAttribute="trailing" constant="18" id="cEK-5F-a0B"/>
                     <constraint firstItem="Bg8-rF-DFv" firstAttribute="leading" secondItem="5Gt-le-yAy" secondAttribute="leading" constant="12" id="hP3-Yw-jSP"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Bg8-rF-DFv" secondAttribute="bottom" constant="8" id="rnC-rX-9bt"/>
                     <constraint firstItem="Bg8-rF-DFv" firstAttribute="centerY" secondItem="5Gt-le-yAy" secondAttribute="centerY" id="sZd-xi-EFF"/>
+                    <constraint firstItem="YO6-Ri-H8M" firstAttribute="top" secondItem="dQ0-NJ-baQ" secondAttribute="bottom" constant="18" id="yva-eH-IV5"/>
                 </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="sZd-xi-EFF"/>
+                    </mask>
+                </variation>
             </tableViewCellContentView>
             <inset key="separatorInset" minX="12" minY="0.0" maxX="0.0" maxY="0.0"/>
             <connections>

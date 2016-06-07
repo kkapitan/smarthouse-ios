@@ -32,6 +32,9 @@
                     </imageView>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="uFy-Me-zLF" firstAttribute="centerY" secondItem="XH8-Nf-Yg2" secondAttribute="centerY" id="88z-Pb-8RE"/>
+                    <constraint firstItem="uW1-Kc-5A9" firstAttribute="top" secondItem="Ixo-O0-tP1" secondAttribute="top" constant="7" id="C2N-eu-3aZ"/>
+                    <constraint firstItem="XH8-Nf-Yg2" firstAttribute="centerY" secondItem="uW1-Kc-5A9" secondAttribute="centerY" id="G2c-cr-o72"/>
                     <constraint firstItem="uW1-Kc-5A9" firstAttribute="centerY" secondItem="Ixo-O0-tP1" secondAttribute="centerY" id="ZYa-iQ-cvL"/>
                     <constraint firstItem="uW1-Kc-5A9" firstAttribute="leading" secondItem="Ixo-O0-tP1" secondAttribute="leading" constant="12" id="bii-nB-y5U"/>
                     <constraint firstAttribute="trailing" secondItem="uFy-Me-zLF" secondAttribute="trailing" constant="12" id="fNN-vp-drv"/>
@@ -39,7 +42,15 @@
                     <constraint firstItem="XH8-Nf-Yg2" firstAttribute="leading" secondItem="uW1-Kc-5A9" secondAttribute="trailing" constant="20" id="inB-Yj-JMz"/>
                     <constraint firstItem="uFy-Me-zLF" firstAttribute="leading" secondItem="XH8-Nf-Yg2" secondAttribute="trailing" constant="28" id="j7S-Ft-Kgo"/>
                     <constraint firstItem="uFy-Me-zLF" firstAttribute="centerY" secondItem="uW1-Kc-5A9" secondAttribute="centerY" id="qQo-T7-9jE"/>
+                    <constraint firstAttribute="bottom" secondItem="uW1-Kc-5A9" secondAttribute="bottom" constant="8" id="wVp-KD-H1I"/>
                 </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="ZYa-iQ-cvL"/>
+                        <exclude reference="hJ7-RB-y7L"/>
+                        <exclude reference="qQo-T7-9jE"/>
+                    </mask>
+                </variation>
             </tableViewCellContentView>
             <inset key="separatorInset" minX="12" minY="0.0" maxX="0.0" maxY="0.0"/>
             <connections>

@@ -33,18 +33,50 @@
     return self;
 }
 
+#pragma mark -
+#pragma mark - Private
+
 - (NSString *)weeklyTriggerDescription:(CSWeeklyTimerActionTrigger *)trigger {
     NSString *weeks = [NSString stringWithFormat:@"Every %d weeks", trigger.weeks];
     
     CSDateFormatter *formatter = [CSDateFormatter hourMinuteDateFormatter];
-    NSString *hour = [NSString stringWithFormat:@"On %@", [formatter stringFromDate:trigger.hour]];
+    NSString *hour = [NSString stringWithFormat:@"At %@", [formatter stringFromDate:trigger.hour]];
     
-    return [NSString stringWithFormat:@"%@\n%@", weeks, hour];
+    NSString *weekDays = [self weekDaysStringFromArray:trigger.weekDays];
+    
+    return [NSString stringWithFormat:@"%@\n%@\n%@", weeks, weekDays, hour];
 }
 
 - (NSString *)dailyTriggerDescription:(CSDailyTimerActionTrigger *)trigger {
-    return nil;
+    CSDateFormatter *formatter = [CSDateFormatter hourMinuteDateFormatter];
+    
+    NSString *minutesHours = [NSString stringWithFormat:@"Every %d hours and %d minutes", trigger.hours, trigger.minutes];
+    
+    NSString *startHourFinishHour = [NSString stringWithFormat:@"From %@ to %@", [formatter stringFromDate:trigger.startHour],[formatter stringFromDate: trigger.finishHour]];
+  
+    NSString *weekDays = [self weekDaysStringFromArray:trigger.weekDays];
+    
+    return [NSString stringWithFormat:@"%@\n%@\n%@", minutesHours, weekDays, startHourFinishHour];
+
 }
+
+
+- (NSString *)weekDaysStringFromArray:(NSArray *)array {
+    NSArray *weekDays = @[@"Mon", @"Tue", @"Wed", @"Thu", @"Fri", @"Sat", @"Sun"];
+    
+    NSMutableString *weekDaysString = [NSMutableString stringWithString:@"On "];
+    
+    for (NSNumber *day in array) {
+        NSUInteger dayNum = [day unsignedIntegerValue];
+        NSString *weekDay = [NSString stringWithFormat:@"%@, ",weekDays[dayNum]];
+        
+        [weekDaysString appendString:weekDay];
+    }
+    [weekDaysString deleteCharactersInRange:NSMakeRange([weekDaysString length]-2, 2)];
+    
+    return [weekDaysString copy];
+}
+
 
 
 @end

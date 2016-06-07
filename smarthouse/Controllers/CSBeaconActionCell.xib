@@ -11,7 +11,7 @@
             <rect key="frame" x="0.0" y="0.0" width="351" height="76"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iMH-bq-crj" id="s90-fX-hsT">
-                <rect key="frame" x="0.0" y="0.0" width="351" height="75.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="351" height="75"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D0h-g4-dtI">
@@ -27,23 +27,31 @@
                             <constraint firstAttribute="height" constant="60" id="fiq-KB-Pv0"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hdS-zf-cuV">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hdS-zf-cuV">
                         <rect key="frame" x="90" y="46" width="249" height="21"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="hdS-zf-cuV" secondAttribute="trailing" constant="12" id="6O8-3F-YE0"/>
+                    <constraint firstAttribute="bottom" secondItem="hdS-zf-cuV" secondAttribute="bottom" constant="8" id="7Nu-1p-Y19"/>
                     <constraint firstAttribute="trailing" secondItem="D0h-g4-dtI" secondAttribute="trailing" constant="12" id="Dao-W4-u9q"/>
                     <constraint firstItem="RC0-y1-9sY" firstAttribute="leading" secondItem="s90-fX-hsT" secondAttribute="leading" constant="12" id="TtE-Op-oaS"/>
+                    <constraint firstItem="RC0-y1-9sY" firstAttribute="top" secondItem="s90-fX-hsT" secondAttribute="top" constant="7" id="X3z-x2-uLy"/>
                     <constraint firstItem="RC0-y1-9sY" firstAttribute="centerY" secondItem="s90-fX-hsT" secondAttribute="centerY" id="cSJ-kn-ZLL"/>
-                    <constraint firstItem="D0h-g4-dtI" firstAttribute="top" secondItem="RC0-y1-9sY" secondAttribute="top" id="fqu-h5-j0h"/>
-                    <constraint firstItem="hdS-zf-cuV" firstAttribute="bottom" secondItem="RC0-y1-9sY" secondAttribute="bottom" id="l9S-nC-ZQU"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="RC0-y1-9sY" secondAttribute="bottom" constant="8" id="hxe-tN-2RB"/>
+                    <constraint firstItem="D0h-g4-dtI" firstAttribute="top" secondItem="s90-fX-hsT" secondAttribute="top" constant="7" id="kzh-Az-Jgj"/>
+                    <constraint firstItem="hdS-zf-cuV" firstAttribute="top" secondItem="D0h-g4-dtI" secondAttribute="bottom" constant="18" id="sKO-wg-lkb"/>
                     <constraint firstItem="hdS-zf-cuV" firstAttribute="leading" secondItem="D0h-g4-dtI" secondAttribute="leading" id="uWD-1a-40e"/>
                     <constraint firstItem="D0h-g4-dtI" firstAttribute="leading" secondItem="RC0-y1-9sY" secondAttribute="trailing" constant="18" id="vG0-bp-KT8"/>
                 </constraints>
+                <variation key="default">
+                    <mask key="constraints">
+                        <exclude reference="cSJ-kn-ZLL"/>
+                    </mask>
+                </variation>
             </tableViewCellContentView>
             <inset key="separatorInset" minX="12" minY="0.0" maxX="0.0" maxY="0.0"/>
             <connections>
